@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>High-Converting Websites for Digital Product Sellers | 40% More Sales Guaranteed</title>
+    <title>ConvertPRO | High-Converting Websites for Global Digital Product Sellers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #4F46E5;
-            --primary-dark: #3730A3;
-            --primary-light: #818CF8;
-            --secondary: #F97316;
-            --secondary-dark: #EA580C;
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --primary-light: #3B82F6;
+            --secondary: #7C3AED;
+            --secondary-dark: #6D28D9;
             --accent: #EC4899;
-            --dark: #111827;
-            --darker: #0F172A;
+            --dark: #0F172A;
+            --darker: #020617;
             --light: #F8FAFC;
-            --gray: #6B7280;
-            --light-gray: #E5E7EB;
+            --gray: #64748B;
+            --light-gray: #E2E8F0;
             --success: #10B981;
             --danger: #EF4444;
             --warning: #F59E0B;
-            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --shadow-lg: 0 20px 50px -12px rgba(0, 0, 0, 0.25);
-            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+            --card-bg: #FFFFFF;
+            --border-color: rgba(226, 232, 240, 0.5);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.01);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--dark) 0%, #1E293B 100%);
+            --border-radius: 16px;
+            --border-radius-lg: 24px;
         }
 
         * {
@@ -38,6 +45,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
 
         body {
@@ -46,20 +54,14 @@
             line-height: 1.6;
             overflow-x: hidden;
             background-color: #FFFFFF;
+            font-size: 16px;
         }
 
-        .container {
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Typography */
         h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 700;
             line-height: 1.2;
-            color: var(--darker);
+            color: var(--dark);
         }
 
         h1 {
@@ -86,78 +88,11 @@
             font-weight: 500;
         }
 
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 40px;
-            font-size: 1.125rem;
-            font-weight: 600;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            color: white;
-            box-shadow: var(--shadow);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-whatsapp {
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            color: white;
-            box-shadow: var(--shadow);
-        }
-
-        .btn-whatsapp:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-            background: linear-gradient(135deg, #1EBE5D 0%, #0E7A6B 100%);
-        }
-
-        .btn-accent {
-            background: linear-gradient(135deg, var(--accent) 0%, #BE185D 100%);
-            color: white;
-            box-shadow: var(--shadow);
-        }
-
-        .btn-accent:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .btn i {
-            margin-right: 8px;
-            font-size: 1.25rem;
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
 
         /* Header */
@@ -170,14 +105,14 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+            border-bottom: 1px solid var(--border-color);
             padding: 20px 0;
             transition: var(--transition);
         }
 
         header.scrolled {
             padding: 12px 0;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-md);
         }
 
         .header-container {
@@ -195,13 +130,12 @@
         .logo-text {
             font-size: 1.875rem;
             font-weight: 800;
-            color: var(--darker);
+            color: var(--dark);
             letter-spacing: -0.02em;
         }
 
         .logo-accent {
-            color: var(--primary);
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -220,21 +154,26 @@
             font-size: 1rem;
             position: relative;
             padding: 8px 0;
+            transition: var(--transition);
         }
 
-        .nav-links a:after {
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active:after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 0;
+            width: 100%;
             height: 2px;
             background: var(--primary);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover:after {
-            width: 100%;
+            border-radius: 2px;
         }
 
         .mobile-menu-btn {
@@ -244,6 +183,60 @@
             font-size: 1.5rem;
             color: var(--dark);
             cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-dark {
+            background: var(--dark);
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: var(--darker);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
         }
 
         /* Hero Section */
@@ -260,21 +253,9 @@
             width: 800px;
             height: 800px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(236, 72, 153, 0.05) 100%);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(124, 58, 237, 0.05) 100%);
             top: -400px;
             right: -200px;
-            z-index: 0;
-        }
-
-        .hero:after {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.05) 0%, rgba(236, 72, 153, 0.03) 100%);
-            bottom: -300px;
-            left: -200px;
             z-index: 0;
         }
 
@@ -289,10 +270,6 @@
 
         .hero-content h1 {
             margin-bottom: 24px;
-            background: linear-gradient(135deg, var(--darker) 0%, var(--primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .hero-content .lead {
@@ -301,33 +278,27 @@
             color: var(--gray);
         }
 
-        .hero-stats {
+        .hero-badges {
             display: flex;
-            gap: 48px;
-            margin-top: 48px;
-            padding-top: 32px;
-            border-top: 1px solid var(--light-gray);
+            gap: 16px;
+            margin-top: 40px;
+            flex-wrap: wrap;
         }
 
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            display: block;
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
+        .hero-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 50px;
             font-size: 0.875rem;
-            color: var(--gray);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
             font-weight: 600;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-badge i {
+            color: var(--success);
         }
 
         .hero-visual {
@@ -336,21 +307,15 @@
 
         .hero-visual-inner {
             position: relative;
-            border-radius: 24px;
+            border-radius: var(--border-radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow-xl);
-            transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
-            transition: var(--transition);
         }
 
-        .hero-visual-inner:hover {
-            transform: perspective(1000px) rotateY(0) rotateX(0);
-        }
-
-        .hero-visual-img {
+        .hero-image {
             width: 100%;
             height: 500px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -358,18 +323,30 @@
             position: relative;
         }
 
-        .floating-badge {
+        .floating-element {
             position: absolute;
-            top: 24px;
-            right: 24px;
             background: white;
             color: var(--primary);
-            padding: 12px 24px;
-            border-radius: 50px;
+            padding: 16px 24px;
+            border-radius: 12px;
             font-weight: 700;
             font-size: 0.875rem;
-            box-shadow: var(--shadow);
-            animation: float 3s ease-in-out infinite;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .floating-1 {
+            top: 40px;
+            right: 40px;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .floating-2 {
+            bottom: 60px;
+            left: 40px;
+            animation: float 4s ease-in-out infinite 0.5s;
         }
 
         @keyframes float {
@@ -377,29 +354,7 @@
             50% { transform: translateY(-10px); }
         }
 
-        /* Trust Badges */
-        .trust-badges {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-top: 32px;
-            flex-wrap: wrap;
-        }
-
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.875rem;
-            color: var(--gray);
-        }
-
-        .trust-badge i {
-            color: var(--success);
-            font-size: 1rem;
-        }
-
-        /* Sections */
+        /* Section Titles */
         .section {
             padding: 120px 0;
         }
@@ -412,192 +367,38 @@
 
         .section-title h2 {
             margin-bottom: 16px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
         }
 
         .section-title .lead {
             font-size: 1.25rem;
         }
 
-        /* Who We Help */
-        .who-help {
-            background: white;
-        }
-
-        .help-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
-        }
-
-        .help-card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px 32px;
-            text-align: center;
-            border: 1px solid var(--light-gray);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .help-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            transform: scaleX(0);
-            transition: var(--transition);
-            transform-origin: left;
-        }
-
-        .help-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .help-card:hover:before {
-            transform: scaleX(1);
-        }
-
-        .help-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-            font-size: 2rem;
-            color: var(--primary);
-        }
-
-        /* Services */
-        .services {
-            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .service-icon {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .service-card h3 {
-            margin-bottom: 16px;
-        }
-
-        /* Benefits */
-        .benefits {
-            background: white;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
-        }
-
-        .benefit-card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            border: 1px solid var(--light-gray);
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .benefit-card:hover {
-            border-color: var(--primary);
-            box-shadow: var(--shadow);
-        }
-
-        .benefit-icon {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-            color: var(--secondary);
-            font-size: 1.5rem;
-        }
-
-        /* Portfolio */
-        .portfolio {
-            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
-        }
-
+        /* Portfolio Grid */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            margin-bottom: 48px;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 32px;
         }
 
-        .portfolio-card {
-            background: white;
-            border-radius: 20px;
+        .portfolio-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            border: 1px solid var(--border-color);
+            position: relative;
         }
 
-        .portfolio-card:hover {
+        .portfolio-item:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
         }
 
         .portfolio-image {
             height: 240px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -612,16 +413,33 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background: var(--secondary);
+            background: var(--primary);
             color: white;
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 0.75rem;
             font-weight: 700;
+            z-index: 2;
         }
 
         .portfolio-content {
             padding: 32px;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-tag {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
         }
 
         .portfolio-stats {
@@ -629,7 +447,7 @@
             gap: 24px;
             margin-top: 20px;
             padding-top: 20px;
-            border-top: 1px solid var(--light-gray);
+            border-top: 1px solid var(--border-color);
         }
 
         .portfolio-stat {
@@ -648,83 +466,55 @@
             color: var(--gray);
         }
 
-        /* Testimonials */
-        .testimonials {
-            background: white;
+        /* Case Studies */
+        .case-study {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
         }
 
-        .testimonials-grid {
+        .case-study-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
         }
 
-        .testimonial-card {
+        .case-study-item {
             background: white;
-            border-radius: 20px;
-            padding: 40px;
+            border-radius: var(--border-radius);
+            padding: 48px;
             box-shadow: var(--shadow);
-            border: 1px solid var(--light-gray);
-            position: relative;
+            transition: var(--transition);
         }
 
-        .testimonial-card:before {
-            content: '"';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 5rem;
-            color: rgba(79, 70, 229, 0.1);
-            font-family: Georgia, serif;
-            line-height: 1;
+        .case-study-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .testimonial-content {
-            position: relative;
-            z-index: 1;
-            margin-bottom: 24px;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .author-avatar {
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+        .case-study-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 24px;
             color: white;
-            font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
         }
 
-        .author-info h4 {
-            margin-bottom: 4px;
-        }
-
-        .author-info p {
-            font-size: 0.875rem;
-            color: var(--gray);
-        }
-
-        /* Trust Logos */
-        .trust-logos {
-            background: white;
+        /* Client Logos */
+        .client-logos {
             padding: 80px 0;
-            border-top: 1px solid var(--light-gray);
-            border-bottom: 1px solid var(--light-gray);
+            background: white;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .logos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 48px;
             align-items: center;
         }
@@ -733,10 +523,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
             color: var(--gray);
             opacity: 0.7;
             transition: var(--transition);
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
         .logo-item:hover {
@@ -745,61 +536,113 @@
             transform: scale(1.05);
         }
 
-        /* Guarantee */
-        .guarantee {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+        /* Process Section */
+        .process {
+            background: white;
+        }
+
+        .process-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .process-timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            height: 100%;
+            width: 2px;
+            background: var(--light-gray);
+            z-index: 1;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 48px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            margin-bottom: 12px;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--gradient-dark);
             color: white;
+            padding: 100px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
             text-align: center;
-            padding: 80px 0;
         }
 
-        .guarantee h2 {
+        .stat-item h3 {
             color: white;
-            margin-bottom: 16px;
+            font-size: 3rem;
+            margin-bottom: 8px;
         }
 
-        .guarantee p {
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
-            margin: 0 auto 32px;
+        .stat-item p {
+            color: rgba(255, 255, 255, 0.8);
         }
 
         /* CTA Section */
         .cta {
-            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-            color: white;
-            text-align: center;
+            background: white;
             padding: 120px 0;
-            position: relative;
-            overflow: hidden;
+            text-align: center;
         }
 
-        .cta:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="rgba(255,255,255,0.03)" stroke-width="2"/></svg>');
+        .cta-box {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 80px;
+            border-radius: var(--border-radius-lg);
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-xl);
         }
 
-        .cta h2 {
+        .cta-box h2 {
             color: white;
             margin-bottom: 16px;
-            font-size: 3.5rem;
         }
 
-        .cta p {
-            color: rgba(255, 255, 255, 0.8);
-            max-width: 600px;
-            margin: 0 auto 48px;
-            font-size: 1.25rem;
+        .cta-box p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 32px;
         }
 
         /* Footer */
         footer {
-            background: var(--darker);
+            background: var(--dark);
             color: white;
             padding: 80px 0 40px;
         }
@@ -866,7 +709,7 @@
             font-size: 0.875rem;
         }
 
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 1024px) {
             h1 { font-size: 3rem; }
             h2 { font-size: 2.25rem; }
@@ -876,37 +719,44 @@
                 gap: 60px;
             }
             
-            .hero-visual {
-                order: -1;
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             }
         }
 
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 280px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 100px 40px 40px;
+                box-shadow: var(--shadow-xl);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                display: flex;
             }
             
             .mobile-menu-btn {
                 display: block;
             }
             
-            .btn-group {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .hero-stats {
-                flex-direction: column;
-                gap: 24px;
+            .hero {
+                padding: 150px 0 80px;
             }
             
             .section {
                 padding: 80px 0;
+            }
+            
+            .cta-box {
+                padding: 40px;
             }
         }
 
@@ -918,30 +768,14 @@
                 padding: 0 16px;
             }
             
-            .hero {
-                padding: 140px 0 80px;
+            .portfolio-grid {
+                grid-template-columns: 1fr;
             }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+            
+            .hero-badges {
+                flex-direction: column;
+                align-items: flex-start;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        /* Counter Animation */
-        .counter {
-            font-variant-numeric: tabular-nums;
         }
     </style>
 </head>
@@ -955,16 +789,15 @@
             
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#who-we-help">Who We Help</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#testimonials">Results</a></li>
-                    <li><a href="#contact" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.875rem;">Get Quote</a></li>
+                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -973,66 +806,56 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-container">
-            <div class="hero-content fade-in-up">
+            <div class="hero-content">
                 <div style="margin-bottom: 16px;">
-                    <span style="background: linear-gradient(135deg, var(--primary), var(--accent)); color: white; padding: 8px 20px; border-radius: 50px; font-size: 0.875rem; font-weight: 600; display: inline-block;">
-                        <i class="fas fa-bolt" style="margin-right: 6px;"></i> 40% More Sales Guaranteed
+                    <span style="background: var(--gradient-primary); color: white; padding: 8px 20px; border-radius: 50px; font-size: 0.875rem; font-weight: 600; display: inline-block;">
+                        <i class="fas fa-globe" style="margin-right: 6px;"></i> Global Digital Product Agency
                     </span>
                 </div>
                 
-                <h1>High-Converting Websites for <span style="background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Digital Product Sellers</span></h1>
+                <h1>High-Converting Websites for <span style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">International Digital Sellers</span></h1>
                 
-                <p class="lead">Sell more courses, software & tools with conversion-focused design that turns visitors into buyers. Get 40% more sales or your money back.</p>
+                <p class="lead">We specialize in creating conversion-optimized websites for digital product sellers worldwide. Increase your sales by 40%+ with our data-driven approach.</p>
                 
-                <div class="btn-group">
-                    <a href="https://wa.me/919876543210?text=Hi!%20I%20want%20a%20high-converting%20website%20for%20my%20digital%20product" class="btn btn-whatsapp" target="_blank">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Now
+                <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px;">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <i class="fas fa-eye"></i> View Our Work
                     </a>
-                    <a href="#contact" class="btn btn-primary">
-                        <i class="fas fa-calendar-check"></i> Get Free Consultation
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-calendar"></i> Schedule Consultation
                     </a>
                 </div>
                 
-                <div class="trust-badges">
-                    <div class="trust-badge">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>30-Day Money Back Guarantee</span>
+                <div class="hero-badges">
+                    <div class="hero-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Global Clientele</span>
                     </div>
-                    <div class="trust-badge">
-                        <i class="fas fa-clock"></i>
-                        <span>7-10 Days Delivery</span>
+                    <div class="hero-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>40% Avg. Sales Increase</span>
                     </div>
-                    <div class="trust-badge">
-                        <i class="fas fa-users"></i>
-                        <span>247+ Clients Served</span>
-                    </div>
-                </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number counter" data-target="247">0</span>
-                        <span class="stat-label">Clients Served</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number counter" data-target="40">0</span>
-                        <span class="stat-label">Avg. Sales Increase</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number counter" data-target="98">0</span>
-                        <span class="stat-label">Success Rate</span>
+                    <div class="hero-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>7-10 Day Delivery</span>
                     </div>
                 </div>
             </div>
             
-            <div class="hero-visual fade-in-up">
+            <div class="hero-visual">
                 <div class="hero-visual-inner">
-                    <div class="hero-visual-img">
+                    <div class="hero-image">
                         <div style="text-align: center; padding: 40px;">
-                            <div style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">Sales Dashboard</div>
-                            <div style="font-size: 1rem; opacity: 0.9;">Real-time conversion tracking</div>
+                            <div style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">Global Sales Dashboard</div>
+                            <div style="font-size: 1rem; opacity: 0.9;">Multi-currency, multi-language ready</div>
                         </div>
-                        <div class="floating-badge">
-                            <i class="fas fa-chart-line" style="margin-right: 6px;"></i> 40% Sales Increase
+                        <div class="floating-element floating-1">
+                            <i class="fas fa-chart-line"></i>
+                            <span>+42% Conversions</span>
+                        </div>
+                        <div class="floating-element floating-2">
+                            <i class="fas fa-globe-americas"></i>
+                            <span>International Ready</span>
                         </div>
                     </div>
                 </div>
@@ -1040,324 +863,242 @@
         </div>
     </section>
 
-    <!-- Who We Help -->
-    <section class="section who-help" id="who-we-help">
+    <!-- Portfolio Section -->
+    <section class="section" id="portfolio">
         <div class="container">
-            <div class="section-title fade-in-up">
-                <h2>Who We Help</h2>
-                <p class="lead">We specialize in creating conversion-focused websites for digital product sellers across all niches.</p>
-            </div>
-            
-            <div class="help-grid">
-                <div class="help-card fade-in-up">
-                    <div class="help-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>Digital Product Sellers</h3>
-                    <p>Sell eBooks, templates, graphics and digital assets with optimized checkout flows that convert at 3x industry average.</p>
-                </div>
-                
-                <div class="help-card fade-in-up">
-                    <div class="help-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Course Creators</h3>
-                    <p>Build engaging learning platforms with integrated payment, student management, and completion tracking.</p>
-                </div>
-                
-                <div class="help-card fade-in-up">
-                    <div class="help-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Software / SaaS</h3>
-                    <p>Showcase your software with compelling demos, seamless subscription setup, and automated onboarding.</p>
-                </div>
-                
-                <div class="help-card fade-in-up">
-                    <div class="help-icon">
-                        <i class="fas fa-key"></i>
-                    </div>
-                    <h3>License Sellers</h3>
-                    <p>McAfee, Norton, QuickBooks type license sales with automated delivery systems and instant activation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services -->
-    <section class="section services" id="services">
-        <div class="container">
-            <div class="section-title fade-in-up">
-                <h2>Our Services</h2>
-                <p class="lead">End-to-end solutions to build, launch, and optimize your digital product website for maximum conversions.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Digital Product Website</h3>
-                    <p>Complete website development tailored for selling digital products with seamless user experience and high-converting layouts.</p>
-                </div>
-                
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Landing Page Design</h3>
-                    <p>High-converting landing pages designed using psychological principles to capture leads and drive sales for your products.</p>
-                </div>
-                
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Sales Funnel Setup</h3>
-                    <p>Complete marketing funnels with upsells, downsells, and email sequences to maximize customer lifetime value.</p>
-                </div>
-                
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <h3>Payment Integration</h3>
-                    <p>Secure payment gateways like Stripe, Razorpay, PayPal with automated delivery and tax compliance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits -->
-    <section class="section benefits">
-        <div class="container">
-            <div class="section-title fade-in-up">
-                <h2>Why Choose Us</h2>
-                <p class="lead">We deliver more than just websites - we build conversion machines for your digital products.</p>
-            </div>
-            
-            <div class="benefits-grid">
-                <div class="benefit-card fade-in-up">
-                    <div class="benefit-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Fast Delivery</h3>
-                    <p>Get your website ready in 7-10 days with our proven process, without compromising on quality.</p>
-                </div>
-                
-                <div class="benefit-card fade-in-up">
-                    <div class="benefit-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Conversion-Focused</h3>
-                    <p>Every element is designed using psychological principles to guide visitors towards purchase.</p>
-                </div>
-                
-                <div class="benefit-card fade-in-up">
-                    <div class="benefit-icon">
-                        <i class="fas fa-tag"></i>
-                    </div>
-                    <h3>Affordable Pricing</h3>
-                    <p>Professional quality at competitive prices with flexible payment options. No hidden costs.</p>
-                </div>
-                
-                <div class="benefit-card fade-in-up">
-                    <div class="benefit-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Ongoing Support</h3>
-                    <p>30 days of free support post-launch plus training on managing your website effectively.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="section portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-title fade-in-up">
+            <div class="section-title">
                 <h2>Our Portfolio</h2>
-                <p class="lead">Check out some of our recent work for digital product sellers who increased their sales.</p>
+                <p class="lead">Showcasing our work with digital product sellers, course creators, and SaaS businesses from around the world.</p>
             </div>
             
             <div class="portfolio-grid">
-                <div class="portfolio-card fade-in-up">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div>Online Course Platform</div>
-                        <div class="portfolio-badge">+42% Sales</div>
+                        <div>EduTech Platform</div>
+                        <div class="portfolio-badge">USA</div>
                     </div>
                     <div class="portfolio-content">
-                        <h3>EduMaster Pro</h3>
-                        <p>Complete learning management system for a premium course creator with integrated payments, student dashboard, and progress tracking.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Online Courses</span>
+                            <span class="portfolio-tag">LMS</span>
+                            <span class="portfolio-tag">International</span>
+                        </div>
+                        <h3>Global Learning Academy</h3>
+                        <p>A comprehensive learning management system for a US-based educational company with multi-language support and integrated payment processing.</p>
                         
                         <div class="portfolio-stats">
                             <div class="portfolio-stat">
-                                <span class="number">42%</span>
+                                <span class="number">+45%</span>
                                 <span class="label">Sales Increase</span>
                             </div>
                             <div class="portfolio-stat">
-                                <span class="number">7</span>
-                                <span class="label">Days Delivery</span>
+                                <span class="number">28</span>
+                                <span class="label">Days to Launch</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-card fade-in-up">
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div>SaaS Product Website</div>
-                        <div class="portfolio-badge">+38% Conversions</div>
+                        <div>SaaS Dashboard</div>
+                        <div class="portfolio-badge">UK</div>
                     </div>
                     <div class="portfolio-content">
-                        <h3>Analytics Dashboard</h3>
-                        <p>Conversion-optimized website for a SaaS analytics tool with interactive demos, pricing page, and automated onboarding.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">SaaS</span>
+                            <span class="portfolio-tag">Dashboard</span>
+                            <span class="portfolio-tag">Analytics</span>
+                        </div>
+                        <h3>DataInsight Pro</h3>
+                        <p>A data analytics SaaS platform with subscription management, user onboarding, and real-time dashboard for a UK-based tech startup.</p>
                         
                         <div class="portfolio-stats">
                             <div class="portfolio-stat">
-                                <span class="number">38%</span>
-                                <span class="label">More Conversions</span>
+                                <span class="number">+38%</span>
+                                <span class="label">Conversion Rate</span>
                             </div>
                             <div class="portfolio-stat">
-                                <span class="number">9</span>
-                                <span class="label">Days Delivery</span>
+                                <span class="number">21</span>
+                                <span class="label">Days to Launch</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="portfolio-card fade-in-up">
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item">
                     <div class="portfolio-image">
-                        <div>Digital Template Store</div>
-                        <div class="portfolio-badge">+55% Revenue</div>
+                        <div>Digital Marketplace</div>
+                        <div class="portfolio-badge">Australia</div>
                     </div>
                     <div class="portfolio-content">
-                        <h3>DesignResource Hub</h3>
-                        <p>E-commerce website for selling digital design templates with instant download, license management, and affiliate system.</p>
+                        <div class="portfolio-tags">
+                            <span class="portfolio-tag">Marketplace</span>
+                            <span class="portfolio-tag">Digital Products</span>
+                            <span class="portfolio-tag">E-commerce</span>
+                        </div>
+                        <h3>DesignAsset Hub</h3>
+                        <p>A digital marketplace for designers selling templates, graphics, and assets with affiliate system and instant download capabilities.</p>
                         
                         <div class="portfolio-stats">
                             <div class="portfolio-stat">
-                                <span class="number">55%</span>
+                                <span class="number">+52%</span>
                                 <span class="label">Revenue Growth</span>
                             </div>
                             <div class="portfolio-stat">
-                                <span class="number">8</span>
-                                <span class="label">Days Delivery</span>
+                                <span class="number">35</span>
+                                <span class="label">Days to Launch</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="#" class="btn btn-outline">
-                    <i class="fas fa-images"></i> View Full Portfolio
-                </a>
-            </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section testimonials" id="testimonials">
+    <!-- Case Studies -->
+    <section class="case-study" id="case-studies">
         <div class="container">
-            <div class="section-title fade-in-up">
-                <h2>Client Success Stories</h2>
-                <p class="lead">Don't just take our word for it - hear from digital product sellers we've helped succeed.</p>
+            <div class="section-title">
+                <h2>Case Studies</h2>
+                <p class="lead">Detailed analysis of how we helped clients achieve significant growth in their digital product sales.</p>
             </div>
             
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-in-up">
-                    <div class="testimonial-content">
-                        "Our course sales increased by 40% after launching the new website. The conversion-focused design truly makes a difference! The team delivered exactly what they promised, on time and on budget."
+            <div class="case-study-grid">
+                <div class="case-study-item">
+                    <div class="case-study-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SJ</div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Course Creator, Digital Marketing Pro</p>
-                        </div>
+                    <h3>Course Platform Transformation</h3>
+                    <p>Increased course sales by 45% for an international education provider through conversion-optimized design and improved user journey.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn btn-outline" style="padding: 12px 24px;">View Case Study</a>
                     </div>
                 </div>
                 
-                <div class="testimonial-card fade-in-up">
-                    <div class="testimonial-content">
-                        "The payment integration was seamless, and our license delivery is now fully automated. We saw a 38% increase in conversions within the first month. Highly recommended for digital sellers!"
+                <div class="case-study-item">
+                    <div class="case-study-icon">
+                        <i class="fas fa-shopping-cart"></i>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MR</div>
-                        <div class="author-info">
-                            <h4>Michael Rodriguez</h4>
-                            <p>Software License Reseller</p>
-                        </div>
+                    <h3>SaaS Conversion Optimization</h3>
+                    <p>Improved sign-up conversion rate by 38% for a UK-based SaaS company through A/B testing and streamlined onboarding process.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn btn-outline" style="padding: 12px 24px;">View Case Study</a>
+                    </div>
+                </div>
+                
+                <div class="case-study-item">
+                    <div class="case-study-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global E-commerce Expansion</h3>
+                    <p>Enabled multi-currency sales and expanded to 12 new countries for a digital template seller, increasing international revenue by 67%.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" class="btn btn-outline" style="padding: 12px 24px;">View Case Study</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Logos -->
-    <section class="trust-logos">
+    <!-- Client Logos -->
+    <section class="client-logos">
         <div class="container">
             <div class="logos-grid">
-                <div class="logo-item">
-                    <i class="fab fa-wordpress"></i>
-                </div>
-                <div class="logo-item">
-                    <i class="fab fa-elementor"></i>
-                </div>
-                <div class="logo-item">
-                    <i class="fab fa-stripe"></i>
-                </div>
-                <div class="logo-item">
-                    <i class="fas fa-rupee-sign"></i>
-                    <span style="font-size: 1.5rem; font-weight: 700; margin-left: 8px;">Razorpay</span>
-                </div>
-                <div class="logo-item">
-                    <i class="fab fa-woocommerce"></i>
-                </div>
+                <div class="logo-item">TECH<span style="color: var(--primary);">CORP</span></div>
+                <div class="logo-item">EDU<span style="color: var(--primary);">MASTER</span></div>
+                <div class="logo-item">DATA<span style="color: var(--primary);">PRO</span></div>
+                <div class="logo-item">DESIGN<span style="color: var(--primary);">HUB</span></div>
+                <div class="logo-item">GLOBAL<span style="color: var(--primary);">LEARN</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Guarantee -->
-    <section class="guarantee">
+    <!-- Process Section -->
+    <section class="section process" id="process">
         <div class="container">
-            <h2 class="fade-in-up">40% More Sales Guaranteed</h2>
-            <p class="fade-in-up">We're so confident in our conversion-focused design that we offer a money-back guarantee if your sales don't increase by at least 40% within 60 days of launching your new website.</p>
-            <div class="btn-group fade-in-up" style="justify-content: center;">
-                <a href="#contact" class="btn btn-accent">
-                    <i class="fas fa-shield-alt"></i> Get Guaranteed Results
-                </a>
+            <div class="section-title">
+                <h2>Our Process</h2>
+                <p class="lead">A structured approach to ensure quality, efficiency, and results for every project.</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discovery & Strategy</h3>
+                        <p>We begin by understanding your business, target audience, and goals to create a customized strategy for your digital product website.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Design & Prototyping</h3>
+                        <p>Our designers create conversion-focused mockups and interactive prototypes, incorporating best practices for digital product sales.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Development</h3>
+                        <p>Our developers build your website with clean code, fast performance, and seamless integration with payment gateways and delivery systems.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Testing & Launch</h3>
+                        <p>We thoroughly test across devices and browsers, optimize for conversions, and launch your website with ongoing support.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 class="counter" data-target="247">0</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="40">0</h3>
+                    <p>Avg. Sales Increase</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="28">0</h3>
+                    <p>Countries Served</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="98">0</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
     <section class="cta" id="contact">
         <div class="container">
-            <h2 class="fade-in-up">Let's Build Your Digital Product Website</h2>
-            <p class="fade-in-up">Ready to turn your digital product into consistent revenue? Get a free consultation and quote for your project today.</p>
-            
-            <div class="btn-group fade-in-up" style="justify-content: center;">
-                <a href="https://wa.me/919876543210?text=Hi!%20I%20want%20a%20high-converting%20website%20for%20my%20digital%20product" class="btn btn-whatsapp" target="_blank" style="padding: 20px 48px;">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Now
-                </a>
-                <a href="mailto:consult@convertpro.com?subject=Free%20Consultation%20for%20Digital%20Product%20Website" class="btn btn-primary" style="padding: 20px 48px;">
-                    <i class="fas fa-envelope"></i> Email Us
-                </a>
-            </div>
-            
-            <div class="trust-badges fade-in-up" style="justify-content: center; margin-top: 40px;">
-                <div class="trust-badge">
-                    <i class="fas fa-check-circle" style="color: var(--success);"></i>
-                    <span>Free Consultation</span>
-                </div>
-                <div class="trust-badge">
-                    <i class="fas fa-check-circle" style="color: var(--success);"></i>
-                    <span>No Obligation Quote</span>
-                </div>
-                <div class="trust-badge">
-                    <i class="fas fa-check-circle" style="color: var(--success);"></i>
-                    <span>7-Day Delivery Promise</span>
+            <div class="cta-box">
+                <h2>Ready to Transform Your Digital Product Sales?</h2>
+                <p>Schedule a free consultation with our experts to discuss your project and get a customized proposal.</p>
+                
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:hello@convertpro.com?subject=Portfolio%20Consultation" class="btn btn-dark">
+                        <i class="fas fa-envelope"></i> Email Us
+                    </a>
+                    <a href="https://calendly.com/convertpro/consultation" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-calendar-alt"></i> Schedule Call
+                    </a>
                 </div>
             </div>
         </div>
@@ -1369,62 +1110,54 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo-text">Convert<span style="color: var(--primary-light);">PRO</span></div>
-                    <p>We build high-converting websites for digital product sellers, course creators, and SaaS businesses. Get 40% more sales or your money back.</p>
+                    <p>Specialists in high-converting websites for digital product sellers worldwide. Helping businesses increase sales through strategic design and development.</p>
                 </div>
                 
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#who-we-help">Who We Help</a></li>
-                        <li><a href="#services">Services</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#process">Our Process</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#services">Digital Product Website</a></li>
-                        <li><a href="#services">Landing Page Design</a></li>
-                        <li><a href="#services">Sales Funnel Setup</a></li>
-                        <li><a href="#services">Payment Integration</a></li>
+                        <li><a href="#portfolio">Digital Product Websites</a></li>
+                        <li><a href="#portfolio">SaaS Platforms</a></li>
+                        <li><a href="#portfolio">Course & LMS</a></li>
+                        <li><a href="#portfolio">E-commerce Solutions</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <h3>Contact</h3>
                     <p><i class="fas fa-envelope"></i> hello@convertpro.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
-                    <p><i class="fab fa-whatsapp"></i> WhatsApp: +91 98765 43210</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Global Remote Team</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri, 9AM-6PM EST</p>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2024 ConvertPRO. All rights reserved. | Specialized in High-Converting Digital Product Websites</p>
+                <p>&copy; 2024 ConvertPRO Digital Agency. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
         // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.querySelector('.nav-links');
         
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.right = '0';
-                navLinks.style.background = 'white';
-                navLinks.style.padding = '20px';
-                navLinks.style.boxShadow = 'var(--shadow)';
-                navLinks.style.gap = '20px';
-            }
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
         });
 
         // Header Scroll Effect
@@ -1439,14 +1172,13 @@
 
         // Animated Counter
         const counters = document.querySelectorAll('.counter');
-        const speed = 200;
-
+        
         const animateCounter = () => {
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
                 const count = +counter.innerText;
-                const increment = target / speed;
-
+                const increment = target / 200;
+                
                 if (count < target) {
                     counter.innerText = Math.ceil(count + increment);
                     setTimeout(animateCounter, 1);
@@ -1465,16 +1197,22 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    if (entry.target.classList.contains('counter')) {
+                    if (entry.target.classList.contains('counter') && entry.target.innerText === '0') {
                         animateCounter();
                     }
-                    entry.target.classList.add('fade-in-up');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, observerOptions);
 
-        // Observe elements
-        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+        // Set initial styles and observe
+        document.querySelectorAll('.counter, .fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1490,26 +1228,54 @@
                         behavior: 'smooth'
                     });
                     
+                    // Update active nav link
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
                     // Close mobile menu if open
                     if (window.innerWidth <= 768) {
-                        navLinks.style.display = 'none';
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                     }
                 }
             });
         });
 
-        // Initialize counters on load
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Initialize
         window.addEventListener('load', () => {
-            counters.forEach(counter => {
-                counter.innerText = '0';
-            });
+            // Set active nav based on scroll position
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-links a');
             
-            // Trigger initial animations
-            document.querySelectorAll('.fade-in-up').forEach(el => {
-                if (el.getBoundingClientRect().top < window.innerHeight) {
-                    el.classList.add('fade-in-up');
-                }
-            });
+            const setActiveLink = () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 100)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', setActiveLink);
         });
     </script>
 </body>
