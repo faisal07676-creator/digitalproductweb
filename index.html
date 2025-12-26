@@ -310,17 +310,146 @@
             border-radius: var(--border-radius-lg);
             overflow: hidden;
             box-shadow: var(--shadow-xl);
+            background: #0F172A;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .hero-image {
+        /* Enhanced Dashboard */
+        .dashboard {
             width: 100%;
             height: 500px;
-            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+            background: #0F172A;
+            position: relative;
+            overflow: hidden;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dashboard-title {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .dashboard-stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .stat-badge {
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--primary-light);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            justify-content: center;
+            gap: 8px;
+        }
+
+        .dashboard-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            flex: 1;
+        }
+
+        .chart-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .chart-title {
             color: white;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .chart {
+            height: 180px;
             position: relative;
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .bar {
+            flex: 1;
+            background: linear-gradient(to top, var(--primary), var(--secondary));
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            min-height: 20px;
+        }
+
+        .bar-1 { height: 70%; }
+        .bar-2 { height: 85%; }
+        .bar-3 { height: 60%; }
+        .bar-4 { height: 95%; }
+        .bar-5 { height: 75%; }
+        .bar-6 { height: 50%; }
+
+        .bar-label {
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.75rem;
+        }
+
+        .metric-container {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            height: 100%;
+        }
+
+        .metric-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+        }
+
+        .metric-value {
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        .metric-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
         }
 
         .floating-element {
@@ -335,6 +464,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            z-index: 2;
         }
 
         .floating-1 {
@@ -344,7 +474,7 @@
         }
 
         .floating-2 {
-            bottom: 60px;
+            bottom: 40px;
             left: 40px;
             animation: float 4s ease-in-out infinite 0.5s;
         }
@@ -371,6 +501,50 @@
 
         .section-title .lead {
             font-size: 1.25rem;
+        }
+
+        /* Features Section */
+        .features {
+            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
+            padding: 100px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 16px;
         }
 
         /* Portfolio Grid */
@@ -719,6 +893,10 @@
                 gap: 60px;
             }
             
+            .dashboard-content {
+                grid-template-columns: 1fr;
+            }
+            
             .portfolio-grid {
                 grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             }
@@ -758,6 +936,26 @@
             .cta-box {
                 padding: 40px;
             }
+            
+            .dashboard {
+                height: 600px;
+                padding: 20px;
+            }
+            
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .dashboard-stats {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .metric-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 480px) {
@@ -776,6 +974,21 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+            
+            .floating-element {
+                padding: 12px 16px;
+                font-size: 0.75rem;
+            }
+            
+            .floating-1 {
+                top: 20px;
+                right: 20px;
+            }
+            
+            .floating-2 {
+                bottom: 20px;
+                left: 20px;
+            }
         }
     </style>
 </head>
@@ -790,6 +1003,7 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#case-studies">Case Studies</a></li>
                     <li><a href="#process">Process</a></li>
@@ -844,20 +1058,137 @@
             
             <div class="hero-visual">
                 <div class="hero-visual-inner">
-                    <div class="hero-image">
-                        <div style="text-align: center; padding: 40px;">
-                            <div style="font-size: 2rem; font-weight: 800; margin-bottom: 16px;">Global Sales Dashboard</div>
-                            <div style="font-size: 1rem; opacity: 0.9;">Multi-currency, multi-language ready</div>
+                    <div class="dashboard">
+                        <div class="dashboard-header">
+                            <div class="dashboard-title">Global Sales Dashboard</div>
+                            <div class="dashboard-stats">
+                                <div class="stat-badge">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>+42% Conversions</span>
+                                </div>
+                                <div class="stat-badge">
+                                    <i class="fas fa-globe-americas"></i>
+                                    <span>28 Countries</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="floating-element floating-1">
-                            <i class="fas fa-chart-line"></i>
-                            <span>+42% Conversions</span>
-                        </div>
-                        <div class="floating-element floating-2">
-                            <i class="fas fa-globe-americas"></i>
-                            <span>International Ready</span>
+                        
+                        <div class="dashboard-content">
+                            <div class="chart-container">
+                                <div class="chart-title">Sales Growth (Monthly)</div>
+                                <div class="chart">
+                                    <div class="bar bar-1">
+                                        <div class="bar-label">Jan</div>
+                                    </div>
+                                    <div class="bar bar-2">
+                                        <div class="bar-label">Feb</div>
+                                    </div>
+                                    <div class="bar bar-3">
+                                        <div class="bar-label">Mar</div>
+                                    </div>
+                                    <div class="bar bar-4">
+                                        <div class="bar-label">Apr</div>
+                                    </div>
+                                    <div class="bar bar-5">
+                                        <div class="bar-label">May</div>
+                                    </div>
+                                    <div class="bar bar-6">
+                                        <div class="bar-label">Jun</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-container">
+                                <div class="chart-title">Key Performance Metrics</div>
+                                <div class="metric-grid">
+                                    <div class="metric-item">
+                                        <div class="metric-value">98%</div>
+                                        <div class="metric-label">Success Rate</div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-value">247</div>
+                                        <div class="metric-label">Projects</div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-value">40%</div>
+                                        <div class="metric-label">Avg. Growth</div>
+                                    </div>
+                                    <div class="metric-item">
+                                        <div class="metric-value">7d</div>
+                                        <div class="metric-label">Avg. Delivery</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="floating-element floating-1">
+                        <i class="fas fa-rocket"></i>
+                        <span>High Converting</span>
+                    </div>
+                    <div class="floating-element floating-2">
+                        <i class="fas fa-bolt"></i>
+                        <span>Fast Delivery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Key Features</h2>
+                <p class="lead">We provide comprehensive solutions tailored for digital product sellers with proven results.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Conversion Optimization</h3>
+                    <p>Every design element is strategically placed to guide visitors toward purchase, increasing conversion rates by 40% on average.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>International Ready</h3>
+                    <p>Multi-currency, multi-language support with localization features to help you sell globally from day one.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Performance</h3>
+                    <p>Lightning-fast website loading times optimized for better user experience and higher search engine rankings.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure Payment Integration</h3>
+                    <p>Seamless integration with Stripe, PayPal, Razorpay and other global payment gateways with automated digital delivery.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile-First Design</h3>
+                    <p>Fully responsive designs that work perfectly on all devices, with mobile optimization as a priority.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Ongoing Support</h3>
+                    <p>30 days of free support post-launch plus training and maintenance packages for long-term success.</p>
                 </div>
             </div>
         </div>
@@ -1117,6 +1448,7 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#case-studies">Case Studies</a></li>
                         <li><a href="#process">Our Process</a></li>
@@ -1276,6 +1608,19 @@
             };
             
             window.addEventListener('scroll', setActiveLink);
+            
+            // Add animation to dashboard bars
+            const bars = document.querySelectorAll('.bar');
+            bars.forEach((bar, index) => {
+                setTimeout(() => {
+                    bar.style.transition = 'height 1s ease';
+                    bar.style.height = bar.classList.contains('bar-1') ? '70%' :
+                                     bar.classList.contains('bar-2') ? '85%' :
+                                     bar.classList.contains('bar-3') ? '60%' :
+                                     bar.classList.contains('bar-4') ? '95%' :
+                                     bar.classList.contains('bar-5') ? '75%' : '50%';
+                }, index * 100);
+            });
         });
     </script>
 </body>
