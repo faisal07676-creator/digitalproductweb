@@ -1,1 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | ConvertPRO - Our Digital Product Website Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --primary-light: #3B82F6;
+            --secondary: #7C3AED;
+            --secondary-dark: #6D28D9;
+            --accent: #EC4899;
+            --dark: #0F172A;
+            --darker: #020617;
+            --light: #F8FAFC;
+            --gray: #64748B;
+            --light-gray: #E2E8F0;
+            --success: #10B981;
+            --danger: #EF4444;
+            --warning: #F59E0B;
+            --card-bg: #FFFFFF;
+            --border-color: rgba(226, 232, 240, 0.5);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.01);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--dark) 0%, #1E293B 100%);
+            --border-radius: 16px;
+            --border-radius-lg: 24px;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #FFFFFF;
+            font-size: 16px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 2.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.875rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--gray);
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 12px 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.02em;
+        }
+
+        .logo-accent {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            position: relative;
+            padding: 8px 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height = 2px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            padding: 180px 0 80px;
+            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            margin-bottom: 16px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+            font-size: 0.875rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumb span {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Portfolio Filters */
+        .portfolio-filters {
+            padding: 60px 0 40px;
+            background: white;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid var(--light-gray);
+            color: var(--gray);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 40px;
+            padding: 40px 0 100px;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
+        }
+
+        .portfolio-image {
+            height: 240px;
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            z-index: 2;
+        }
+
+        .portfolio-content {
+            padding: 32px;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-tag {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .portfolio-stats {
+            display: flex;
+            gap: 24px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .portfolio-stat {
+            text-align: center;
+            flex: 1;
+        }
+
+        .portfolio-stat .number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .portfolio-stat .label {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        /* Portfolio Categories */
+        .portfolio-categories {
+            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
+            padding: 100px 0;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 48px 32px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .testimonial-quote {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 24px;
+            color: var(--gray);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .author-info h4 {
+            margin-bottom: 4px;
+            font-size: 1.125rem;
+        }
+
+        .author-info p {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        /* CTA Section */
+        .cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 48px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .logo-text {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 24px;
+        }
+
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 24px;
+            font-size: 1.25rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-contact p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-contact i {
+            width: 20px;
+            color: var(--primary-light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.25rem; }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 280px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 100px 40px 40px;
+                box-shadow: var(--shadow-xl);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .page-hero {
+                padding: 150px 0 60px;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                padding: 40px 0 60px;
+            }
+            
+            .filter-buttons {
+                gap: 12px;
+            }
+            
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.875rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            
+            .container {
+                padding: 0 16px;
+            }
+            
+            .portfolio-content {
+                padding: 24px;
+            }
+            
+            .portfolio-stats {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .category-card {
+                padding: 32px 24px;
+            }
+            
+            .testimonial-card {
+                padding: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Convert<span class="logo-accent">PRO</span></span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="process.html">Process</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Portfolio</h1>
+            <p class="lead">Showcasing our work with digital product sellers, course creators, and SaaS businesses from around the world.</p>
+            
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Portfolio</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filters -->
+    <section class="portfolio-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="courses">Online Courses</button>
+                <button class="filter-btn" data-filter="saas">SaaS Platforms</button>
+                <button class="filter-btn" data-filter="marketplace">Marketplaces</button>
+                <button class="filter-btn" data-filter="templates">Digital Templates</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid" id="portfolioGrid">
+        <div class="container">
+            <!-- Portfolio Item 1 -->
+            <div class="portfolio-item" data-category="courses">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);">
+                    <div>EduTech Platform</div>
+                    <div class="portfolio-badge">USA</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Online Courses</span>
+                        <span class="portfolio-tag">LMS</span>
+                        <span class="portfolio-tag">International</span>
+                    </div>
+                    <h3>Global Learning Academy</h3>
+                    <p>A comprehensive learning management system for a US-based educational company with multi-language support and integrated payment processing.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+45%</span>
+                            <span class="label">Sales Increase</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">28</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">12</span>
+                            <span class="label">Languages</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-item" data-category="saas">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);">
+                    <div>SaaS Dashboard</div>
+                    <div class="portfolio-badge">UK</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">SaaS</span>
+                        <span class="portfolio-tag">Dashboard</span>
+                        <span class="portfolio-tag">Analytics</span>
+                    </div>
+                    <h3>DataInsight Pro</h3>
+                    <p>A data analytics SaaS platform with subscription management, user onboarding, and real-time dashboard for a UK-based tech startup.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+38%</span>
+                            <span class="label">Conversion Rate</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">21</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">5k</span>
+                            <span class="label">Monthly Users</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-item" data-category="marketplace">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%);">
+                    <div>Digital Marketplace</div>
+                    <div class="portfolio-badge">Australia</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Marketplace</span>
+                        <span class="portfolio-tag">Digital Products</span>
+                        <span class="portfolio-tag">E-commerce</span>
+                    </div>
+                    <h3>DesignAsset Hub</h3>
+                    <p>A digital marketplace for designers selling templates, graphics, and assets with affiliate system and instant download capabilities.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+52%</span>
+                            <span class="label">Revenue Growth</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">35</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">500+</span>
+                            <span class="label">Active Sellers</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 4 -->
+            <div class="portfolio-item" data-category="templates">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #10B981 0%, #047857 100%);">
+                    <div>Template Store</div>
+                    <div class="portfolio-badge">Canada</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Templates</span>
+                        <span class="portfolio-tag">WordPress</span>
+                        <span class="portfolio-tag">Shopify</span>
+                    </div>
+                    <h3>TemplatePro Canada</h3>
+                    <p>A premium template marketplace with automated delivery, licensing system, and user reviews for a Canadian design agency.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+67%</span>
+                            <span class="label">Sales Growth</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">18</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">2k</span>
+                            <span class="label">Daily Downloads</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 5 -->
+            <div class="portfolio-item" data-category="saas">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);">
+                    <div>Project Management</div>
+                    <div class="portfolio-badge">Germany</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">SaaS</span>
+                        <span class="portfolio-tag">Project Management</span>
+                        <span class="portfolio-tag">Team Collaboration</span>
+                    </div>
+                    <h3>TeamFlow Pro</h3>
+                    <p>A project management SaaS platform with real-time collaboration, time tracking, and reporting features for German tech teams.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+43%</span>
+                            <span class="label">User Adoption</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">42</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">150</span>
+                            <span class="label">Teams Using</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 6 -->
+            <div class="portfolio-item" data-category="courses">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #5B21B6 100%);">
+                    <div>Language Learning</div>
+                    <div class="portfolio-badge">France</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Online Courses</span>
+                        <span class="portfolio-tag">Language Learning</span>
+                        <span class="portfolio-tag">Mobile App</span>
+                    </div>
+                    <h3>LinguaMaster Pro</h3>
+                    <p>A language learning platform with interactive courses, progress tracking, and mobile app integration for a French education startup.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+55%</span>
+                            <span class="label">Course Completion</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">31</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">8</span>
+                            <span class="label">Languages</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Categories -->
+    <section class="portfolio-categories">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2>Specialized Categories</h2>
+                <p class="lead">We excel in these specific areas of digital product development</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Online Courses & LMS</h3>
+                    <p>Complete learning management systems with student tracking, course progression, and certification.</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>SaaS Platforms</h3>
+                    <p>Subscription-based software with user management, billing systems, and analytics dashboards.</p>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Digital Marketplaces</h3>
+                    <p>Multi-vendor platforms with seller accounts, commission systems, and digital delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2>Client Testimonials</h2>
+                <p class="lead">What our clients say about working with ConvertPRO</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        "ConvertPRO transformed our online course platform. Our sales increased by 45% within the first month of launching the new website."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JS</div>
+                        <div class="author-info">
+                            <h4>John Smith</h4>
+                            <p>CEO, Global Learning Academy</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        "The team at ConvertPRO understood our SaaS needs perfectly. The dashboard they built has become our most valuable tool for user engagement."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div class="author-info">
+                            <h4>Sarah Rodriguez</h4>
+                            <p>Product Manager, DataInsight Pro</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        "From concept to launch, ConvertPRO delivered beyond our expectations. Our marketplace now serves customers in 15 countries seamlessly."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <h4>Michael Kim</h4>
+                            <p>Founder, DesignAsset Hub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to See Your Project Here?</h2>
+            <p>Let's work together to create a high-converting website for your digital products.</p>
+            
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+                <a href="contact.html" class="btn btn-dark">
+                    <i class="fas fa-calendar"></i> Start Your Project
+                </a>
+                <a href="process.html" class="btn btn-outline" style="background: white; color: var(--primary);">
+                    <i class="fas fa-info-circle"></i> Learn Our Process
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">Convert<span style="color: var(--primary-light);">PRO</span></div>
+                    <p>Specialists in high-converting websites for digital product sellers worldwide. Helping businesses increase sales through strategic design and development.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="portfolio.html">Digital Product Websites</a></li>
+                        <li><a href="portfolio.html">SaaS Platforms</a></li>
+                        <li><a href="portfolio.html">Course & LMS</a></li>
+                        <li><a href="portfolio.html">E-commerce Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> hello@convertpro.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Global Remote Team</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri, 9AM-6PM EST</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 ConvertPRO Digital Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Portfolio Filtering
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            // Set active nav based on current page
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+            
+            // Filter functionality
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Animate portfolio items on load
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            portfolioItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
