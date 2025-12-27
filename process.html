@@ -1,1 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Process | ConvertPRO - How We Create High-Converting Websites</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1D4ED8;
+            --primary-light: #3B82F6;
+            --secondary: #7C3AED;
+            --secondary-dark: #6D28D9;
+            --accent: #EC4899;
+            --dark: #0F172A;
+            --darker: #020617;
+            --light: #F8FAFC;
+            --gray: #64748B;
+            --light-gray: #E2E8F0;
+            --success: #10B981;
+            --danger: #EF4444;
+            --warning: #F59E0B;
+            --card-bg: #FFFFFF;
+            --border-color: rgba(226, 232, 240, 0.5);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.01);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--dark) 0%, #1E293B 100%);
+            --border-radius: 16px;
+            --border-radius-lg: 24px;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #FFFFFF;
+            font-size: 16px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 2.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.875rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: var(--gray);
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 12px 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -0.02em;
+        }
+
+        .logo-accent {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            position: relative;
+            padding: 8px 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a.active:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            padding: 180px 0 80px;
+            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            margin-bottom: 16px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+            font-size: 0.875rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumb span {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Process Overview */
+        .process-overview {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .overview-card {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .overview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .overview-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 24px;
+        }
+
+        /* Process Timeline */
+        .process-timeline {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
+        }
+
+        .timeline-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            height: 100%;
+            width: 2px;
+            background: var(--light-gray);
+            z-index: 1;
+        }
+
+        .timeline-step {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 64px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            flex-shrink: 0;
+            z-index: 3;
+        }
+
+        .step-content {
+            flex: 1;
+            padding: 24px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .step-content h3 {
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+
+        .step-details {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .step-details li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            color: var(--gray);
+        }
+
+        .step-details li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .step-duration {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+
+        /* Process Benefits */
+        .process-benefits {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .benefit-card {
+            padding: 40px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        /* Timeline Comparison */
+        .timeline-comparison {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
+        }
+
+        .comparison-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .comparison-row {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .comparison-label {
+            flex: 1;
+            text-align: right;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .comparison-bar {
+            flex: 2;
+            height: 40px;
+            background: var(--light-gray);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            transition: width 1.5s ease;
+            width: 0;
+        }
+
+        .bar-label {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 24px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background: rgba(37, 99, 235, 0.05);
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .faq-icon {
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 24px 24px;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* CTA Section */
+        .cta {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 48px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .logo-text {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 24px;
+        }
+
+        .footer-links h3 {
+            color: white;
+            margin-bottom: 24px;
+            font-size: 1.25rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-contact p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-contact i {
+            width: 20px;
+            color: var(--primary-light);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.25rem; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 280px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 100px 40px 40px;
+                box-shadow: var(--shadow-xl);
+                z-index: 1000;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .page-hero {
+                padding: 150px 0 60px;
+            }
+            
+            .timeline-container:before {
+                left: 20px;
+            }
+            
+            .timeline-step {
+                gap: 20px;
+            }
+            
+            .step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+            }
+            
+            .comparison-row {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+            
+            .comparison-label {
+                text-align: center;
+            }
+            
+            .comparison-bar {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            
+            .container {
+                padding: 0 16px;
+            }
+            
+            .step-content {
+                padding: 20px;
+            }
+            
+            .overview-card,
+            .benefit-card {
+                padding: 32px;
+            }
+            
+            .faq-question {
+                padding: 20px;
+            }
+            
+            .faq-question h3 {
+                font-size: 1.125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">Convert<span class="logo-accent">PRO</span></span>
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="process.html" class="active">Process</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Process</h1>
+            <p class="lead">A structured approach to ensure quality, efficiency, and results for every project.</p>
+            
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Process</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Overview -->
+    <section class="process-overview">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2>The ConvertPRO Methodology</h2>
+                <p class="lead">Our proven 4-step process ensures your digital product website delivers maximum conversions and growth.</p>
+            </div>
+            
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="overview-number">1</div>
+                    <h3>Discovery</h3>
+                    <p>Understanding your business, audience, and goals to create a winning strategy.</p>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-number">2</div>
+                    <h3>Design</h3>
+                    <p>Creating conversion-focused designs with data-driven user experience.</p>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-number">3</div>
+                    <h3>Development</h3>
+                    <p>Building with clean code, fast performance, and seamless integrations.</p>
+                </div>
+                
+                <div class="overview-card">
+                    <div class="overview-number">4</div>
+                    <h3>Launch & Support</h3>
+                    <p>Thorough testing, optimization, and ongoing support for success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="process-timeline">
+        <div class="container">
+            <div class="timeline-container">
+                <!-- Step 1 -->
+                <div class="timeline-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discovery & Strategy</h3>
+                        <p>We begin by understanding your business, target audience, and goals to create a customized strategy for your digital product website.</p>
+                        
+                        <ul class="step-details">
+                            <li>Initial consultation and requirements gathering</li>
+                            <li>Competitor analysis and market research</li>
+                            <li>Target audience persona development</li>
+                            <li>Conversion goal setting and KPIs</li>
+                            <li>Project roadmap and timeline creation</li>
+                        </ul>
+                        
+                        <span class="step-duration">3-5 Days</span>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="timeline-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Design & Prototyping</h3>
+                        <p>Our designers create conversion-focused mockups and interactive prototypes, incorporating best practices for digital product sales.</p>
+                        
+                        <ul class="step-details">
+                            <li>Information architecture and sitemap</li>
+                            <li>Wireframing and user flow mapping</li>
+                            <li>UI/UX design with conversion optimization</li>
+                            <li>Interactive prototype creation</li>
+                            <li>Design review and iteration</li>
+                        </ul>
+                        
+                        <span class="step-duration">5-7 Days</span>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="timeline-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Development</h3>
+                        <p>Our developers build your website with clean code, fast performance, and seamless integration with payment gateways and delivery systems.</p>
+                        
+                        <ul class="step-details">
+                            <li>Front-end development (HTML, CSS, JavaScript)</li>
+                            <li>Back-end development and database setup</li>
+                            <li>Payment gateway integration</li>
+                            <li>Digital delivery system implementation</li>
+                            <li>Mobile responsiveness and testing</li>
+                        </ul>
+                        
+                        <span class="step-duration">7-10 Days</span>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="timeline-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Testing & Launch</h3>
+                        <p>We thoroughly test across devices and browsers, optimize for conversions, and launch your website with ongoing support.</p>
+                        
+                        <ul class="step-details">
+                            <li>Cross-browser and cross-device testing</li>
+                            <li>Performance optimization</li>
+                            <li>Security audit and SSL implementation</li>
+                            <li>SEO setup and optimization</li>
+                            <li>Launch and post-launch support</li>
+                        </ul>
+                        
+                        <span class="step-duration">3-5 Days</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Benefits -->
+    <section class="process-benefits">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2>Why Our Process Works</h2>
+                <p class="lead">Key benefits of following our structured approach</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Clear Communication</h3>
+                    <p>Regular updates and transparent communication ensure you're always informed about project progress.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data-Driven Decisions</h3>
+                    <p>Every design and development decision is backed by data and conversion optimization principles.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Predictable Timelines</h3>
+                    <p>Our structured process ensures projects are delivered on time, with clear milestones and deadlines.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>Multiple rounds of testing ensure your website works perfectly across all devices and browsers.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Readiness</h3>
+                    <p>Built-in international features ensure your website is ready to sell worldwide from day one.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Ongoing Support</h3>
+                    <p>30 days of free support post-launch ensures your website continues to perform optimally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Comparison -->
+    <section class="timeline-comparison">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2>Project Timeline Comparison</h2>
+                <p class="lead">See how our efficient process compares to traditional development</p>
+            </div>
+            
+            <div class="comparison-container">
+                <div class="comparison-row">
+                    <div class="comparison-label">ConvertPRO Process</div>
+                    <div class="comparison-bar">
+                        <div class="bar-fill" style="width: 70%;">
+                            <span class="bar-label">18-27 Days</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comparison-label">Traditional Development</div>
+                    <div class="comparison-bar">
+                        <div class="bar-fill" style="width: 100%; background: var(--gray);">
+                            <span class="bar-label">45-60+ Days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <p>Our process is 60% faster than traditional web development approaches.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2>Frequently Asked Questions</h2>
+                <p class="lead">Common questions about our process and methodology</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does the entire process take?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our typical project timeline is 18-27 days from start to launch, depending on the complexity of your requirements. This includes all four phases: Discovery (3-5 days), Design (5-7 days), Development (7-10 days), and Testing & Launch (3-5 days).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What information do you need to start the discovery phase?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We'll need details about your business goals, target audience, existing branding (if any), competitors, and specific features you want in your website. We provide a detailed questionnaire to gather all necessary information during our initial consultation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How involved do I need to be during the process?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We keep you involved at key milestones while handling the heavy lifting. You'll participate in initial discovery sessions, provide feedback during design reviews, and be involved in testing before launch. We aim for a collaborative approach without overwhelming you.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What happens after the website launches?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide 30 days of free support post-launch to address any issues and make minor adjustments. After this period, we offer maintenance packages for ongoing updates, security monitoring, and performance optimization.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can you work with my existing branding and design elements?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We can incorporate your existing branding, colors, and design elements while optimizing them for better conversions. If you don't have existing branding, we can create a complete visual identity as part of the process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's follow our proven process to create a high-converting website for your digital products.</p>
+            
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+                <a href="contact.html" class="btn btn-dark">
+                    <i class="fas fa-calendar"></i> Start the Process
+                </a>
+                <a href="portfolio.html" class="btn btn-outline" style="background: white; color: var(--primary);">
+                    <i class="fas fa-eye"></i> See Results
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-text">Convert<span style="color: var(--primary-light);">PRO</span></div>
+                    <p>Specialists in high-converting websites for digital product sellers worldwide. Helping businesses increase sales through strategic design and development.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="process.html">Our Process</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="portfolio.html">Digital Product Websites</a></li>
+                        <li><a href="portfolio.html">SaaS Platforms</a></li>
+                        <li><a href="portfolio.html">Course & LMS</a></li>
+                        <li><a href="portfolio.html">E-commerce Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> hello@convertpro.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Global Remote Team</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri, 9AM-6PM EST</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 ConvertPRO Digital Agency. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Set active nav based on current page
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+            
+            // Animate timeline bars
+            const barFills = document.querySelectorAll('.bar-fill');
+            barFills.forEach(bar => {
+                setTimeout(() => {
+                    bar.style.width = bar.style.width;
+                }, 500);
+            });
+            
+            // FAQ functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Animate timeline steps
+            const timelineSteps = document.querySelectorAll('.timeline-step');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateX(0)';
+                        }, index * 200);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            timelineSteps.forEach(step => {
+                step.style.opacity = '0';
+                step.style.transform = 'translateX(-20px)';
+                step.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(step);
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && window.innerWidth <= 768) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
