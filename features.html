@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -54,7 +54,7 @@
             line-height: 1.6;
             overflow-x: hidden;
             background-color: #FFFFFF;
-            font-size: 16px;
+            font-size: clamp(15px, 1.5vw, 16px);
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -65,34 +65,39 @@
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2.25rem, 4vw + 1rem, 3.5rem);
             letter-spacing: -0.02em;
         }
 
         h2 {
-            font-size: 2.75rem;
+            font-size: clamp(1.75rem, 3vw + 0.75rem, 2.75rem);
             letter-spacing: -0.01em;
         }
 
         h3 {
-            font-size: 1.875rem;
+            font-size: clamp(1.375rem, 2vw + 0.5rem, 1.875rem);
+        }
+
+        h4 {
+            font-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.5rem);
         }
 
         p {
-            font-size: 1.125rem;
+            font-size: clamp(0.9375rem, 1vw + 0.5rem, 1.125rem);
             color: var(--gray);
         }
 
         .lead {
-            font-size: 1.25rem;
+            font-size: clamp(1rem, 1.25vw + 0.5rem, 1.25rem);
             font-weight: 500;
+            line-height: 1.4;
         }
 
         .container {
             width: 100%;
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 clamp(16px, 3vw, 24px);
         }
 
         /* Header */
@@ -106,12 +111,12 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
-            padding: 20px 0;
+            padding: clamp(12px, 2vw, 20px) 0;
             transition: var(--transition);
         }
 
         header.scrolled {
-            padding: 12px 0;
+            padding: clamp(8px, 1vw, 12px) 0;
             box-shadow: var(--shadow-md);
         }
 
@@ -128,7 +133,7 @@
         }
 
         .logo-text {
-            font-size: 1.875rem;
+            font-size: clamp(1.25rem, 2vw + 0.5rem, 1.875rem);
             font-weight: 800;
             color: var(--dark);
             letter-spacing: -0.02em;
@@ -143,7 +148,7 @@
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: clamp(16px, 2.5vw, 40px);
             list-style: none;
         }
 
@@ -151,10 +156,11 @@
             text-decoration: none;
             color: var(--dark);
             font-weight: 600;
-            font-size: 1rem;
+            font-size: clamp(0.8125rem, 0.75vw + 0.5rem, 1rem);
             position: relative;
             padding: 8px 0;
             transition: var(--transition);
+            white-space: nowrap;
         }
 
         .nav-links a:hover {
@@ -191,8 +197,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 16px 32px;
-            font-size: 1rem;
+            padding: clamp(12px, 1vw, 16px) clamp(20px, 2vw, 32px);
+            font-size: clamp(0.8125rem, 0.75vw + 0.5rem, 1rem);
             font-weight: 600;
             border-radius: 12px;
             text-decoration: none;
@@ -202,6 +208,7 @@
             position: relative;
             overflow: hidden;
             gap: 8px;
+            white-space: nowrap;
         }
 
         .btn-primary {
@@ -228,23 +235,36 @@
             box-shadow: var(--shadow);
         }
 
+        .btn-dark {
+            background: var(--dark);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-dark:hover {
+            background: var(--darker);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
         /* Page Hero */
         .page-hero {
-            padding: 180px 0 80px;
+            padding: clamp(120px, 15vw, 180px) 0 clamp(40px, 5vw, 80px);
             background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
             text-align: center;
         }
 
         .page-hero h1 {
-            margin-bottom: 16px;
+            margin-bottom: clamp(8px, 1vw, 16px);
         }
 
         .breadcrumb {
             display: flex;
             justify-content: center;
             gap: 8px;
-            margin-top: 24px;
-            font-size: 0.875rem;
+            margin-top: clamp(12px, 2vw, 24px);
+            font-size: clamp(0.75rem, 0.5vw + 0.5rem, 0.875rem);
+            flex-wrap: wrap;
         }
 
         .breadcrumb a {
@@ -265,15 +285,15 @@
         /* Features Grid */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            padding: 100px 0;
+            grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+            gap: clamp(20px, 3vw, 40px);
+            padding: clamp(40px, 8vw, 100px) 0;
         }
 
         .feature-card {
             background: white;
             border-radius: var(--border-radius);
-            padding: 48px;
+            padding: clamp(24px, 4vw, 48px);
             box-shadow: var(--shadow);
             transition: var(--transition);
             border: 1px solid var(--border-color);
@@ -288,62 +308,76 @@
         }
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
+            width: clamp(60px, 6vw, 80px);
+            height: clamp(60px, 6vw, 80px);
             background: var(--gradient-primary);
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 32px;
+            margin-bottom: clamp(20px, 3vw, 32px);
             color: white;
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem);
         }
 
         .feature-card h3 {
-            margin-bottom: 16px;
+            margin-bottom: clamp(8px, 1vw, 16px);
             color: var(--dark);
         }
 
         .feature-card p {
-            margin-bottom: 24px;
+            margin-bottom: clamp(12px, 2vw, 24px);
             color: var(--gray);
         }
 
         .feature-benefits {
             list-style: none;
-            margin-top: 24px;
+            margin-top: clamp(16px, 2vw, 24px);
         }
 
         .feature-benefits li {
             display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
+            align-items: flex-start;
+            gap: clamp(8px, 1vw, 12px);
+            margin-bottom: clamp(6px, 1vw, 12px);
             color: var(--gray);
+            font-size: clamp(0.8125rem, 0.75vw + 0.5rem, 1rem);
+            line-height: 1.4;
         }
 
         .feature-benefits i {
             color: var(--success);
             font-size: 0.875rem;
+            flex-shrink: 0;
+            margin-top: 2px;
         }
 
         /* Feature Categories */
         .feature-categories {
             background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
-            padding: 100px 0;
+            padding: clamp(40px, 8vw, 100px) 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: clamp(30px, 5vw, 60px);
+        }
+
+        .section-title .lead {
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+            gap: clamp(20px, 3vw, 32px);
         }
 
         .category-card {
             background: white;
             border-radius: var(--border-radius);
-            padding: 40px;
+            padding: clamp(24px, 4vw, 40px);
             box-shadow: var(--shadow);
             transition: var(--transition);
             border: 1px solid var(--border-color);
@@ -355,43 +389,53 @@
         }
 
         .category-icon {
-            width: 60px;
-            height: 60px;
+            width: clamp(50px, 5vw, 60px);
+            height: clamp(50px, 5vw, 60px);
             background: var(--gradient-primary);
             border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 24px;
+            margin-bottom: clamp(12px, 2vw, 24px);
             color: white;
-            font-size: 1.5rem;
+            font-size: clamp(1.125rem, 1.5vw + 0.25rem, 1.5rem);
+        }
+
+        .category-card h3 {
+            margin-bottom: clamp(6px, 1vw, 12px);
+        }
+
+        .category-card p {
+            font-size: clamp(0.8125rem, 0.75vw + 0.5rem, 1rem);
         }
 
         /* Comparison Section */
         .comparison {
-            padding: 100px 0;
+            padding: clamp(40px, 8vw, 100px) 0;
             background: white;
         }
 
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 40px;
+            margin-top: clamp(24px, 4vw, 40px);
             box-shadow: var(--shadow);
             border-radius: var(--border-radius);
             overflow: hidden;
+            font-size: clamp(0.8125rem, 0.75vw + 0.5rem, 1rem);
         }
 
         .comparison-table th {
             background: var(--gradient-primary);
             color: white;
-            padding: 24px;
+            padding: clamp(12px, 2vw, 24px);
             text-align: left;
             font-weight: 600;
+            font-size: clamp(0.875rem, 0.75vw + 0.5rem, 1rem);
         }
 
         .comparison-table td {
-            padding: 20px 24px;
+            padding: clamp(12px, 2vw, 20px) clamp(12px, 2vw, 24px);
             border-bottom: 1px solid var(--border-color);
         }
 
@@ -413,51 +457,60 @@
         .cta {
             background: var(--gradient-primary);
             color: white;
-            padding: 120px 0;
+            padding: clamp(60px, 10vw, 120px) 0;
             text-align: center;
         }
 
         .cta h2 {
             color: white;
-            margin-bottom: 16px;
+            margin-bottom: clamp(8px, 1vw, 16px);
         }
 
         .cta p {
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 32px;
+            margin-bottom: clamp(20px, 3vw, 32px);
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: clamp(12px, 2vw, 16px);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: clamp(20px, 3vw, 32px);
         }
 
         /* Footer */
         footer {
             background: var(--dark);
             color: white;
-            padding: 80px 0 40px;
+            padding: clamp(40px, 8vw, 80px) 0 clamp(24px, 5vw, 40px);
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 48px;
-            margin-bottom: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+            gap: clamp(24px, 4vw, 48px);
+            margin-bottom: clamp(30px, 6vw, 60px);
         }
 
         .footer-brand .logo-text {
             color: white;
-            margin-bottom: 16px;
+            margin-bottom: clamp(8px, 1vw, 16px);
         }
 
         .footer-brand p {
             color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 24px;
+            margin-bottom: clamp(12px, 2vw, 24px);
+            font-size: clamp(0.8125rem, 0.75vw + 0.5rem, 1rem);
         }
 
         .footer-links h3 {
             color: white;
-            margin-bottom: 24px;
-            font-size: 1.25rem;
+            margin-bottom: clamp(12px, 2vw, 24px);
+            font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
         }
 
         .footer-links ul {
@@ -465,48 +518,58 @@
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: clamp(6px, 1vw, 12px);
         }
 
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: var(--transition);
+            font-size: clamp(0.8125rem, 0.75vw + 0.5rem, 1rem);
         }
 
         .footer-links a:hover {
             color: white;
         }
 
+        .footer-contact h3 {
+            color: white;
+            margin-bottom: clamp(12px, 2vw, 24px);
+            font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
+        }
+
         .footer-contact p {
             color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 12px;
+            margin-bottom: clamp(6px, 1vw, 12px);
             display: flex;
             align-items: center;
             gap: 12px;
+            font-size: clamp(0.8125rem, 0.75vw + 0.5rem, 1rem);
         }
 
         .footer-contact i {
             width: 20px;
             color: var(--primary-light);
+            flex-shrink: 0;
         }
 
         .copyright {
             text-align: center;
-            padding-top: 40px;
+            padding-top: clamp(20px, 4vw, 40px);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.5);
-            font-size: 0.875rem;
+            font-size: clamp(0.75rem, 0.5vw + 0.5rem, 0.875rem);
         }
 
         /* Responsive Design */
         @media (max-width: 1024px) {
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2.25rem; }
-            
             .features-grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
                 gap: 32px;
+            }
+            
+            .feature-benefits li {
+                font-size: clamp(0.875rem, 1vw, 1rem);
             }
         }
 
@@ -516,17 +579,23 @@
                 position: fixed;
                 top: 0;
                 right: 0;
-                width: 280px;
+                width: min(280px, 80%);
                 height: 100vh;
                 background: white;
                 flex-direction: column;
-                padding: 100px 40px 40px;
+                padding: 100px clamp(20px, 5vw, 40px) 40px;
                 box-shadow: var(--shadow-xl);
                 z-index: 1000;
+                gap: 24px;
             }
             
             .nav-links.active {
                 display: flex;
+            }
+            
+            .nav-links a {
+                font-size: 1rem;
+                padding: 12px 0;
             }
             
             .mobile-menu-btn {
@@ -534,11 +603,11 @@
             }
             
             .page-hero {
-                padding: 150px 0 60px;
+                padding: 100px 0 40px;
             }
             
             .features-grid {
-                padding: 60px 0;
+                padding: 40px 0;
             }
             
             .comparison-table {
@@ -548,26 +617,152 @@
             
             .comparison-table th,
             .comparison-table td {
-                min-width: 200px;
+                min-width: 150px;
+                padding: 12px 16px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+            
+            .feature-benefits li {
+                font-size: 0.875rem;
             }
         }
 
         @media (max-width: 480px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
+            h1 {
+                font-size: clamp(1.75rem, 5vw, 2.5rem);
+            }
+            
+            h2 {
+                font-size: clamp(1.5rem, 4vw, 2rem);
+            }
+            
+            h3 {
+                font-size: clamp(1.25rem, 3vw, 1.5rem);
+            }
             
             .container {
                 padding: 0 16px;
             }
             
             .feature-card {
-                padding: 32px;
+                padding: 20px;
             }
             
             .feature-icon {
-                width: 60px;
-                height: 60px;
-                font-size: 1.5rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+                border-radius: 16px;
+            }
+            
+            .feature-card h3 {
+                font-size: 1.25rem;
+            }
+            
+            .feature-card p {
+                font-size: 0.875rem;
+            }
+            
+            .feature-benefits li {
+                font-size: 0.8125rem;
+            }
+            
+            .category-card {
+                padding: 20px;
+            }
+            
+            .category-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+            
+            .footer-grid {
+                gap: 32px;
+            }
+            
+            .lead {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .feature-card {
+                padding: 18px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .category-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .logo-text {
+                font-size: 1.25rem;
+            }
+            
+            .lead {
+                font-size: 0.9375rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            header, .cta, .mobile-menu-btn {
+                display: none;
+            }
+            
+            body {
+                font-size: 12pt;
+            }
+            
+            .page-hero {
+                padding: 40px 0;
+            }
+            
+            .feature-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* High Contrast Mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary: #0044CC;
+                --secondary: #5A00CC;
+                --dark: #000000;
+                --gray: #333333;
             }
         }
     </style>
@@ -577,7 +772,7 @@
     <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <span class="logo-text">Convert<span class="logo-accent">PRO</span></span>
+                <span class="logo-text">Growthvia<span class="logo-accent">Digital</span></span>
             </a>
             
             <nav>
@@ -715,7 +910,7 @@
     <!-- Feature Categories -->
     <section class="feature-categories">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 60px;">
+            <div class="section-title">
                 <h2>Feature Categories</h2>
                 <p class="lead">Organized by functionality to meet all your digital product selling needs</p>
             </div>
@@ -751,7 +946,7 @@
     <!-- Comparison Section -->
     <section class="comparison">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 60px;">
+            <div class="section-title">
                 <h2>Compare Our Features</h2>
                 <p class="lead">See how Growthvia Digital stands out from traditional web development</p>
             </div>
@@ -806,7 +1001,7 @@
             <h2>Ready to Leverage Our Features?</h2>
             <p>Get started with our comprehensive feature set designed specifically for digital product success.</p>
             
-            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+            <div class="cta-buttons">
                 <a href="https://calendly.com/swatirajput868443/30min" class="btn btn-dark">
                     <i class="fas fa-calendar"></i> Book a Demo
                 </a>
@@ -849,7 +1044,7 @@
                 
                 <div class="footer-contact">
                     <h3>Contact</h3>
-                    <p><i class="fas fa-envelope"></i> hello@convertpro.com</p>
+                    <p><i class="fas fa-envelope"></i> hello@growthviadigital.com</p>
                     <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
                     <p><i class="fas fa-map-marker-alt"></i> Global Remote Team</p>
                     <p><i class="fas fa-clock"></i> Mon-Fri, 9AM-6PM EST</p>
@@ -931,6 +1126,42 @@
                 card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(card);
             });
+        });
+
+        // Adjust text sizes dynamically for very small screens
+        function adjustTextForScreen() {
+            const screenWidth = window.innerWidth;
+            const body = document.body;
+            
+            if (screenWidth < 400) {
+                // Further reduce text sizes for very small screens
+                document.querySelectorAll('.feature-benefits li').forEach(item => {
+                    item.style.fontSize = '0.75rem';
+                });
+                
+                document.querySelectorAll('.category-card p').forEach(p => {
+                    p.style.fontSize = '0.75rem';
+                });
+            } else if (screenWidth < 480) {
+                // Adjust for small screens
+                document.querySelectorAll('.feature-benefits li').forEach(item => {
+                    item.style.fontSize = '0.8125rem';
+                });
+            } else {
+                // Reset to default
+                document.querySelectorAll('.feature-benefits li, .category-card p').forEach(el => {
+                    el.style.fontSize = '';
+                });
+            }
+        }
+
+        // Run on load and resize
+        window.addEventListener('load', adjustTextForScreen);
+        window.addEventListener('resize', adjustTextForScreen);
+        
+        // Handle orientation change
+        window.addEventListener('orientationchange', () => {
+            setTimeout(adjustTextForScreen, 100);
         });
     </script>
 </body>
