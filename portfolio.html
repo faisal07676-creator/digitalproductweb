@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Gowthvia Digital - Our Digital Product Website Projects</title>
+    <title>Digital Product Portfolio | ConvertPRO - Expert Digital Product Websites</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,7 +102,7 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
@@ -171,7 +171,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height = 2px;
+            height: 2px;
             background: var(--primary);
             border-radius: 2px;
         }
@@ -228,6 +228,17 @@
             box-shadow: var(--shadow);
         }
 
+        .btn-dark {
+            background: var(--dark);
+            color: white;
+        }
+
+        .btn-dark:hover {
+            background: var(--darker);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
         /* Page Hero */
         .page-hero {
             padding: 180px 0 80px;
@@ -237,6 +248,14 @@
 
         .page-hero h1 {
             margin-bottom: 16px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-hero .lead {
+            max-width: 700px;
+            margin: 0 auto 32px;
         }
 
         .breadcrumb {
@@ -262,10 +281,101 @@
             font-weight: 600;
         }
 
+        /* Digital Product Categories */
+        .product-categories {
+            padding: 80px 0 40px;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            margin-bottom: 16px;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 48px 32px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .category-stats {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .category-stat {
+            text-align: center;
+        }
+
+        .category-stat .number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .category-stat .label {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
         /* Portfolio Filters */
         .portfolio-filters {
             padding: 60px 0 40px;
             background: white;
+            position: sticky;
+            top: 80px;
+            z-index: 100;
         }
 
         .filter-buttons {
@@ -330,6 +440,12 @@
             overflow: hidden;
         }
 
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .portfolio-badge {
             position: absolute;
             top: 20px;
@@ -388,45 +504,53 @@
             color: var(--gray);
         }
 
-        /* Portfolio Categories */
-        .portfolio-categories {
-            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
+        /* Process Section */
+        .process-section {
             padding: 100px 0;
+            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
         }
 
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 60px;
         }
 
-        .category-card {
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--light-gray);
+            z-index: 1;
+        }
+
+        .process-step {
+            position: relative;
+            z-index: 2;
             background: white;
+            padding: 32px;
             border-radius: var(--border-radius);
-            padding: 48px 32px;
             text-align: center;
             box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid var(--border-color);
+            width: 23%;
         }
 
-        .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--primary-light);
-        }
-
-        .category-icon {
+        .step-number {
             width: 80px;
             height: 80px;
             background: var(--gradient-primary);
-            border-radius: 20px;
+            color: white;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 24px;
-            color: white;
             font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 24px;
         }
 
         /* Testimonials */
@@ -589,6 +713,19 @@
                 grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
                 gap: 32px;
             }
+            
+            .process-steps {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            
+            .process-step {
+                width: 48%;
+            }
+            
+            .process-steps::before {
+                display: none;
+            }
         }
 
         @media (max-width: 768px) {
@@ -631,6 +768,14 @@
                 padding: 10px 20px;
                 font-size: 0.875rem;
             }
+            
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-step {
+                width: 100%;
+            }
         }
 
         @media (max-width: 480px) {
@@ -656,6 +801,12 @@
             
             .testimonial-card {
                 padding: 32px;
+            }
+            
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -688,13 +839,139 @@
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>Our Portfolio expert digital product website design </h1>
-            <p class="lead">Showcasing our work with digital product sellers, course creators, and SaaS businesses from around the world.</p>
+            <h1>Digital Product Website Design Portfolio</h1>
+            <p class="lead">Specializing in high-converting websites for digital product sellers, course creators, SaaS companies, and digital marketplaces.</p>
             
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <span>/</span>
                 <span>Portfolio</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Product Categories -->
+    <section class="product-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Digital Product Specialties</h2>
+                <p class="lead">We build websites specifically designed to sell these types of digital products</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Online Courses & LMS</h3>
+                    <p>Complete learning management systems with student tracking, course progression, certifications, and integrated payment processing.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">45+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+62%</span>
+                            <span class="label">Avg. Sales</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>SaaS Platforms</h3>
+                    <p>Subscription-based software with user management, billing systems, analytics dashboards, and onboarding flows.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">32+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+58%</span>
+                            <span class="label">Avg. Conversion</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Digital Marketplaces</h3>
+                    <p>Multi-vendor platforms with seller accounts, commission systems, digital delivery, and affiliate marketing.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">28+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+71%</span>
+                            <span class="label">Avg. Revenue</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <h3>Digital Templates</h3>
+                    <p>Websites for selling templates (WordPress, Figma, Canva) with automated delivery, licensing, and preview systems.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">37+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+65%</span>
+                            <span class="label">Avg. Growth</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>E-books & Publications</h3>
+                    <p>Websites for selling digital books, reports, and publications with sample chapters, reviews, and secure downloads.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">24+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+55%</span>
+                            <span class="label">Avg. Sales</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Digital Assets</h3>
+                    <p>Platforms for selling graphics, fonts, stock media, and design assets with search, filtering, and licensing options.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">19+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+68%</span>
+                            <span class="label">Avg. Revenue</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -708,6 +985,8 @@
                 <button class="filter-btn" data-filter="saas">SaaS Platforms</button>
                 <button class="filter-btn" data-filter="marketplace">Marketplaces</button>
                 <button class="filter-btn" data-filter="templates">Digital Templates</button>
+                <button class="filter-btn" data-filter="ebooks">E-books</button>
+                <button class="filter-btn" data-filter="assets">Digital Assets</button>
             </div>
         </div>
     </section>
@@ -719,16 +998,16 @@
             <div class="portfolio-item" data-category="courses">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);">
                     <div>EduTech Platform</div>
-                    <div class="portfolio-badge">USA</div>
+                    <div class="portfolio-badge">Online Course</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
-                        <span class="portfolio-tag">Online Courses</span>
                         <span class="portfolio-tag">LMS</span>
-                        <span class="portfolio-tag">International</span>
+                        <span class="portfolio-tag">Multi-language</span>
+                        <span class="portfolio-tag">Payment Integration</span>
                     </div>
                     <h3>Global Learning Academy</h3>
-                    <p>A comprehensive learning management system for a US-based educational company with multi-language support and integrated payment processing.</p>
+                    <p>A comprehensive learning management system for a US-based educational company with 12 language support and integrated payment processing.</p>
                     
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
@@ -757,13 +1036,13 @@
             <div class="portfolio-item" data-category="saas">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);">
                     <div>SaaS Dashboard</div>
-                    <div class="portfolio-badge">UK</div>
+                    <div class="portfolio-badge">SaaS Platform</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
-                        <span class="portfolio-tag">SaaS</span>
                         <span class="portfolio-tag">Dashboard</span>
                         <span class="portfolio-tag">Analytics</span>
+                        <span class="portfolio-tag">Subscription</span>
                     </div>
                     <h3>DataInsight Pro</h3>
                     <p>A data analytics SaaS platform with subscription management, user onboarding, and real-time dashboard for a UK-based tech startup.</p>
@@ -795,13 +1074,13 @@
             <div class="portfolio-item" data-category="marketplace">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%);">
                     <div>Digital Marketplace</div>
-                    <div class="portfolio-badge">Australia</div>
+                    <div class="portfolio-badge">Marketplace</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
-                        <span class="portfolio-tag">Marketplace</span>
-                        <span class="portfolio-tag">Digital Products</span>
-                        <span class="portfolio-tag">E-commerce</span>
+                        <span class="portfolio-tag">Multi-vendor</span>
+                        <span class="portfolio-tag">Affiliate System</span>
+                        <span class="portfolio-tag">Instant Delivery</span>
                     </div>
                     <h3>DesignAsset Hub</h3>
                     <p>A digital marketplace for designers selling templates, graphics, and assets with affiliate system and instant download capabilities.</p>
@@ -833,13 +1112,13 @@
             <div class="portfolio-item" data-category="templates">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #10B981 0%, #047857 100%);">
                     <div>Template Store</div>
-                    <div class="portfolio-badge">Canada</div>
+                    <div class="portfolio-badge">Digital Templates</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
-                        <span class="portfolio-tag">Templates</span>
                         <span class="portfolio-tag">WordPress</span>
                         <span class="portfolio-tag">Shopify</span>
+                        <span class="portfolio-tag">Automated Delivery</span>
                     </div>
                     <h3>TemplatePro Canada</h3>
                     <p>A premium template marketplace with automated delivery, licensing system, and user reviews for a Canadian design agency.</p>
@@ -868,32 +1147,32 @@
             </div>
             
             <!-- Portfolio Item 5 -->
-            <div class="portfolio-item" data-category="saas">
+            <div class="portfolio-item" data-category="ebooks">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);">
-                    <div>Project Management</div>
-                    <div class="portfolio-badge">Germany</div>
+                    <div>E-book Platform</div>
+                    <div class="portfolio-badge">Digital Publications</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
-                        <span class="portfolio-tag">SaaS</span>
-                        <span class="portfolio-tag">Project Management</span>
-                        <span class="portfolio-tag">Team Collaboration</span>
+                        <span class="portfolio-tag">E-books</span>
+                        <span class="portfolio-tag">PDF Delivery</span>
+                        <span class="portfolio-tag">Sample Chapters</span>
                     </div>
-                    <h3>TeamFlow Pro</h3>
-                    <p>A project management SaaS platform with real-time collaboration, time tracking, and reporting features for German tech teams.</p>
+                    <h3>KnowledgePress Books</h3>
+                    <p>A digital book store with sample chapter previews, secure PDF delivery, and affiliate marketing for an independent publisher.</p>
                     
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
-                            <span class="number">+43%</span>
-                            <span class="label">User Adoption</span>
+                            <span class="number">+48%</span>
+                            <span class="label">Sales Increase</span>
                         </div>
                         <div class="portfolio-stat">
-                            <span class="number">42</span>
+                            <span class="number">22</span>
                             <span class="label">Days to Launch</span>
                         </div>
                         <div class="portfolio-stat">
-                            <span class="number">150</span>
-                            <span class="label">Teams Using</span>
+                            <span class="number">150+</span>
+                            <span class="label">Titles</span>
                         </div>
                     </div>
                     
@@ -906,32 +1185,32 @@
             </div>
             
             <!-- Portfolio Item 6 -->
-            <div class="portfolio-item" data-category="courses">
+            <div class="portfolio-item" data-category="assets">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #5B21B6 100%);">
-                    <div>Language Learning</div>
-                    <div class="portfolio-badge">France</div>
+                    <div>Digital Asset Store</div>
+                    <div class="portfolio-badge">Digital Assets</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
-                        <span class="portfolio-tag">Online Courses</span>
-                        <span class="portfolio-tag">Language Learning</span>
-                        <span class="portfolio-tag">Mobile App</span>
+                        <span class="portfolio-tag">Graphics</span>
+                        <span class="portfolio-tag">Fonts</span>
+                        <span class="portfolio-tag">Stock Media</span>
                     </div>
-                    <h3>LinguaMaster Pro</h3>
-                    <p>A language learning platform with interactive courses, progress tracking, and mobile app integration for a French education startup.</p>
+                    <h3>DesignResource Hub</h3>
+                    <p>A platform for selling digital assets including graphics, fonts, and stock media with advanced filtering and licensing options.</p>
                     
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
-                            <span class="number">+55%</span>
-                            <span class="label">Course Completion</span>
+                            <span class="number">+72%</span>
+                            <span class="label">Revenue Growth</span>
                         </div>
                         <div class="portfolio-stat">
-                            <span class="number">31</span>
+                            <span class="number">26</span>
                             <span class="label">Days to Launch</span>
                         </div>
                         <div class="portfolio-stat">
-                            <span class="number">8</span>
-                            <span class="label">Languages</span>
+                            <span class="number">3k+</span>
+                            <span class="label">Assets</span>
                         </div>
                     </div>
                     
@@ -945,37 +1224,37 @@
         </div>
     </section>
 
-    <!-- Portfolio Categories -->
-    <section class="portfolio-categories">
+    <!-- Process Section -->
+    <section class="process-section">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 60px;">
-                <h2>Specialized Categories</h2>
-                <p class="lead">We excel in these specific areas of digital product development</p>
+            <div class="section-header">
+                <h2>Our Digital Product Design Process</h2>
+                <p class="lead">A proven methodology for creating high-converting digital product websites</p>
             </div>
             
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Online Courses & LMS</h3>
-                    <p>Complete learning management systems with student tracking, course progression, and certification.</p>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Discovery & Strategy</h3>
+                    <p>Understand your digital product, target audience, and conversion goals to create a strategic roadmap.</p>
                 </div>
                 
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>SaaS Platforms</h3>
-                    <p>Subscription-based software with user management, billing systems, and analytics dashboards.</p>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>UX/UI Design</h3>
+                    <p>Create intuitive user experiences and conversion-focused designs tailored to your digital product.</p>
                 </div>
                 
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <h3>Digital Marketplaces</h3>
-                    <p>Multi-vendor platforms with seller accounts, commission systems, and digital delivery.</p>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Development</h3>
+                    <p>Build with the latest technologies ensuring fast performance, security, and scalability.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Launch & Optimize</h3>
+                    <p>Deploy your website and continuously optimize for maximum conversions and performance.</p>
                 </div>
             </div>
         </div>
@@ -984,9 +1263,9 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 60px;">
+            <div class="section-header">
                 <h2>Client Testimonials</h2>
-                <p class="lead">What our clients say about working with ConvertPRO</p>
+                <p class="lead">What digital product sellers say about working with ConvertPRO</p>
             </div>
             
             <div class="testimonials-grid">
@@ -995,7 +1274,7 @@
                         <i class="fas fa-quote-left"></i>
                     </div>
                     <div class="testimonial-content">
-                        "ConvertPRO transformed our online course platform. Our sales increased by 45% within the first month of launching the new website."
+                        "ConvertPRO transformed our online course platform. Sales increased by 45% within the first month of launching the new website."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">JS</div>
@@ -1011,7 +1290,7 @@
                         <i class="fas fa-quote-left"></i>
                     </div>
                     <div class="testimonial-content">
-                        "The team at ConvertPRO understood our SaaS needs perfectly. The dashboard they built has become our most valuable tool for user engagement."
+                        "The team understood our SaaS needs perfectly. The dashboard they built has become our most valuable tool for user engagement."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">SR</div>
@@ -1027,7 +1306,7 @@
                         <i class="fas fa-quote-left"></i>
                     </div>
                     <div class="testimonial-content">
-                        "From concept to launch, ConvertPRO delivered beyond our expectations. Our marketplace now serves customers in 15 countries seamlessly."
+                        "From concept to launch, ConvertPRO delivered beyond expectations. Our marketplace now serves customers in 15 countries seamlessly."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">MK</div>
@@ -1044,8 +1323,8 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Ready to See Your Project Here?</h2>
-            <p>Let's work together to create a high-converting website for your digital products.</p>
+            <h2>Ready to Launch Your Digital Product Website?</h2>
+            <p>Let's work together to create a high-converting website that sells your digital products 24/7.</p>
             
             <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
                 <a href="contact.html" class="btn btn-dark">
@@ -1064,7 +1343,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo-text">Convert<span style="color: var(--primary-light);">PRO</span></div>
-                    <p>Specialists in high-converting websites for digital product sellers worldwide. Helping businesses increase sales through strategic design and development.</p>
+                    <p>Specialists in high-converting websites for digital product sellers worldwide. We design, develop, and optimize websites that sell.</p>
                 </div>
                 
                 <div class="footer-links">
@@ -1079,12 +1358,13 @@
                 </div>
                 
                 <div class="footer-links">
-                    <h3>Services</h3>
+                    <h3>Digital Product Specialties</h3>
                     <ul>
-                        <li><a href="portfolio.html">Digital Product Websites</a></li>
+                        <li><a href="portfolio.html">Online Courses & LMS</a></li>
                         <li><a href="portfolio.html">SaaS Platforms</a></li>
-                        <li><a href="portfolio.html">Course & LMS</a></li>
-                        <li><a href="portfolio.html">E-commerce Solutions</a></li>
+                        <li><a href="portfolio.html">Digital Marketplaces</a></li>
+                        <li><a href="portfolio.html">Digital Templates</a></li>
+                        <li><a href="portfolio.html">E-books & Publications</a></li>
                     </ul>
                 </div>
                 
@@ -1191,6 +1471,19 @@
                 item.style.transform = 'translateY(20px)';
                 item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(item);
+            });
+            
+            // Animate category cards
+            const categoryCards = document.querySelectorAll('.category-card');
+            categoryCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 200 + index * 100);
             });
         });
 
