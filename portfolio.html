@@ -374,41 +374,21 @@
             color: var(--gray);
         }
 
-        /* Portfolio Filters */
-        .portfolio-filters {
-            padding: 60px 0 40px;
+        /* Portfolio Section Header */
+        .portfolio-header {
+            text-align: center;
+            padding: 80px 0 40px;
             background: white;
         }
 
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
+        .portfolio-header h2 {
+            margin-bottom: 16px;
         }
 
-        .filter-btn {
-            background: white;
-            border: 2px solid var(--light-gray);
-            color: var(--gray);
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .filter-btn.active,
-        .filter-btn:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: white;
-        }
-
-        /* Full Width Portfolio Grid - No Left Blank Space */
+        /* Full Width Portfolio Grid */
         .portfolio-grid-container {
             width: 100%;
-            padding: 40px 0 100px;
+            padding: 0 0 100px;
             background: white;
         }
 
@@ -440,7 +420,6 @@
 
         .portfolio-image {
             height: 260px;
-            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -527,19 +506,6 @@
         .portfolio-stat .label {
             font-size: 0.875rem;
             color: var(--gray);
-        }
-
-        /* Additional Portfolio Items for Filling Space */
-        .portfolio-item:nth-child(7) .portfolio-image {
-            background: linear-gradient(135deg, #3B82F6 0%, #10B981 100%);
-        }
-
-        .portfolio-item:nth-child(8) .portfolio-image {
-            background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%);
-        }
-
-        .portfolio-item:nth-child(9) .portfolio-image {
-            background: linear-gradient(135deg, #F59E0B 0%, #EC4899 100%);
         }
 
         /* Process Section */
@@ -812,15 +778,6 @@
                 gap: 32px;
             }
             
-            .filter-buttons {
-                gap: 10px;
-            }
-            
-            .filter-btn {
-                padding: 10px 18px;
-                font-size: 0.85rem;
-            }
-            
             .categories-grid {
                 grid-template-columns: 1fr;
             }
@@ -877,7 +834,7 @@
     <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <span class="logo-text">Convert<span class="logo-accent">PRO</span></span>
+                <span class="logo-text">Growth<span class="logo-accent">via</span> Digital</span>
             </a>
             
             <nav>
@@ -1037,35 +994,28 @@
         </div>
     </section>
 
-    <!-- Portfolio Filters -->
-    <section class="portfolio-filters">
+    <!-- Portfolio Header -->
+    <section class="portfolio-header">
         <div class="container">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="courses">Online Courses</button>
-                <button class="filter-btn" data-filter="saas">SaaS Platforms</button>
-                <button class="filter-btn" data-filter="marketplace">Marketplaces</button>
-                <button class="filter-btn" data-filter="templates">Digital Templates</button>
-                <button class="filter-btn" data-filter="ebooks">E-books</button>
-                <button class="filter-btn" data-filter="assets">Digital Assets</button>
-            </div>
+            <h2>Our Latest Digital Product Projects</h2>
+            <p class="lead">Explore our diverse portfolio of successful digital product websites</p>
         </div>
     </section>
 
-    <!-- Full Width Portfolio Grid - No Left Blank Space -->
+    <!-- Full Width Portfolio Grid - 9 Diverse Projects -->
     <section class="portfolio-grid-container" id="portfolioGrid">
         <div class="portfolio-grid">
             <!-- Portfolio Item 1 -->
-            <div class="portfolio-item" data-category="courses">
+            <div class="portfolio-item">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);">
                     <div>EduTech Platform</div>
-                    <div class="portfolio-badge">Online Course</div>
+                    <div class="portfolio-badge">Education</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
                         <span class="portfolio-tag">LMS</span>
-                        <span class="portfolio-tag">Multi-language</span>
-                        <span class="portfolio-tag">Payment Integration</span>
+                        <span class="portfolio-tag">E-learning</span>
+                        <span class="portfolio-tag">Mobile App</span>
                     </div>
                     <h3>Global Learning Academy</h3>
                     <p>A comprehensive learning management system for a US-based educational company with 12 language support and integrated payment processing.</p>
@@ -1094,16 +1044,16 @@
             </div>
             
             <!-- Portfolio Item 2 -->
-            <div class="portfolio-item" data-category="saas">
+            <div class="portfolio-item">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);">
                     <div>SaaS Dashboard</div>
-                    <div class="portfolio-badge">SaaS Platform</div>
+                    <div class="portfolio-badge">SaaS</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
-                        <span class="portfolio-tag">Dashboard</span>
                         <span class="portfolio-tag">Analytics</span>
-                        <span class="portfolio-tag">Subscription</span>
+                        <span class="portfolio-tag">Dashboard</span>
+                        <span class="portfolio-tag">Real-time</span>
                     </div>
                     <h3>DataInsight Pro</h3>
                     <p>A data analytics SaaS platform with subscription management, user onboarding, and real-time dashboard for a UK-based tech startup.</p>
@@ -1132,7 +1082,7 @@
             </div>
             
             <!-- Portfolio Item 3 -->
-            <div class="portfolio-item" data-category="marketplace">
+            <div class="portfolio-item">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%);">
                     <div>Digital Marketplace</div>
                     <div class="portfolio-badge">Marketplace</div>
@@ -1140,8 +1090,8 @@
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
                         <span class="portfolio-tag">Multi-vendor</span>
-                        <span class="portfolio-tag">Affiliate System</span>
-                        <span class="portfolio-tag">Instant Delivery</span>
+                        <span class="portfolio-tag">E-commerce</span>
+                        <span class="portfolio-tag">Payment Gateway</span>
                     </div>
                     <h3>Sheets Mitra</h3>
                     <p>A digital marketplace for designers selling templates, graphics, and assets with affiliate system and instant download capabilities.</p>
@@ -1170,18 +1120,18 @@
             </div>
             
             <!-- Portfolio Item 4 -->
-            <div class="portfolio-item" data-category="templates">
+            <div class="portfolio-item">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #10B981 0%, #047857 100%);">
                     <div>Template Store</div>
-                    <div class="portfolio-badge">Digital Templates</div>
+                    <div class="portfolio-badge">Templates</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
                         <span class="portfolio-tag">WordPress</span>
                         <span class="portfolio-tag">Shopify</span>
-                        <span class="portfolio-tag">Automated Delivery</span>
+                        <span class="portfolio-tag">Digital Delivery</span>
                     </div>
-                    <h3>Digitreat online </h3>
+                    <h3>Digitreat Online</h3>
                     <p>A premium template marketplace with automated delivery, licensing system, and user reviews for a Canadian design agency.</p>
                     
                     <div class="portfolio-stats">
@@ -1208,16 +1158,16 @@
             </div>
             
             <!-- Portfolio Item 5 -->
-            <div class="portfolio-item" data-category="ebooks">
+            <div class="portfolio-item">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);">
                     <div>E-book Platform</div>
-                    <div class="portfolio-badge">Digital Publications</div>
+                    <div class="portfolio-badge">Publishing</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
                         <span class="portfolio-tag">E-books</span>
-                        <span class="portfolio-tag">PDF Delivery</span>
-                        <span class="portfolio-tag">Sample Chapters</span>
+                        <span class="portfolio-tag">PDF</span>
+                        <span class="portfolio-tag">Digital Rights</span>
                     </div>
                     <h3>KnowledgePress Books</h3>
                     <p>A digital book store with sample chapter previews, secure PDF delivery, and affiliate marketing for an independent publisher.</p>
@@ -1246,10 +1196,10 @@
             </div>
             
             <!-- Portfolio Item 6 -->
-            <div class="portfolio-item" data-category="assets">
+            <div class="portfolio-item">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #5B21B6 100%);">
                     <div>Digital Asset Store</div>
-                    <div class="portfolio-badge">Digital Assets</div>
+                    <div class="portfolio-badge">Assets</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
@@ -1283,16 +1233,15 @@
                 </div>
             </div>
 
-            <!-- Additional Portfolio Items to Fill Space -->
             <!-- Portfolio Item 7 -->
-            <div class="portfolio-item" data-category="courses">
-                <div class="portfolio-image">
+            <div class="portfolio-item">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #3B82F6 0%, #10B981 100%);">
                     <div>Tech Bootcamp</div>
-                    <div class="portfolio-badge">Online Course</div>
+                    <div class="portfolio-badge">Education</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
-                        <span class="portfolio-tag">Bootcamp</span>
+                        <span class="portfolio-tag">Coding</span>
                         <span class="portfolio-tag">Live Sessions</span>
                         <span class="portfolio-tag">Certification</span>
                     </div>
@@ -1323,10 +1272,10 @@
             </div>
 
             <!-- Portfolio Item 8 -->
-            <div class="portfolio-item" data-category="saas">
-                <div class="portfolio-image">
+            <div class="portfolio-item">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%);">
                     <div>Project Management</div>
-                    <div class="portfolio-badge">SaaS Platform</div>
+                    <div class="portfolio-badge">SaaS</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
@@ -1361,16 +1310,16 @@
             </div>
 
             <!-- Portfolio Item 9 -->
-            <div class="portfolio-item" data-category="marketplace">
-                <div class="portfolio-image">
+            <div class="portfolio-item">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #F59E0B 0%, #EC4899 100%);">
                     <div>Creative Services</div>
                     <div class="portfolio-badge">Marketplace</div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-tags">
+                        <span class="portfolio-tag">Freelance</span>
                         <span class="portfolio-tag">Services</span>
-                        <span class="portfolio-tag">Freelancers</span>
-                        <span class="portfolio-tag">Escrow System</span>
+                        <span class="portfolio-tag">Escrow</span>
                     </div>
                     <h3>CreativeWork Hub</h3>
                     <p>A marketplace connecting businesses with creative professionals including designers, writers, and marketers.</p>
@@ -1387,6 +1336,44 @@
                         <div class="portfolio-stat">
                             <span class="number">800+</span>
                             <span class="label">Freelancers</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Item 10 -->
+            <div class="portfolio-item">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);">
+                    <div>Membership Platform</div>
+                    <div class="portfolio-badge">Subscription</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Membership</span>
+                        <span class="portfolio-tag">Recurring</span>
+                        <span class="portfolio-tag">Community</span>
+                    </div>
+                    <h3>ProMember Network</h3>
+                    <p>A subscription-based membership platform with exclusive content, community features, and tiered pricing options.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+61%</span>
+                            <span class="label">Retention Rate</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">24</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">1.5k</span>
+                            <span class="label">Active Members</span>
                         </div>
                     </div>
                     
@@ -1441,7 +1428,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Client Testimonials</h2>
-                <p class="lead">What digital product sellers say about working with ConvertPRO</p>
+                <p class="lead">What digital product sellers say about working with Growthvia Digital</p>
             </div>
             
             <div class="testimonials-grid">
@@ -1450,7 +1437,7 @@
                         <i class="fas fa-quote-left"></i>
                     </div>
                     <div class="testimonial-content">
-                        "ConvertPRO transformed our online course platform. Sales increased by 45% within the first month of launching the new website."
+                        "Growthvia Digital transformed our online course platform. Sales increased by 45% within the first month of launching the new website."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">JS</div>
@@ -1482,13 +1469,13 @@
                         <i class="fas fa-quote-left"></i>
                     </div>
                     <div class="testimonial-content">
-                        "From concept to launch, ConvertPRO delivered beyond expectations. Our marketplace now serves customers in 15 countries seamlessly."
+                        "From concept to launch, Growthvia Digital delivered beyond expectations. Our marketplace now serves customers in 15 countries seamlessly."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">MK</div>
                         <div class="author-info">
                             <h4>Michael Kim</h4>
-                            <p>Founder, DesignAsset Hub</p>
+                            <p>Founder, Sheets Mitra</p>
                         </div>
                     </div>
                 </div>
@@ -1518,7 +1505,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="logo-text">Convert<span style="color: var(--primary-light);">PRO</span></div>
+                    <div class="logo-text">Growth<span style="color: var(--primary-light);">via</span> Digital</div>
                     <p>Specialists in high-converting websites for digital product sellers worldwide. We design, develop, and optimize websites that sell.</p>
                 </div>
                 
@@ -1546,7 +1533,7 @@
                 
                 <div class="footer-contact">
                     <h3>Contact</h3>
-                    <p><i class="fas fa-envelope"></i> hello@convertpro.com</p>
+                    <p><i class="fas fa-envelope"></i> hello@growthvia.com</p>
                     <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
                     <p><i class="fas fa-map-marker-alt"></i> Global Remote Team</p>
                     <p><i class="fas fa-clock"></i> Mon-Fri, 9AM-6PM EST</p>
@@ -1554,7 +1541,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2024 ConvertPRO Digital Agency. All rights reserved.</p>
+                <p>&copy; 2024 Growthvia Digital Agency. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1581,12 +1568,8 @@
             }
         });
 
-        // Portfolio Filtering
+        // Set active nav based on current page
         document.addEventListener('DOMContentLoaded', () => {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
-            
-            // Set active nav based on current page
             const currentPage = window.location.pathname.split('/').pop();
             const navLinks = document.querySelectorAll('.nav-links a');
             
@@ -1599,35 +1582,8 @@
                 }
             });
             
-            // Filter functionality
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    // Add active class to clicked button
-                    btn.classList.add('active');
-                    
-                    const filterValue = btn.getAttribute('data-filter');
-                    
-                    portfolioItems.forEach(item => {
-                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            item.style.display = 'block';
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'translateY(0)';
-                            }, 100);
-                        } else {
-                            item.style.opacity = '0';
-                            item.style.transform = 'translateY(20px)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-                });
-            });
-            
             // Animate portfolio items on load with staggered effect
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry, index) => {
                     if (entry.isIntersecting) {
