@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConvertPRO | High-Converting Websites for Global Digital Product Sellers</title>
+    <title>Digital Product Portfolio | ConvertPRO - Expert Digital Product Websites</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,7 +102,7 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
@@ -239,348 +239,180 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* Hero Section */
-        .hero {
-            padding: 180px 0 120px;
-            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 50%, #E8EDFF 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero:before {
-            content: '';
-            position: absolute;
-            width: 800px;
-            height: 800px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(124, 58, 237, 0.05) 100%);
-            top: -400px;
-            right: -200px;
-            z-index: 0;
-        }
-
-        .hero-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-content h1 {
-            margin-bottom: 24px;
-        }
-
-        .hero-content .lead {
-            margin-bottom: 40px;
-            font-size: 1.375rem;
-            color: var(--gray);
-        }
-
-        .hero-badges {
-            display: flex;
-            gap: 16px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        .hero-badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: white;
-            padding: 12px 20px;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            box-shadow: var(--shadow);
-        }
-
-        .hero-badge i {
-            color: var(--success);
-        }
-
-        .hero-visual {
-            position: relative;
-        }
-
-        .hero-visual-inner {
-            position: relative;
-            border-radius: var(--border-radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-xl);
-            background: #0F172A;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            max-width: 100%;
-        }
-
-        /* Enhanced Dashboard - RESPONSIVE VERSION */
-        .dashboard {
-            width: 100%;
-            min-height: 400px;
-            background: #0F172A;
-            position: relative;
-            overflow: hidden;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            transition: all 0.3s ease;
-        }
-
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .dashboard-title {
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .dashboard-stats {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .stat-badge {
-            background: rgba(37, 99, 235, 0.2);
-            color: var(--primary-light);
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            white-space: nowrap;
-        }
-
-        .dashboard-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            flex: 1;
-            min-height: 300px;
-        }
-
-        .chart-container {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .chart-title {
-            color: white;
-            font-size: 1rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .chart {
-            height: 180px;
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-            gap: 8px;
-            padding: 10px 5px;
-            flex: 1;
-        }
-
-        .bar {
-            flex: 1;
-            background: linear-gradient(to top, var(--primary), var(--secondary));
-            border-radius: 4px 4px 0 0;
-            position: relative;
-            min-height: 20px;
-            transition: height 1.5s ease-out;
-            height: 0;
-        }
-
-        .bar-1 { height: 70%; }
-        .bar-2 { height: 85%; }
-        .bar-3 { height: 60%; }
-        .bar-4 { height: 95%; }
-        .bar-5 { height: 75%; }
-        .bar-6 { height: 50%; }
-
-        .bar-label {
-            position: absolute;
-            bottom: -25px;
-            left: 0;
-            right: 0;
+        /* Page Hero */
+        .page-hero {
+            padding: 180px 0 80px;
+            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
             text-align: center;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.75rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
-        .metric-container {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .metric-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            flex: 1;
-        }
-
-        .metric-item {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 15px;
-            background: rgba(37, 99, 235, 0.1);
-            border-radius: 8px;
-            border: 1px solid rgba(37, 99, 235, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .metric-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .metric-value {
-            color: white;
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-            line-height: 1;
-        }
-
-        .metric-label {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.75rem;
-            line-height: 1.3;
-        }
-
-        .floating-element {
-            position: absolute;
-            background: white;
-            color: var(--primary);
-            padding: 12px 18px;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 0.75rem;
-            box-shadow: var(--shadow-lg);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            z-index: 2;
-            max-width: 140px;
-        }
-
-        .floating-1 {
-            top: 20px;
-            right: 20px;
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .floating-2 {
-            bottom: 20px;
-            left: 20px;
-            animation: float 4s ease-in-out infinite 0.5s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        /* Section Titles */
-        .section {
-            padding: 120px 0;
-        }
-
-        .section-title {
-            text-align: center;
+        .page-hero h1 {
+            margin-bottom: 16px;
             max-width: 800px;
-            margin: 0 auto 80px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .section-title h2 {
+        .page-hero .lead {
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+            font-size: 0.875rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumb span {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Digital Product Categories */
+        .product-categories {
+            padding: 80px 0 40px;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
             margin-bottom: 16px;
         }
 
-        .section-title .lead {
-            font-size: 1.25rem;
-        }
-
-        /* Features Section */
-        .features {
-            background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
-            padding: 100px 0;
-        }
-
-        .features-grid {
+        .categories-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 32px;
+            margin-bottom: 80px;
         }
 
-        .feature-card {
+        .category-card {
             background: white;
             border-radius: var(--border-radius);
-            padding: 40px;
+            padding: 48px 32px;
+            text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
             border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
+        .category-card:hover {
+            transform: translateY(-8px);
             box-shadow: var(--shadow-lg);
             border-color: var(--primary-light);
         }
 
-        .feature-icon {
-            width: 64px;
-            height: 64px;
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
             background: var(--gradient-primary);
-            border-radius: 16px;
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 24px;
+            margin: 0 auto 24px;
             color: white;
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
 
-        .feature-card h3 {
-            margin-bottom: 16px;
+        .category-stats {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .category-stat {
+            text-align: center;
+        }
+
+        .category-stat .number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .category-stat .label {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        /* Portfolio Filters */
+        .portfolio-filters {
+            padding: 60px 0 40px;
+            background: white;
+            position: sticky;
+            top: 80px;
+            z-index: 100;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid var(--light-gray);
+            color: var(--gray);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
         }
 
         /* Portfolio Grid */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-            gap: 32px;
+            gap: 40px;
+            padding: 40px 0 100px;
         }
 
         .portfolio-item {
-            background: var(--card-bg);
+            background: white;
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--shadow);
@@ -606,6 +438,12 @@
             font-weight: 700;
             position: relative;
             overflow: hidden;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .portfolio-badge {
@@ -651,6 +489,7 @@
 
         .portfolio-stat {
             text-align: center;
+            flex: 1;
         }
 
         .portfolio-stat .number {
@@ -665,178 +504,135 @@
             color: var(--gray);
         }
 
-        /* Case Studies */
-        .case-study {
+        /* Process Section */
+        .process-section {
             padding: 100px 0;
             background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
         }
 
-        .case-study-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 48px;
-        }
-
-        .case-study-item {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 48px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .case-study-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .case-study-icon {
-            width: 64px;
-            height: 64px;
-            background: var(--gradient-primary);
-            border-radius: 16px;
+        .process-steps {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        /* Client Logos */
-        .client-logos {
-            padding: 80px 0;
-            background: white;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .logos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 48px;
-            align-items: center;
-        }
-
-        .logo-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray);
-            opacity: 0.7;
-            transition: var(--transition);
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .logo-item:hover {
-            opacity: 1;
-            color: var(--primary);
-            transform: scale(1.05);
-        }
-
-        /* Process Section */
-        .process {
-            background: white;
-        }
-
-        .process-timeline {
-            max-width: 800px;
-            margin: 0 auto;
+            justify-content: space-between;
             position: relative;
+            margin-top: 60px;
         }
 
-        .process-timeline:before {
+        .process-steps::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 30px;
-            height: 100%;
-            width: 2px;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
             background: var(--light-gray);
             z-index: 1;
         }
 
         .process-step {
-            display: flex;
-            gap: 32px;
-            margin-bottom: 48px;
             position: relative;
             z-index: 2;
+            background: white;
+            padding: 32px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            width: 23%;
         }
 
         .step-number {
-            width: 60px;
-            height: 60px;
-            background: white;
-            border: 2px solid var(--primary);
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 700;
-            color: var(--primary);
-            flex-shrink: 0;
+            margin: 0 auto 24px;
         }
 
-        .step-content {
-            flex: 1;
-        }
-
-        .step-content h3 {
-            margin-bottom: 12px;
-        }
-
-        /* Stats Section */
-        .stats {
-            background: var(--gradient-dark);
-            color: white;
+        /* Testimonials */
+        .testimonials {
             padding: 100px 0;
+            background: white;
         }
 
-        .stats-grid {
+        .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 48px;
-            text-align: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
         }
 
-        .stat-item h3 {
+        .testimonial-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .testimonial-quote {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 24px;
+            color: var(--gray);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            font-size: 3rem;
-            margin-bottom: 8px;
+            font-weight: 600;
         }
 
-        .stat-item p {
-            color: rgba(255, 255, 255, 0.8);
+        .author-info h4 {
+            margin-bottom: 4px;
+            font-size: 1.125rem;
+        }
+
+        .author-info p {
+            font-size: 0.875rem;
+            color: var(--gray);
         }
 
         /* CTA Section */
         .cta {
-            background: white;
+            background: var(--gradient-primary);
+            color: white;
             padding: 120px 0;
             text-align: center;
         }
 
-        .cta-box {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 80px;
-            border-radius: var(--border-radius-lg);
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: var(--shadow-xl);
-        }
-
-        .cta-box h2 {
+        .cta h2 {
             color: white;
             margin-bottom: 16px;
         }
 
-        .cta-box p {
+        .cta p {
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Footer */
@@ -908,50 +704,30 @@
             font-size: 0.875rem;
         }
 
-        /* ==============================================
-           RESPONSIVE DESIGN IMPROVEMENTS
-           ============================================== */
-        
-        /* Large Devices (1024px and below) */
+        /* Responsive Design */
         @media (max-width: 1024px) {
             h1 { font-size: 3rem; }
             h2 { font-size: 2.25rem; }
             
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 60px;
-            }
-            
-            .dashboard-content {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .chart {
-                height: 160px;
-            }
-            
             .portfolio-grid {
                 grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 32px;
             }
             
-            .floating-element {
-                padding: 10px 15px;
-                font-size: 0.7rem;
+            .process-steps {
+                flex-wrap: wrap;
+                gap: 30px;
             }
             
-            .floating-1 {
-                top: 15px;
-                right: 15px;
+            .process-step {
+                width: 48%;
             }
             
-            .floating-2 {
-                bottom: 15px;
-                left: 15px;
+            .process-steps::before {
+                display: none;
             }
         }
 
-        /* Medium Devices (768px and below) */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -975,72 +751,33 @@
                 display: block;
             }
             
-            .hero {
-                padding: 150px 0 80px;
+            .page-hero {
+                padding: 150px 0 60px;
             }
             
-            .section {
-                padding: 80px 0;
-            }
-            
-            .cta-box {
-                padding: 40px;
-            }
-            
-            /* Dashboard Mobile Optimizations */
-            .dashboard {
-                min-height: 500px;
-                padding: 15px;
-            }
-            
-            .dashboard-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-                margin-bottom: 20px;
-            }
-            
-            .dashboard-stats {
-                width: 100%;
-                justify-content: space-between;
-                gap: 10px;
-            }
-            
-            .stat-badge {
-                flex: 1;
-                justify-content: center;
-                min-width: 140px;
-            }
-            
-            .metric-grid {
+            .portfolio-grid {
                 grid-template-columns: 1fr;
+                padding: 40px 0 60px;
+            }
+            
+            .filter-buttons {
                 gap: 12px;
             }
             
-            .metric-item {
-                padding: 12px;
+            .filter-btn {
+                padding: 10px 20px;
+                font-size: 0.875rem;
             }
             
-            .metric-value {
-                font-size: 1.5rem;
+            .categories-grid {
+                grid-template-columns: 1fr;
             }
             
-            .chart {
-                height: 140px;
-                gap: 6px;
-            }
-            
-            .bar-label {
-                font-size: 0.65rem;
-                bottom: -20px;
-            }
-            
-            .floating-element {
-                display: none; /* Hide floating elements on mobile for cleaner look */
+            .process-step {
+                width: 100%;
             }
         }
 
-        /* Small Devices (480px and below) */
         @media (max-width: 480px) {
             h1 { font-size: 2.5rem; }
             h2 { font-size: 2rem; }
@@ -1049,136 +786,27 @@
                 padding: 0 16px;
             }
             
-            .portfolio-grid {
-                grid-template-columns: 1fr;
+            .portfolio-content {
+                padding: 24px;
             }
             
-            .hero-badges {
+            .portfolio-stats {
                 flex-direction: column;
-                align-items: flex-start;
+                gap: 16px;
             }
             
-            /* Dashboard Extra Small Screen Optimizations */
-            .dashboard {
-                min-height: 550px;
-                padding: 12px;
+            .category-card {
+                padding: 32px 24px;
             }
             
-            .dashboard-title {
-                font-size: 1.25rem;
+            .testimonial-card {
+                padding: 32px;
             }
             
-            .dashboard-stats {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .stat-badge {
-                width: 100%;
-                justify-content: flex-start;
-            }
-            
-            .dashboard-content {
-                gap: 15px;
-            }
-            
-            .chart-container, .metric-container {
-                padding: 15px;
-            }
-            
-            .chart-title {
-                font-size: 0.9rem;
-                margin-bottom: 15px;
-            }
-            
-            .chart {
-                height: 120px;
-            }
-            
-            .bar {
-                border-radius: 3px 3px 0 0;
-            }
-            
-            .bar-label {
-                font-size: 0.6rem;
-                bottom: -18px;
-            }
-            
-            .metric-value {
-                font-size: 1.25rem;
-            }
-            
-            .metric-label {
-                font-size: 0.7rem;
-            }
-        }
-
-        /* Extra Small Devices (360px and below) */
-        @media (max-width: 360px) {
-            .dashboard {
-                min-height: 500px;
-            }
-            
-            .dashboard-header {
-                gap: 10px;
-            }
-            
-            .stat-badge {
-                font-size: 0.75rem;
-                padding: 6px 12px;
-            }
-            
-            .chart {
-                height: 100px;
-                gap: 4px;
-            }
-            
-            .bar-label {
-                font-size: 0.55rem;
-            }
-            
-            .metric-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .metric-item {
-                padding: 10px;
-            }
-        }
-
-        /* Landscape Mode for Mobile */
-        @media (max-height: 600px) and (orientation: landscape) {
-            .dashboard {
-                min-height: 350px;
-            }
-            
-            .chart {
-                height: 120px;
-            }
-            
-            .metric-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* Print Styles */
-        @media print {
-            .dashboard {
-                background: white !important;
-                color: black !important;
-                border: 1px solid #ccc;
-            }
-            
-            .dashboard-title, .chart-title, .metric-value {
-                color: black !important;
-            }
-            
-            .bar {
-                background: #2563EB !important;
-            }
-            
-            .floating-element {
-                display: none;
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -1187,18 +815,18 @@
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <span class="logo-text">Convert<span class="logo-accent">PRO</span></span>
             </a>
             
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#case-studies">Case Studies</a></li>
-                    <li><a href="#process">Process</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="process.html">Process</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             
@@ -1208,420 +836,503 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div style="margin-bottom: 16px;">
-                    <span style="background: var(--gradient-primary); color: white; padding: 8px 20px; border-radius: 50px; font-size: 0.875rem; font-weight: 600; display: inline-block;">
-                        <i class="fas fa-globe" style="margin-right: 6px;"></i> Global Digital Product Agency
-                    </span>
-                </div>
-                
-                <h1>High-Converting Websites for <span style="background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">International Digital Sellers</span></h1>
-                
-                <p class="lead">We specialize in creating conversion-optimized websites for digital product sellers worldwide. Increase your sales by 40%+ with our data-driven approach.</p>
-                
-                <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px;">
-                    <a href="#portfolio" class="btn btn-primary">
-                        <i class="fas fa-eye"></i> View Our Work
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-calendar"></i> Schedule Consultation
-                    </a>
-                </div>
-                
-                <div class="hero-badges">
-                    <div class="hero-badge">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Global Clientele</span>
-                    </div>
-                    <div class="hero-badge">
-                        <i class="fas fa-check-circle"></i>
-                        <span>40% Avg. Sales Increase</span>
-                    </div>
-                    <div class="hero-badge">
-                        <i class="fas fa-check-circle"></i>
-                        <span>7-10 Day Delivery</span>
-                    </div>
-                </div>
-            </div>
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Digital Product Website Design Portfolio</h1>
+            <p class="lead">Specializing in high-converting websites for digital product sellers, course creators, SaaS companies, and digital marketplaces.</p>
             
-            <div class="hero-visual">
-                <div class="hero-visual-inner">
-                    <div class="dashboard">
-                        <div class="dashboard-header">
-                            <div class="dashboard-title">Global Sales Dashboard</div>
-                            <div class="dashboard-stats">
-                                <div class="stat-badge">
-                                    <i class="fas fa-chart-line"></i>
-                                    <span>+42% Conversions</span>
-                                </div>
-                                <div class="stat-badge">
-                                    <i class="fas fa-globe-americas"></i>
-                                    <span>28 Countries</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="dashboard-content">
-                            <div class="chart-container">
-                                <div class="chart-title">Sales Growth (Monthly)</div>
-                                <div class="chart">
-                                    <div class="bar bar-1">
-                                        <div class="bar-label">Jan</div>
-                                    </div>
-                                    <div class="bar bar-2">
-                                        <div class="bar-label">Feb</div>
-                                    </div>
-                                    <div class="bar bar-3">
-                                        <div class="bar-label">Mar</div>
-                                    </div>
-                                    <div class="bar bar-4">
-                                        <div class="bar-label">Apr</div>
-                                    </div>
-                                    <div class="bar bar-5">
-                                        <div class="bar-label">May</div>
-                                    </div>
-                                    <div class="bar bar-6">
-                                        <div class="bar-label">Jun</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="metric-container">
-                                <div class="chart-title">Key Performance Metrics</div>
-                                <div class="metric-grid">
-                                    <div class="metric-item">
-                                        <div class="metric-value">98%</div>
-                                        <div class="metric-label">Success Rate</div>
-                                    </div>
-                                    <div class="metric-item">
-                                        <div class="metric-value">247</div>
-                                        <div class="metric-label">Projects</div>
-                                    </div>
-                                    <div class="metric-item">
-                                        <div class="metric-value">40%</div>
-                                        <div class="metric-label">Avg. Growth</div>
-                                    </div>
-                                    <div class="metric-item">
-                                        <div class="metric-value">7d</div>
-                                        <div class="metric-label">Avg. Delivery</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="floating-element floating-1">
-                        <i class="fas fa-rocket"></i>
-                        <span>High Converting</span>
-                    </div>
-                    <div class="floating-element floating-2">
-                        <i class="fas fa-bolt"></i>
-                        <span>Fast Delivery</span>
-                    </div>
-                </div>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Portfolio</span>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
+    <!-- Digital Product Categories -->
+    <section class="product-categories">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Key Features</h2>
-                <p class="lead">We provide comprehensive solutions tailored for digital product sellers with proven results.</p>
+            <div class="section-header">
+                <h2>Our Digital Product Specialties</h2>
+                <p class="lead">We build websites specifically designed to sell these types of digital products</p>
             </div>
             
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Online Courses & LMS</h3>
+                    <p>Complete learning management systems with student tracking, course progression, certifications, and integrated payment processing.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">45+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+62%</span>
+                            <span class="label">Avg. Sales</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Conversion Optimization</h3>
-                    <p>Every design element is strategically placed to guide visitors toward purchase, increasing conversion rates by 40% on average.</p>
+                    <h3>SaaS Platforms</h3>
+                    <p>Subscription-based software with user management, billing systems, analytics dashboards, and onboarding flows.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">32+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+58%</span>
+                            <span class="label">Avg. Conversion</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-store"></i>
                     </div>
-                    <h3>International Ready</h3>
-                    <p>Multi-currency, multi-language support with localization features to help you sell globally from day one.</p>
+                    <h3>Digital Marketplaces</h3>
+                    <p>Multi-vendor platforms with seller accounts, commission systems, digital delivery, and affiliate marketing.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">28+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+71%</span>
+                            <span class="label">Avg. Revenue</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-file-code"></i>
                     </div>
-                    <h3>Fast Performance</h3>
-                    <p>Lightning-fast website loading times optimized for better user experience and higher search engine rankings.</p>
+                    <h3>Digital Templates</h3>
+                    <p>Websites for selling templates (WordPress, Figma, Canva) with automated delivery, licensing, and preview systems.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">37+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+65%</span>
+                            <span class="label">Avg. Growth</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
                     </div>
-                    <h3>Secure Payment Integration</h3>
-                    <p>Seamless integration with Stripe, PayPal, Razorpay and other global payment gateways with automated digital delivery.</p>
+                    <h3>E-books & Publications</h3>
+                    <p>Websites for selling digital books, reports, and publications with sample chapters, reviews, and secure downloads.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">24+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+55%</span>
+                            <span class="label">Avg. Sales</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-palette"></i>
                     </div>
-                    <h3>Mobile-First Design</h3>
-                    <p>Fully responsive designs that work perfectly on all devices, with mobile optimization as a priority.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
+                    <h3>Digital Assets</h3>
+                    <p>Platforms for selling graphics, fonts, stock media, and design assets with search, filtering, and licensing options.</p>
+                    
+                    <div class="category-stats">
+                        <div class="category-stat">
+                            <span class="number">19+</span>
+                            <span class="label">Projects</span>
+                        </div>
+                        <div class="category-stat">
+                            <span class="number">+68%</span>
+                            <span class="label">Avg. Revenue</span>
+                        </div>
                     </div>
-                    <h3>Ongoing Support</h3>
-                    <p>30 days of free support post-launch plus training and maintenance packages for long-term success.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="section" id="portfolio">
+    <!-- Portfolio Filters -->
+    <section class="portfolio-filters">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Portfolio</h2>
-                <p class="lead">Showcasing our work with digital product sellers, course creators, and SaaS businesses from around the world.</p>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="courses">Online Courses</button>
+                <button class="filter-btn" data-filter="saas">SaaS Platforms</button>
+                <button class="filter-btn" data-filter="marketplace">Marketplaces</button>
+                <button class="filter-btn" data-filter="templates">Digital Templates</button>
+                <button class="filter-btn" data-filter="ebooks">E-books</button>
+                <button class="filter-btn" data-filter="assets">Digital Assets</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid" id="portfolioGrid">
+        <div class="container">
+            <!-- Portfolio Item 1 -->
+            <div class="portfolio-item" data-category="courses">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);">
+                    <div>EduTech Platform</div>
+                    <div class="portfolio-badge">Online Course</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">LMS</span>
+                        <span class="portfolio-tag">Multi-language</span>
+                        <span class="portfolio-tag">Payment Integration</span>
+                    </div>
+                    <h3>Global Learning Academy</h3>
+                    <p>A comprehensive learning management system for a US-based educational company with 12 language support and integrated payment processing.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+45%</span>
+                            <span class="label">Sales Increase</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">28</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">12</span>
+                            <span class="label">Languages</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
+                    </div>
+                </div>
             </div>
             
-            <div class="portfolio-grid">
-                <!-- Portfolio Item 1 -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div>EduTech Platform</div>
-                        <div class="portfolio-badge">USA</div>
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-item" data-category="saas">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);">
+                    <div>SaaS Dashboard</div>
+                    <div class="portfolio-badge">SaaS Platform</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Dashboard</span>
+                        <span class="portfolio-tag">Analytics</span>
+                        <span class="portfolio-tag">Subscription</span>
                     </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">Online Courses</span>
-                            <span class="portfolio-tag">LMS</span>
-                            <span class="portfolio-tag">International</span>
+                    <h3>DataInsight Pro</h3>
+                    <p>A data analytics SaaS platform with subscription management, user onboarding, and real-time dashboard for a UK-based tech startup.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+38%</span>
+                            <span class="label">Conversion Rate</span>
                         </div>
-                        <h3>Global Learning Academy</h3>
-                        <p>A comprehensive learning management system for a US-based educational company with multi-language support and integrated payment processing.</p>
-                        
-                        <div class="portfolio-stats">
-                            <div class="portfolio-stat">
-                                <span class="number">+45%</span>
-                                <span class="label">Sales Increase</span>
-                            </div>
-                            <div class="portfolio-stat">
-                                <span class="number">28</span>
-                                <span class="label">Days to Launch</span>
-                            </div>
+                        <div class="portfolio-stat">
+                            <span class="number">21</span>
+                            <span class="label">Days to Launch</span>
                         </div>
+                        <div class="portfolio-stat">
+                            <span class="number">5k</span>
+                            <span class="label">Monthly Users</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
                     </div>
                 </div>
-                
-                <!-- Portfolio Item 2 -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div>SaaS Dashboard</div>
-                        <div class="portfolio-badge">UK</div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">SaaS</span>
-                            <span class="portfolio-tag">Dashboard</span>
-                            <span class="portfolio-tag">Analytics</span>
-                        </div>
-                        <h3>DataInsight Pro</h3>
-                        <p>A data analytics SaaS platform with subscription management, user onboarding, and real-time dashboard for a UK-based tech startup.</p>
-                        
-                        <div class="portfolio-stats">
-                            <div class="portfolio-stat">
-                                <span class="number">+38%</span>
-                                <span class="label">Conversion Rate</span>
-                            </div>
-                            <div class="portfolio-stat">
-                                <span class="number">21</span>
-                                <span class="label">Days to Launch</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Portfolio Item 3 -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div>Digital Marketplace</div>
-                        <div class="portfolio-badge">Australia</div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">Marketplace</span>
-                            <span class="portfolio-tag">Digital Products</span>
-                            <span class="portfolio-tag">E-commerce</span>
-                        </div>
-                        <h3>DesignAsset Hub</h3>
-                        <p>A digital marketplace for designers selling templates, graphics, and assets with affiliate system and instant download capabilities.</p>
-                        
-                        <div class="portfolio-stats">
-                            <div class="portfolio-stat">
-                                <span class="number">+52%</span>
-                                <span class="label">Revenue Growth</span>
-                            </div>
-                            <div class="portfolio-stat">
-                                <span class="number">35</span>
-                                <span class="label">Days to Launch</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section class="case-study" id="case-studies">
-        <div class="container">
-            <div class="section-title">
-                <h2>Case Studies</h2>
-                <p class="lead">Detailed analysis of how we helped clients achieve significant growth in their digital product sales.</p>
             </div>
             
-            <div class="case-study-grid">
-                <div class="case-study-item">
-                    <div class="case-study-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Course Platform Transformation</h3>
-                    <p>Increased course sales by 45% for an international education provider through conversion-optimized design and improved user journey.</p>
-                    <div style="margin-top: 20px;">
-                        <a href="#" class="btn btn-outline" style="padding: 12px 24px;">View Case Study</a>
-                    </div>
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-item" data-category="marketplace">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%);">
+                    <div>Digital Marketplace</div>
+                    <div class="portfolio-badge">Marketplace</div>
                 </div>
-                
-                <div class="case-study-item">
-                    <div class="case-study-icon">
-                        <i class="fas fa-shopping-cart"></i>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Multi-vendor</span>
+                        <span class="portfolio-tag">Affiliate System</span>
+                        <span class="portfolio-tag">Instant Delivery</span>
                     </div>
-                    <h3>SaaS Conversion Optimization</h3>
-                    <p>Improved sign-up conversion rate by 38% for a UK-based SaaS company through A/B testing and streamlined onboarding process.</p>
-                    <div style="margin-top: 20px;">
-                        <a href="#" class="btn btn-outline" style="padding: 12px 24px;">View Case Study</a>
+                    <h3>DesignAsset Hub</h3>
+                    <p>A digital marketplace for designers selling templates, graphics, and assets with affiliate system and instant download capabilities.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+52%</span>
+                            <span class="label">Revenue Growth</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">35</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">500+</span>
+                            <span class="label">Active Sellers</span>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="case-study-item">
-                    <div class="case-study-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Global E-commerce Expansion</h3>
-                    <p>Enabled multi-currency sales and expanded to 12 new countries for a digital template seller, increasing international revenue by 67%.</p>
-                    <div style="margin-top: 20px;">
-                        <a href="#" class="btn btn-outline" style="padding: 12px 24px;">View Case Study</a>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Client Logos -->
-    <section class="client-logos">
-        <div class="container">
-            <div class="logos-grid">
-                <div class="logo-item">TECH<span style="color: var(--primary);">CORP</span></div>
-                <div class="logo-item">EDU<span style="color: var(--primary);">MASTER</span></div>
-                <div class="logo-item">DATA<span style="color: var(--primary);">PRO</span></div>
-                <div class="logo-item">DESIGN<span style="color: var(--primary);">HUB</span></div>
-                <div class="logo-item">GLOBAL<span style="color: var(--primary);">LEARN</span></div>
+            
+            <!-- Portfolio Item 4 -->
+            <div class="portfolio-item" data-category="templates">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #10B981 0%, #047857 100%);">
+                    <div>Template Store</div>
+                    <div class="portfolio-badge">Digital Templates</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">WordPress</span>
+                        <span class="portfolio-tag">Shopify</span>
+                        <span class="portfolio-tag">Automated Delivery</span>
+                    </div>
+                    <h3>TemplatePro Canada</h3>
+                    <p>A premium template marketplace with automated delivery, licensing system, and user reviews for a Canadian design agency.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+67%</span>
+                            <span class="label">Sales Growth</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">18</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">2k</span>
+                            <span class="label">Daily Downloads</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 5 -->
+            <div class="portfolio-item" data-category="ebooks">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);">
+                    <div>E-book Platform</div>
+                    <div class="portfolio-badge">Digital Publications</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">E-books</span>
+                        <span class="portfolio-tag">PDF Delivery</span>
+                        <span class="portfolio-tag">Sample Chapters</span>
+                    </div>
+                    <h3>KnowledgePress Books</h3>
+                    <p>A digital book store with sample chapter previews, secure PDF delivery, and affiliate marketing for an independent publisher.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+48%</span>
+                            <span class="label">Sales Increase</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">22</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">150+</span>
+                            <span class="label">Titles</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Item 6 -->
+            <div class="portfolio-item" data-category="assets">
+                <div class="portfolio-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #5B21B6 100%);">
+                    <div>Digital Asset Store</div>
+                    <div class="portfolio-badge">Digital Assets</div>
+                </div>
+                <div class="portfolio-content">
+                    <div class="portfolio-tags">
+                        <span class="portfolio-tag">Graphics</span>
+                        <span class="portfolio-tag">Fonts</span>
+                        <span class="portfolio-tag">Stock Media</span>
+                    </div>
+                    <h3>DesignResource Hub</h3>
+                    <p>A platform for selling digital assets including graphics, fonts, and stock media with advanced filtering and licensing options.</p>
+                    
+                    <div class="portfolio-stats">
+                        <div class="portfolio-stat">
+                            <span class="number">+72%</span>
+                            <span class="label">Revenue Growth</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">26</span>
+                            <span class="label">Days to Launch</span>
+                        </div>
+                        <div class="portfolio-stat">
+                            <span class="number">3k+</span>
+                            <span class="label">Assets</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
+                            <i class="fas fa-external-link-alt"></i> View Case Study
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Process Section -->
-    <section class="section process" id="process">
+    <section class="process-section">
         <div class="container">
-            <div class="section-title">
-                <h2>Our Process</h2>
-                <p class="lead">A structured approach to ensure quality, efficiency, and results for every project.</p>
+            <div class="section-header">
+                <h2>Our Digital Product Design Process</h2>
+                <p class="lead">A proven methodology for creating high-converting digital product websites</p>
             </div>
             
-            <div class="process-timeline">
+            <div class="process-steps">
                 <div class="process-step">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3>Discovery & Strategy</h3>
-                        <p>We begin by understanding your business, target audience, and goals to create a customized strategy for your digital product website.</p>
-                    </div>
+                    <div class="step-number">1</div>
+                    <h3>Discovery & Strategy</h3>
+                    <p>Understand your digital product, target audience, and conversion goals to create a strategic roadmap.</p>
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3>Design & Prototyping</h3>
-                        <p>Our designers create conversion-focused mockups and interactive prototypes, incorporating best practices for digital product sales.</p>
-                    </div>
+                    <div class="step-number">2</div>
+                    <h3>UX/UI Design</h3>
+                    <p>Create intuitive user experiences and conversion-focused designs tailored to your digital product.</p>
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3>Development</h3>
-                        <p>Our developers build your website with clean code, fast performance, and seamless integration with payment gateways and delivery systems.</p>
-                    </div>
+                    <div class="step-number">3</div>
+                    <h3>Development</h3>
+                    <p>Build with the latest technologies ensuring fast performance, security, and scalability.</p>
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h3>Testing & Launch</h3>
-                        <p>We thoroughly test across devices and browsers, optimize for conversions, and launch your website with ongoing support.</p>
-                    </div>
+                    <div class="step-number">4</div>
+                    <h3>Launch & Optimize</h3>
+                    <p>Deploy your website and continuously optimize for maximum conversions and performance.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
+    <!-- Testimonials -->
+    <section class="testimonials">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3 class="counter" data-target="247">0</h3>
-                    <p>Projects Completed</p>
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p class="lead">What digital product sellers say about working with ConvertPRO</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        "ConvertPRO transformed our online course platform. Sales increased by 45% within the first month of launching the new website."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JS</div>
+                        <div class="author-info">
+                            <h4>John Smith</h4>
+                            <p>CEO, Global Learning Academy</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h3 class="counter" data-target="40">0</h3>
-                    <p>Avg. Sales Increase</p>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        "The team understood our SaaS needs perfectly. The dashboard they built has become our most valuable tool for user engagement."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div class="author-info">
+                            <h4>Sarah Rodriguez</h4>
+                            <p>Product Manager, DataInsight Pro</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h3 class="counter" data-target="28">0</h3>
-                    <p>Countries Served</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="counter" data-target="98">0</h3>
-                    <p>Client Satisfaction</p>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        "From concept to launch, ConvertPRO delivered beyond expectations. Our marketplace now serves customers in 15 countries seamlessly."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <h4>Michael Kim</h4>
+                            <p>Founder, DesignAsset Hub</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta" id="contact">
+    <section class="cta">
         <div class="container">
-            <div class="cta-box">
-                <h2>Ready to Transform Your Digital Product Sales?</h2>
-                <p>Schedule a free consultation with our experts to discuss your project and get a customized proposal.</p>
-                
-                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                    <a href="mailto:hello@convertpro.com?subject=Portfolio%20Consultation" class="btn btn-dark">
-                        <i class="fas fa-envelope"></i> Email Us
-                    </a>
-                    <a href="https://calendly.com/convertpro/consultation" class="btn btn-primary" target="_blank">
-                        <i class="fas fa-calendar-alt"></i> Schedule Call
-                    </a>
-                </div>
+            <h2>Ready to Launch Your Digital Product Website?</h2>
+            <p>Let's work together to create a high-converting website that sells your digital products 24/7.</p>
+            
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+                <a href="contact.html" class="btn btn-dark">
+                    <i class="fas fa-calendar"></i> Start Your Project
+                </a>
+                <a href="process.html" class="btn btn-outline" style="background: white; color: var(--primary);">
+                    <i class="fas fa-info-circle"></i> Learn Our Process
+                </a>
             </div>
         </div>
     </section>
@@ -1632,27 +1343,28 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo-text">Convert<span style="color: var(--primary-light);">PRO</span></div>
-                    <p>Specialists in high-converting websites for digital product sellers worldwide. Helping businesses increase sales through strategic design and development.</p>
+                    <p>Specialists in high-converting websites for digital product sellers worldwide. We design, develop, and optimize websites that sell.</p>
                 </div>
                 
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#case-studies">Case Studies</a></li>
-                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="process.html">Our Process</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h3>Services</h3>
+                    <h3>Digital Product Specialties</h3>
                     <ul>
-                        <li><a href="#portfolio">Digital Product Websites</a></li>
-                        <li><a href="#portfolio">SaaS Platforms</a></li>
-                        <li><a href="#portfolio">Course & LMS</a></li>
-                        <li><a href="#portfolio">E-commerce Solutions</a></li>
+                        <li><a href="portfolio.html">Online Courses & LMS</a></li>
+                        <li><a href="portfolio.html">SaaS Platforms</a></li>
+                        <li><a href="portfolio.html">Digital Marketplaces</a></li>
+                        <li><a href="portfolio.html">Digital Templates</a></li>
+                        <li><a href="portfolio.html">E-books & Publications</a></li>
                     </ul>
                 </div>
                 
@@ -1693,76 +1405,85 @@
             }
         });
 
-        // Animated Counter
-        const counters = document.querySelectorAll('.counter');
-        
-        const animateCounter = () => {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const increment = target / 200;
-                
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(animateCounter, 1);
+        // Portfolio Filtering
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            // Set active nav based on current page
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
                 } else {
-                    counter.innerText = target;
+                    link.classList.remove('active');
                 }
             });
-        };
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (entry.target.classList.contains('counter') && entry.target.innerText === '0') {
-                        animateCounter();
+            
+            // Filter functionality
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    const filterValue = btn.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Animate portfolio items on load
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 100);
                     }
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
             });
-        }, observerOptions);
 
-        // Set initial styles and observe
-        document.querySelectorAll('.counter, .fade-in').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
+            portfolioItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+            
+            // Animate category cards
+            const categoryCards = document.querySelectorAll('.category-card');
+            categoryCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Update active nav link
-                    document.querySelectorAll('.nav-links a').forEach(link => {
-                        link.classList.remove('active');
-                    });
-                    this.classList.add('active');
-                    
-                    // Close mobile menu if open
-                    if (window.innerWidth <= 768) {
-                        navLinks.classList.remove('active');
-                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                    }
-                }
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 200 + index * 100);
             });
         });
 
@@ -1773,95 +1494,6 @@
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             }
         });
-
-        // Dashboard Bar Animation with Responsive Check
-        function animateDashboardBars() {
-            const bars = document.querySelectorAll('.bar');
-            const isMobile = window.innerWidth <= 768;
-            
-            bars.forEach((bar, index) => {
-                // Reset height to 0 for animation
-                bar.style.height = '0';
-                
-                setTimeout(() => {
-                    // Set final height based on screen size
-                    const finalHeight = bar.classList.contains('bar-1') ? '70%' :
-                                     bar.classList.contains('bar-2') ? '85%' :
-                                     bar.classList.contains('bar-3') ? '60%' :
-                                     bar.classList.contains('bar-4') ? '95%' :
-                                     bar.classList.contains('bar-5') ? '75%' : '50%';
-                    
-                    bar.style.height = finalHeight;
-                }, index * (isMobile ? 150 : 100)); // Slower animation on mobile
-            });
-        }
-
-        // Initialize
-        window.addEventListener('load', () => {
-            // Set active nav based on scroll position
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            const setActiveLink = () => {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (scrollY >= (sectionTop - 100)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
-                    }
-                });
-            };
-            
-            window.addEventListener('scroll', setActiveLink);
-            
-            // Animate dashboard bars
-            animateDashboardBars();
-            
-            // Re-animate bars on window resize
-            let resizeTimer;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(() => {
-                    animateDashboardBars();
-                }, 250);
-            });
-        });
-
-        // Dashboard Responsive Enhancements
-        function adjustDashboardForScreenSize() {
-            const dashboard = document.querySelector('.dashboard');
-            const floatingElements = document.querySelectorAll('.floating-element');
-            
-            if (window.innerWidth <= 768) {
-                // Hide floating elements on mobile
-                floatingElements.forEach(el => {
-                    el.style.display = 'none';
-                });
-                
-                // Adjust dashboard padding
-                dashboard.style.padding = '15px';
-            } else {
-                // Show floating elements on larger screens
-                floatingElements.forEach(el => {
-                    el.style.display = 'flex';
-                });
-                
-                // Reset dashboard padding
-                dashboard.style.padding = '20px';
-            }
-        }
-
-        // Run on load and resize
-        window.addEventListener('load', adjustDashboardForScreenSize);
-        window.addEventListener('resize', adjustDashboardForScreenSize);
     </script>
 </body>
 </html>
