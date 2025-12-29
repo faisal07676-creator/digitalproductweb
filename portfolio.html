@@ -369,11 +369,10 @@
             color: var(--gray);
         }
 
-        /* Portfolio Filters - Removed sticky positioning */
+        /* Portfolio Filters */
         .portfolio-filters {
             padding: 60px 0 40px;
             background: white;
-            /* Removed: position: sticky; top: 80px; z-index: 100; */
         }
 
         .filter-buttons {
@@ -401,7 +400,7 @@
             color: white;
         }
 
-        /* Portfolio Grid */
+        /* Updated Portfolio Grid with Mixed Layout */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -409,6 +408,7 @@
             padding: 40px 0 100px;
         }
 
+        /* Vertical Portfolio Items (Default) */
         .portfolio-item {
             background: white;
             border-radius: var(--border-radius);
@@ -417,12 +417,41 @@
             transition: var(--transition);
             border: 1px solid var(--border-color);
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
         .portfolio-item:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-xl);
             border-color: var(--primary-light);
+        }
+
+        /* Horizontal Portfolio Items */
+        .portfolio-item.horizontal {
+            grid-column: span 2;
+            display: flex;
+            flex-direction: row;
+            min-height: 340px;
+        }
+
+        .portfolio-item.horizontal .portfolio-image {
+            height: auto;
+            width: 50%;
+            flex-shrink: 0;
+        }
+
+        .portfolio-item.horizontal .portfolio-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+        }
+
+        .portfolio-item.horizontal .portfolio-stats {
+            margin-top: auto;
+            padding-top: 24px;
         }
 
         .portfolio-image {
@@ -459,6 +488,9 @@
 
         .portfolio-content {
             padding: 32px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .portfolio-tags {
@@ -500,6 +532,11 @@
         .portfolio-stat .label {
             font-size: 0.875rem;
             color: var(--gray);
+        }
+
+        .portfolio-actions {
+            margin-top: auto;
+            padding-top: 20px;
         }
 
         /* Process Section */
@@ -703,6 +740,19 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .portfolio-item.horizontal {
+                grid-column: span 1;
+                flex-direction: column;
+                min-height: auto;
+            }
+            
+            .portfolio-item.horizontal .portfolio-image {
+                width: 100%;
+                height: 240px;
+            }
+        }
+
         @media (max-width: 1024px) {
             h1 { font-size: 3rem; }
             h2 { font-size: 2.25rem; }
@@ -774,6 +824,10 @@
             .process-step {
                 width: 100%;
             }
+            
+            .portfolio-item.horizontal .portfolio-content {
+                padding: 24px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -805,6 +859,10 @@
                 width: 60px;
                 height: 60px;
                 font-size: 1.5rem;
+            }
+            
+            .portfolio-item.horizontal .portfolio-image {
+                height: 200px;
             }
         }
     </style>
@@ -974,7 +1032,7 @@
         </div>
     </section>
 
-    <!-- Portfolio Filters - No longer sticky -->
+    <!-- Portfolio Filters -->
     <section class="portfolio-filters">
         <div class="container">
             <div class="filter-buttons">
@@ -989,11 +1047,11 @@
         </div>
     </section>
 
-    <!-- Portfolio Grid -->
+    <!-- Portfolio Grid with Mixed Layout -->
     <section class="portfolio-grid" id="portfolioGrid">
         <div class="container">
-            <!-- Portfolio Item 1 -->
-            <div class="portfolio-item" data-category="courses">
+            <!-- Portfolio Item 1 - Horizontal -->
+            <div class="portfolio-item horizontal" data-category="courses">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);">
                     <div>EduTech Platform</div>
                     <div class="portfolio-badge">Online Course</div>
@@ -1005,7 +1063,7 @@
                         <span class="portfolio-tag">Payment Integration</span>
                     </div>
                     <h3>Global Learning Academy</h3>
-                    <p>A comprehensive learning management system for a US-based educational company with 12 language support and integrated payment processing.</p>
+                    <p>A comprehensive learning management system for a US-based educational company with 12 language support and integrated payment processing. Features include student tracking, course progression, certifications, and mobile-responsive design.</p>
                     
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
@@ -1020,17 +1078,21 @@
                             <span class="number">12</span>
                             <span class="label">Languages</span>
                         </div>
+                        <div class="portfolio-stat">
+                            <span class="number">5k+</span>
+                            <span class="label">Active Students</span>
+                        </div>
                     </div>
                     
-                    <div style="margin-top: 24px;">
+                    <div class="portfolio-actions">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
-                            <i class="fas fa-external-link-alt"></i> View Case Study
+                            <i class="fas fa-external-link-alt"></i> View Full Case Study
                         </a>
                     </div>
                 </div>
             </div>
             
-            <!-- Portfolio Item 2 -->
+            <!-- Portfolio Item 2 - Vertical -->
             <div class="portfolio-item" data-category="saas">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);">
                     <div>SaaS Dashboard</div>
@@ -1060,7 +1122,7 @@
                         </div>
                     </div>
                     
-                    <div style="margin-top: 24px;">
+                    <div class="portfolio-actions">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
                         </a>
@@ -1068,7 +1130,7 @@
                 </div>
             </div>
             
-            <!-- Portfolio Item 3 -->
+            <!-- Portfolio Item 3 - Vertical -->
             <div class="portfolio-item" data-category="marketplace">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%);">
                     <div>Digital Marketplace</div>
@@ -1098,7 +1160,7 @@
                         </div>
                     </div>
                     
-                    <div style="margin-top: 24px;">
+                    <div class="portfolio-actions">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
                         </a>
@@ -1106,8 +1168,8 @@
                 </div>
             </div>
             
-            <!-- Portfolio Item 4 -->
-            <div class="portfolio-item" data-category="templates">
+            <!-- Portfolio Item 4 - Horizontal -->
+            <div class="portfolio-item horizontal" data-category="templates">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #10B981 0%, #047857 100%);">
                     <div>Template Store</div>
                     <div class="portfolio-badge">Digital Templates</div>
@@ -1116,10 +1178,11 @@
                     <div class="portfolio-tags">
                         <span class="portfolio-tag">WordPress</span>
                         <span class="portfolio-tag">Shopify</span>
+                        <span class="portfolio-tag">Figma</span>
                         <span class="portfolio-tag">Automated Delivery</span>
                     </div>
                     <h3>TemplatePro Canada</h3>
-                    <p>A premium template marketplace with automated delivery, licensing system, and user reviews for a Canadian design agency.</p>
+                    <p>A premium template marketplace with automated delivery, licensing system, and user reviews for a Canadian design agency. Features include template previews, licensing options, and a built-in affiliate marketing system that increased sales by 67% in the first quarter.</p>
                     
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
@@ -1134,17 +1197,21 @@
                             <span class="number">2k</span>
                             <span class="label">Daily Downloads</span>
                         </div>
+                        <div class="portfolio-stat">
+                            <span class="number">150+</span>
+                            <span class="label">Templates</span>
+                        </div>
                     </div>
                     
-                    <div style="margin-top: 24px;">
+                    <div class="portfolio-actions">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
-                            <i class="fas fa-external-link-alt"></i> View Case Study
+                            <i class="fas fa-external-link-alt"></i> View Full Case Study
                         </a>
                     </div>
                 </div>
             </div>
             
-            <!-- Portfolio Item 5 -->
+            <!-- Portfolio Item 5 - Vertical -->
             <div class="portfolio-item" data-category="ebooks">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);">
                     <div>E-book Platform</div>
@@ -1174,7 +1241,7 @@
                         </div>
                     </div>
                     
-                    <div style="margin-top: 24px;">
+                    <div class="portfolio-actions">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
                         </a>
@@ -1182,7 +1249,7 @@
                 </div>
             </div>
             
-            <!-- Portfolio Item 6 -->
+            <!-- Portfolio Item 6 - Vertical -->
             <div class="portfolio-item" data-category="assets">
                 <div class="portfolio-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #5B21B6 100%);">
                     <div>Digital Asset Store</div>
@@ -1212,7 +1279,7 @@
                         </div>
                     </div>
                     
-                    <div style="margin-top: 24px;">
+                    <div class="portfolio-actions">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
                         </a>
@@ -1433,7 +1500,7 @@
                     
                     portfolioItems.forEach(item => {
                         if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            item.style.display = 'block';
+                            item.style.display = 'flex';
                             setTimeout(() => {
                                 item.style.opacity = '1';
                                 item.style.transform = 'translateY(0)';
