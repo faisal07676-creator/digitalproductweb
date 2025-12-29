@@ -55,6 +55,7 @@
             overflow-x: hidden;
             background-color: #FFFFFF;
             font-size: 16px;
+            text-align: left; /* Base text alignment */
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -67,25 +68,30 @@
         h1 {
             font-size: 3.5rem;
             letter-spacing: -0.02em;
+            margin-bottom: 16px;
         }
 
         h2 {
             font-size: 2.75rem;
             letter-spacing: -0.01em;
+            margin-bottom: 16px;
         }
 
         h3 {
             font-size: 1.875rem;
+            margin-bottom: 12px;
         }
 
         p {
             font-size: 1.125rem;
             color: var(--gray);
+            margin-bottom: 16px;
         }
 
         .lead {
             font-size: 1.25rem;
             font-weight: 500;
+            margin-bottom: 32px;
         }
 
         .container {
@@ -132,6 +138,7 @@
             font-weight: 800;
             color: var(--dark);
             letter-spacing: -0.02em;
+            text-align: left;
         }
 
         .logo-accent {
@@ -202,6 +209,7 @@
             position: relative;
             overflow: hidden;
             gap: 8px;
+            text-align: center; /* Button text centered */
         }
 
         .btn-primary {
@@ -243,11 +251,10 @@
         .page-hero {
             padding: 180px 0 80px;
             background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
-            text-align: center;
+            text-align: center; /* Hero section centered */
         }
 
         .page-hero h1 {
-            margin-bottom: 16px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -255,7 +262,8 @@
 
         .page-hero .lead {
             max-width: 700px;
-            margin: 0 auto 32px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .breadcrumb {
@@ -313,6 +321,7 @@
             border: 1px solid var(--border-color);
             position: relative;
             overflow: hidden;
+            height: 100%;
         }
 
         .category-card:hover {
@@ -394,6 +403,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: var(--transition);
+            text-align: center;
         }
 
         .filter-btn.active,
@@ -419,6 +429,7 @@
             transition: var(--transition);
             border: 1px solid var(--border-color);
             position: relative;
+            height: 100%;
         }
 
         .portfolio-item:hover {
@@ -457,6 +468,7 @@
             font-size: 0.75rem;
             font-weight: 700;
             z-index: 2;
+            text-align: center;
         }
 
         .portfolio-content {
@@ -488,7 +500,6 @@
         }
 
         .portfolio-stat {
-            text-align: center;
             flex: 1;
         }
 
@@ -497,11 +508,13 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
+            text-align: center;
         }
 
         .portfolio-stat .label {
             font-size: 0.875rem;
             color: var(--gray);
+            text-align: center;
         }
 
         /* Process Section */
@@ -511,32 +524,19 @@
         }
 
         .process-steps {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
             margin-top: 60px;
         }
 
-        .process-steps::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--light-gray);
-            z-index: 1;
-        }
-
         .process-step {
-            position: relative;
-            z-index: 2;
             background: white;
             padding: 32px;
             border-radius: var(--border-radius);
             text-align: center;
             box-shadow: var(--shadow);
-            width: 23%;
+            position: relative;
         }
 
         .step-number {
@@ -602,6 +602,7 @@
             justify-content: center;
             color: white;
             font-weight: 600;
+            flex-shrink: 0;
         }
 
         .author-info h4 {
@@ -633,6 +634,14 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 32px;
         }
 
         /* Footer */
@@ -683,17 +692,25 @@
             color: white;
         }
 
+        .footer-contact h3 {
+            color: white;
+            margin-bottom: 24px;
+            font-size: 1.25rem;
+        }
+
         .footer-contact p {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 12px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 12px;
         }
 
         .footer-contact i {
             width: 20px;
             color: var(--primary-light);
+            flex-shrink: 0;
+            margin-top: 3px;
         }
 
         .copyright {
@@ -706,8 +723,14 @@
 
         /* Responsive Design */
         @media (max-width: 1024px) {
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2.25rem; }
+            h1 { 
+                font-size: 3rem; 
+                text-align: center;
+            }
+            h2 { 
+                font-size: 2.25rem; 
+                text-align: center;
+            }
             
             .portfolio-grid {
                 grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -715,16 +738,22 @@
             }
             
             .process-steps {
-                flex-wrap: wrap;
-                gap: 30px;
+                grid-template-columns: repeat(2, 1fr);
             }
             
-            .process-step {
-                width: 48%;
+            .portfolio-item h3,
+            .portfolio-item p {
+                text-align: left;
             }
             
-            .process-steps::before {
-                display: none;
+            .category-card h3,
+            .category-card p {
+                text-align: center;
+            }
+            
+            .process-step h3,
+            .process-step p {
+                text-align: center;
             }
         }
 
@@ -741,6 +770,7 @@
                 padding: 100px 40px 40px;
                 box-shadow: var(--shadow-xl);
                 z-index: 1000;
+                text-align: left;
             }
             
             .nav-links.active {
@@ -753,6 +783,14 @@
             
             .page-hero {
                 padding: 150px 0 60px;
+            }
+            
+            .page-hero h1 {
+                text-align: center;
+            }
+            
+            .page-hero .lead {
+                text-align: center;
             }
             
             .portfolio-grid {
@@ -773,14 +811,64 @@
                 grid-template-columns: 1fr;
             }
             
-            .process-step {
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-buttons .btn {
                 width: 100%;
+                max-width: 300px;
+            }
+            
+            /* Text alignment for mobile */
+            .portfolio-item h3,
+            .portfolio-item p {
+                text-align: left;
+            }
+            
+            .testimonial-author .author-info h4,
+            .testimonial-author .author-info p {
+                text-align: left;
+            }
+            
+            .footer-brand p {
+                text-align: left;
+            }
+            
+            .footer-links h3 {
+                text-align: left;
+            }
+            
+            .footer-contact h3 {
+                text-align: left;
             }
         }
 
         @media (max-width: 480px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
+            h1 { 
+                font-size: 2.5rem; 
+                text-align: center;
+            }
+            h2 { 
+                font-size: 2rem; 
+                text-align: center;
+            }
+            h3 {
+                font-size: 1.5rem;
+            }
             
             .container {
                 padding: 0 16px;
@@ -808,6 +896,76 @@
                 height: 60px;
                 font-size: 1.5rem;
             }
+            
+            .portfolio-item h3 {
+                text-align: left;
+            }
+            
+            .portfolio-item p {
+                text-align: left;
+            }
+            
+            .category-card h3,
+            .category-card p {
+                text-align: center;
+            }
+            
+            .process-step h3,
+            .process-step p {
+                text-align: center;
+            }
+            
+            .testimonial-content {
+                text-align: left;
+            }
+            
+            .testimonial-author .author-info h4,
+            .testimonial-author .author-info p {
+                text-align: left;
+            }
+            
+            .footer-brand p {
+                text-align: left;
+            }
+            
+            .footer-links h3 {
+                text-align: left;
+            }
+            
+            .footer-links ul li {
+                text-align: left;
+            }
+            
+            .footer-contact h3 {
+                text-align: left;
+            }
+        }
+
+        /* Ensure proper text alignment for all elements */
+        .portfolio-content h3,
+        .portfolio-content p {
+            text-align: left;
+        }
+        
+        .testimonial-quote {
+            text-align: left;
+        }
+        
+        .testimonial-content {
+            text-align: left;
+        }
+        
+        .author-info h4,
+        .author-info p {
+            text-align: left;
+        }
+        
+        .footer-brand .logo-text {
+            text-align: left;
+        }
+        
+        .footer-brand p {
+            text-align: left;
         }
     </style>
 </head>
@@ -1326,7 +1484,7 @@
             <h2>Ready to Launch Your Digital Product Website?</h2>
             <p>Let's work together to create a high-converting website that sells your digital products 24/7.</p>
             
-            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+            <div class="cta-buttons">
                 <a href="contact.html" class="btn btn-dark">
                     <i class="fas fa-calendar"></i> Start Your Project
                 </a>
