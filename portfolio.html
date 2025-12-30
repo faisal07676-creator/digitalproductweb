@@ -36,18 +36,15 @@
             --border-radius: 16px;
             --border-radius-lg: 24px;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
         }
-
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--dark);
@@ -56,50 +53,41 @@
             background-color: #FFFFFF;
             font-size: 16px;
         }
-
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 700;
             line-height: 1.2;
             color: var(--dark);
         }
-
         h1 {
             font-size: 3.5rem;
             letter-spacing: -0.02em;
         }
-
         h2 {
             font-size: 2.75rem;
             letter-spacing: -0.01em;
         }
-
         h3 {
             font-size: 1.875rem;
         }
-
         p {
             font-size: 1.125rem;
             color: var(--gray);
         }
-
         .lead {
             font-size: 1.25rem;
             font-weight: 500;
         }
-
         .container {
             width: 100%;
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 24px;
         }
-
         .full-width {
             width: 100%;
             padding: 0;
         }
-
         /* Header */
         header {
             position: fixed;
@@ -114,44 +102,37 @@
             padding: 20px 0;
             transition: var(--transition);
         }
-
         header.scrolled {
             padding: 12px 0;
             box-shadow: var(--shadow-md);
         }
-
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             display: flex;
             align-items: center;
             text-decoration: none;
         }
-
         .logo-text {
             font-size: 1.875rem;
             font-weight: 800;
             color: var(--dark);
             letter-spacing: -0.02em;
         }
-
         .logo-accent {
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
         .nav-links {
             display: flex;
             gap: 40px;
             list-style: none;
         }
-
         .nav-links a {
             text-decoration: none;
             color: var(--dark);
@@ -161,15 +142,12 @@
             padding: 8px 0;
             transition: var(--transition);
         }
-
         .nav-links a:hover {
             color: var(--primary);
         }
-
         .nav-links a.active {
             color: var(--primary);
         }
-
         .nav-links a.active:after {
             content: '';
             position: absolute;
@@ -180,7 +158,6 @@
             background: var(--primary);
             border-radius: 2px;
         }
-
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -190,7 +167,6 @@
             cursor: pointer;
             z-index: 1001;
         }
-
         /* Buttons */
         .btn {
             display: inline-flex;
@@ -208,61 +184,51 @@
             overflow: hidden;
             gap: 8px;
         }
-
         .btn-primary {
             background: var(--gradient-primary);
             color: white;
             box-shadow: var(--shadow);
         }
-
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
-
         .btn-outline {
             background: transparent;
             border: 2px solid var(--primary);
             color: var(--primary);
         }
-
         .btn-outline:hover {
             background: var(--primary);
             color: white;
             transform: translateY(-3px);
             box-shadow: var(--shadow);
         }
-
         .btn-dark {
             background: var(--dark);
             color: white;
         }
-
         .btn-dark:hover {
             background: var(--darker);
             transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
-
         /* Page Hero */
         .page-hero {
             padding: 180px 0 80px;
             background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
             text-align: center;
         }
-
         .page-hero h1 {
             margin-bottom: 16px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
-
         .page-hero .lead {
             max-width: 700px;
             margin: 0 auto 32px;
         }
-
         .breadcrumb {
             display: flex;
             justify-content: center;
@@ -270,44 +236,36 @@
             margin-top: 24px;
             font-size: 0.875rem;
         }
-
         .breadcrumb a {
             color: var(--gray);
             text-decoration: none;
             transition: var(--transition);
         }
-
         .breadcrumb a:hover {
             color: var(--primary);
         }
-
         .breadcrumb span {
             color: var(--primary);
             font-weight: 600;
         }
-
         /* Digital Product Categories */
         .product-categories {
             padding: 80px 0 40px;
             background: white;
         }
-
         .section-header {
             text-align: center;
             margin-bottom: 60px;
         }
-
         .section-header h2 {
             margin-bottom: 16px;
         }
-
         .categories-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 32px;
             margin-bottom: 80px;
         }
-
         .category-card {
             background: white;
             border-radius: var(--border-radius);
@@ -319,13 +277,11 @@
             position: relative;
             overflow: hidden;
         }
-
         .category-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-lg);
             border-color: var(--primary-light);
         }
-
         .category-card::before {
             content: '';
             position: absolute;
@@ -335,7 +291,6 @@
             height: 4px;
             background: var(--gradient-primary);
         }
-
         .category-icon {
             width: 80px;
             height: 80px;
@@ -348,7 +303,6 @@
             color: white;
             font-size: 2rem;
         }
-
         .category-stats {
             display: flex;
             justify-content: center;
@@ -357,41 +311,34 @@
             padding-top: 20px;
             border-top: 1px solid var(--border-color);
         }
-
         .category-stat {
             text-align: center;
         }
-
         .category-stat .number {
             display: block;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
         }
-
         .category-stat .label {
             font-size: 0.875rem;
             color: var(--gray);
         }
-
         /* Portfolio Section Header */
         .portfolio-header {
             text-align: center;
             padding: 80px 0 40px;
             background: white;
         }
-
         .portfolio-header h2 {
             margin-bottom: 16px;
         }
-
         /* Full Width Portfolio Grid */
         .portfolio-grid-container {
             width: 100%;
             padding: 0 0 100px;
             background: white;
         }
-
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
@@ -401,7 +348,6 @@
             margin: 0 auto;
             padding: 0 32px;
         }
-
         .portfolio-item {
             background: white;
             border-radius: var(--border-radius);
@@ -411,25 +357,22 @@
             border: 1px solid var(--border-color);
             position: relative;
         }
-
         .portfolio-item:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-xl);
             border-color: var(--primary-light);
         }
-
         .portfolio-image {
             height: 260px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.75rem;
-            font-weight: 700;
             position: relative;
             overflow: hidden;
         }
-
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
         .portfolio-image::before {
             content: '';
             position: absolute;
@@ -440,15 +383,6 @@
             background: rgba(0, 0, 0, 0.1);
             z-index: 1;
         }
-
-        .portfolio-image > div {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            width: 100%;
-            padding: 20px;
-        }
-
         .portfolio-badge {
             position: absolute;
             top: 20px;
@@ -462,18 +396,15 @@
             z-index: 3;
             box-shadow: var(--shadow);
         }
-
         .portfolio-content {
             padding: 32px;
         }
-
         .portfolio-tags {
             display: flex;
             gap: 8px;
             margin-bottom: 16px;
             flex-wrap: wrap;
         }
-
         .portfolio-tag {
             background: rgba(37, 99, 235, 0.1);
             color: var(--primary);
@@ -482,7 +413,6 @@
             font-size: 0.75rem;
             font-weight: 600;
         }
-
         .portfolio-stats {
             display: flex;
             gap: 24px;
@@ -490,37 +420,31 @@
             padding-top: 20px;
             border-top: 1px solid var(--border-color);
         }
-
         .portfolio-stat {
             text-align: center;
             flex: 1;
         }
-
         .portfolio-stat .number {
             display: block;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
         }
-
         .portfolio-stat .label {
             font-size: 0.875rem;
             color: var(--gray);
         }
-
         /* Process Section */
         .process-section {
             padding: 100px 0;
             background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
         }
-
         .process-steps {
             display: flex;
             justify-content: space-between;
             position: relative;
             margin-top: 60px;
         }
-
         .process-steps::before {
             content: '';
             position: absolute;
@@ -531,7 +455,6 @@
             background: var(--light-gray);
             z-index: 1;
         }
-
         .process-step {
             position: relative;
             z-index: 2;
@@ -542,7 +465,6 @@
             box-shadow: var(--shadow);
             width: 23%;
         }
-
         .step-number {
             width: 80px;
             height: 80px;
@@ -556,19 +478,16 @@
             font-weight: 700;
             margin: 0 auto 24px;
         }
-
         /* Testimonials */
         .testimonials {
             padding: 100px 0;
             background: white;
         }
-
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 32px;
         }
-
         .testimonial-card {
             background: white;
             border-radius: var(--border-radius);
@@ -577,25 +496,21 @@
             border: 1px solid var(--border-color);
             position: relative;
         }
-
         .testimonial-quote {
             color: var(--primary);
             font-size: 1.5rem;
             margin-bottom: 20px;
         }
-
         .testimonial-content {
             font-style: italic;
             margin-bottom: 24px;
             color: var(--gray);
         }
-
         .testimonial-author {
             display: flex;
             align-items: center;
             gap: 16px;
         }
-
         .author-avatar {
             width: 50px;
             height: 50px;
@@ -607,17 +522,14 @@
             color: white;
             font-weight: 600;
         }
-
         .author-info h4 {
             margin-bottom: 4px;
             font-size: 1.125rem;
         }
-
         .author-info p {
             font-size: 0.875rem;
             color: var(--gray);
         }
-
         /* CTA Section */
         .cta {
             background: var(--gradient-primary);
@@ -625,12 +537,10 @@
             padding: 120px 0;
             text-align: center;
         }
-
         .cta h2 {
             color: white;
             margin-bottom: 16px;
         }
-
         .cta p {
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 32px;
@@ -638,55 +548,45 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         /* Footer */
         footer {
             background: var(--dark);
             color: white;
             padding: 80px 0 40px;
         }
-
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 48px;
             margin-bottom: 60px;
         }
-
         .footer-brand .logo-text {
             color: white;
             margin-bottom: 16px;
         }
-
         .footer-brand p {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 24px;
         }
-
         .footer-links h3 {
             color: white;
             margin-bottom: 24px;
             font-size: 1.25rem;
         }
-
         .footer-links ul {
             list-style: none;
         }
-
         .footer-links li {
             margin-bottom: 12px;
         }
-
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: var(--transition);
         }
-
         .footer-links a:hover {
             color: white;
         }
-
         .footer-contact p {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 12px;
@@ -694,12 +594,10 @@
             align-items: center;
             gap: 12px;
         }
-
         .footer-contact i {
             width: 20px;
             color: var(--primary-light);
         }
-
         .copyright {
             text-align: center;
             padding-top: 40px;
@@ -707,44 +605,40 @@
             color: rgba(255, 255, 255, 0.5);
             font-size: 0.875rem;
         }
-
         /* Responsive Design */
         @media (max-width: 1440px) {
             .portfolio-grid {
                 padding: 0 24px;
             }
         }
-
         @media (max-width: 1200px) {
             .portfolio-grid {
                 grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             }
         }
-
         @media (max-width: 1024px) {
             h1 { font-size: 3rem; }
             h2 { font-size: 2.25rem; }
-            
+           
             .portfolio-grid {
                 grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
                 gap: 28px;
                 padding: 0 20px;
             }
-            
+           
             .process-steps {
                 flex-wrap: wrap;
                 gap: 30px;
             }
-            
+           
             .process-step {
                 width: 48%;
             }
-            
+           
             .process-steps::before {
                 display: none;
             }
         }
-
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -759,70 +653,68 @@
                 box-shadow: var(--shadow-xl);
                 z-index: 1000;
             }
-            
+           
             .nav-links.active {
                 display: flex;
             }
-            
+           
             .mobile-menu-btn {
                 display: block;
             }
-            
+           
             .page-hero {
                 padding: 150px 0 60px;
             }
-            
+           
             .portfolio-grid {
                 grid-template-columns: 1fr;
                 padding: 0 16px;
                 gap: 32px;
             }
-            
+           
             .categories-grid {
                 grid-template-columns: 1fr;
             }
-            
+           
             .process-step {
                 width: 100%;
             }
-            
+           
             .portfolio-image {
                 height: 220px;
-                font-size: 1.5rem;
             }
         }
-
         @media (max-width: 480px) {
             h1 { font-size: 2.5rem; }
             h2 { font-size: 2rem; }
-            
+           
             .container {
                 padding: 0 16px;
             }
-            
+           
             .portfolio-content {
                 padding: 24px;
             }
-            
+           
             .portfolio-stats {
                 flex-direction: column;
                 gap: 16px;
             }
-            
+           
             .category-card {
                 padding: 32px 24px;
             }
-            
+           
             .testimonial-card {
                 padding: 32px;
             }
-            
+           
             .step-number {
                 width: 60px;
                 height: 60px;
                 font-size: 1.5rem;
             }
-            
+           
             .portfolio-grid {
                 padding: 0 12px;
             }
@@ -836,7 +728,7 @@
             <a href="index.html" class="logo">
                 <span class="logo-text">Growth<span class="logo-accent">via</span> Digital</span>
             </a>
-            
+           
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -847,19 +739,18 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            
+           
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
-
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
             <h1>Digital Product Website Design Portfolio</h1>
             <p class="lead">Specializing in high-converting websites for digital product sellers, course creators, SaaS companies, and digital marketplaces.</p>
-            
+           
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <span>/</span>
@@ -867,7 +758,6 @@
             </div>
         </div>
     </section>
-
     <!-- Digital Product Categories -->
     <section class="product-categories">
         <div class="container">
@@ -875,7 +765,7 @@
                 <h2>Our Digital Product Specialties</h2>
                 <p class="lead">We build websites specifically designed to sell these types of digital products</p>
             </div>
-            
+           
             <div class="categories-grid">
                 <div class="category-card">
                     <div class="category-icon">
@@ -883,7 +773,7 @@
                     </div>
                     <h3>Online Courses & LMS</h3>
                     <p>Complete learning management systems with student tracking, course progression, certifications, and integrated payment processing.</p>
-                    
+                   
                     <div class="category-stats">
                         <div class="category-stat">
                             <span class="number">45+</span>
@@ -895,14 +785,14 @@
                         </div>
                     </div>
                 </div>
-                
+               
                 <div class="category-card">
                     <div class="category-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>SaaS Platforms</h3>
                     <p>Subscription-based software with user management, billing systems, analytics dashboards, and onboarding flows.</p>
-                    
+                   
                     <div class="category-stats">
                         <div class="category-stat">
                             <span class="number">32+</span>
@@ -914,14 +804,14 @@
                         </div>
                     </div>
                 </div>
-                
+               
                 <div class="category-card">
                     <div class="category-icon">
                         <i class="fas fa-store"></i>
                     </div>
                     <h3>Digital Marketplaces</h3>
                     <p>Multi-vendor platforms with seller accounts, commission systems, digital delivery, and affiliate marketing.</p>
-                    
+                   
                     <div class="category-stats">
                         <div class="category-stat">
                             <span class="number">28+</span>
@@ -933,14 +823,14 @@
                         </div>
                     </div>
                 </div>
-                
+               
                 <div class="category-card">
                     <div class="category-icon">
                         <i class="fas fa-file-code"></i>
                     </div>
                     <h3>Digital Templates</h3>
                     <p>Websites for selling templates (WordPress, Figma, Canva) with automated delivery, licensing, and preview systems.</p>
-                    
+                   
                     <div class="category-stats">
                         <div class="category-stat">
                             <span class="number">37+</span>
@@ -952,14 +842,14 @@
                         </div>
                     </div>
                 </div>
-                
+               
                 <div class="category-card">
                     <div class="category-icon">
                         <i class="fas fa-book"></i>
                     </div>
                     <h3>E-books & Publications</h3>
                     <p>Websites for selling digital books, reports, and publications with sample chapters, reviews, and secure downloads.</p>
-                    
+                   
                     <div class="category-stats">
                         <div class="category-stat">
                             <span class="number">24+</span>
@@ -971,14 +861,14 @@
                         </div>
                     </div>
                 </div>
-                
+               
                 <div class="category-card">
                     <div class="category-icon">
                         <i class="fas fa-palette"></i>
                     </div>
                     <h3>Digital Assets</h3>
                     <p>Platforms for selling graphics, fonts, stock media, and design assets with search, filtering, and licensing options.</p>
-                    
+                   
                     <div class="category-stats">
                         <div class="category-stat">
                             <span class="number">19+</span>
@@ -993,7 +883,6 @@
             </div>
         </div>
     </section>
-
     <!-- Portfolio Header -->
     <section class="portfolio-header">
         <div class="container">
@@ -1001,14 +890,13 @@
             <p class="lead">Explore our diverse portfolio of successful digital product websites</p>
         </div>
     </section>
-
-    <!-- Full Width Portfolio Grid - 9 Diverse Projects -->
+    <!-- Full Width Portfolio Grid - 10 Projects with Real Images -->
     <section class="portfolio-grid-container" id="portfolioGrid">
         <div class="portfolio-grid">
             <!-- Portfolio Item 1 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" style="background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);">
-                    <div>EduTech Platform</div>
+                <div class="portfolio-image">
+                    <img src="https://multipurposethemes.com/wp-content/uploads/2024/11/Education-LMS-Dashboard-Admin-Template.jpg" alt="Global Learning Academy LMS">
                     <div class="portfolio-badge">Education</div>
                 </div>
                 <div class="portfolio-content">
@@ -1019,7 +907,7 @@
                     </div>
                     <h3>Global Learning Academy</h3>
                     <p>A comprehensive learning management system for a US-based educational company with 12 language support and integrated payment processing.</p>
-                    
+                   
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
                             <span class="number">+45%</span>
@@ -1034,7 +922,7 @@
                             <span class="label">Languages</span>
                         </div>
                     </div>
-                    
+                   
                     <div style="margin-top: 24px;">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
@@ -1042,11 +930,11 @@
                     </div>
                 </div>
             </div>
-            
+           
             <!-- Portfolio Item 2 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" style="background: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);">
-                    <div>SaaS Dashboard</div>
+                <div class="portfolio-image">
+                    <img src="https://www.geckoboard.com/uploads/SaaS-dashboard-example.png" alt="DataInsight Pro Analytics Dashboard">
                     <div class="portfolio-badge">SaaS</div>
                 </div>
                 <div class="portfolio-content">
@@ -1057,7 +945,7 @@
                     </div>
                     <h3>DataInsight Pro</h3>
                     <p>A data analytics SaaS platform with subscription management, user onboarding, and real-time dashboard for a UK-based tech startup.</p>
-                    
+                   
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
                             <span class="number">+38%</span>
@@ -1072,7 +960,7 @@
                             <span class="label">Monthly Users</span>
                         </div>
                     </div>
-                    
+                   
                     <div style="margin-top: 24px;">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
@@ -1080,11 +968,11 @@
                     </div>
                 </div>
             </div>
-            
+           
             <!-- Portfolio Item 3 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" style="background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%);">
-                    <div>Digital Marketplace</div>
+                <div class="portfolio-image">
+                    <img src="https://cdn.dribbble.com/userupload/13746416/file/original-24f33e647be39df27c5508c15f17e349.png?format=webp" alt="Sheets Mitra Digital Marketplace">
                     <div class="portfolio-badge">Marketplace</div>
                 </div>
                 <div class="portfolio-content">
@@ -1095,7 +983,7 @@
                     </div>
                     <h3>Sheets Mitra</h3>
                     <p>A digital marketplace for designers selling templates, graphics, and assets with affiliate system and instant download capabilities.</p>
-                    
+                   
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
                             <span class="number">+52%</span>
@@ -1110,7 +998,7 @@
                             <span class="label">Active Sellers</span>
                         </div>
                     </div>
-                    
+                   
                     <div style="margin-top: 24px;">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
@@ -1118,11 +1006,11 @@
                     </div>
                 </div>
             </div>
-            
+           
             <!-- Portfolio Item 4 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" style="background: linear-gradient(135deg, #10B981 0%, #047857 100%);">
-                    <div>Template Store</div>
+                <div class="portfolio-image">
+                    <img src="https://printify.com/wp-content/uploads/2025/03/Thalia-Free-Shopify-themes-1024x768.png" alt="Digitreat Online Template Store">
                     <div class="portfolio-badge">Templates</div>
                 </div>
                 <div class="portfolio-content">
@@ -1133,7 +1021,7 @@
                     </div>
                     <h3>Digitreat Online</h3>
                     <p>A premium template marketplace with automated delivery, licensing system, and user reviews for a Canadian design agency.</p>
-                    
+                   
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
                             <span class="number">+67%</span>
@@ -1148,7 +1036,7 @@
                             <span class="label">Daily Downloads</span>
                         </div>
                     </div>
-                    
+                   
                     <div style="margin-top: 24px;">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
@@ -1156,11 +1044,11 @@
                     </div>
                 </div>
             </div>
-            
+           
             <!-- Portfolio Item 5 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" style="background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);">
-                    <div>E-book Platform</div>
+                <div class="portfolio-image">
+                    <img src="https://media.goodereader.com/blog/uploads/images/2024/01/02183505/Screenshot-2024-01-10-at-8.22.56%E2%80%AFAM.png" alt="KnowledgePress Books E-book Store">
                     <div class="portfolio-badge">Publishing</div>
                 </div>
                 <div class="portfolio-content">
@@ -1171,7 +1059,7 @@
                     </div>
                     <h3>KnowledgePress Books</h3>
                     <p>A digital book store with sample chapter previews, secure PDF delivery, and affiliate marketing for an independent publisher.</p>
-                    
+                   
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
                             <span class="number">+48%</span>
@@ -1186,7 +1074,7 @@
                             <span class="label">Titles</span>
                         </div>
                     </div>
-                    
+                   
                     <div style="margin-top: 24px;">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
@@ -1194,11 +1082,11 @@
                     </div>
                 </div>
             </div>
-            
+           
             <!-- Portfolio Item 6 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" style="background: linear-gradient(135deg, #8B5CF6 0%, #5B21B6 100%);">
-                    <div>Digital Asset Store</div>
+                <div class="portfolio-image">
+                    <img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvjsqhe9ohb6ungd5cs55.png" alt="DesignResource Hub Digital Assets">
                     <div class="portfolio-badge">Assets</div>
                 </div>
                 <div class="portfolio-content">
@@ -1209,7 +1097,7 @@
                     </div>
                     <h3>DesignResource Hub</h3>
                     <p>A platform for selling digital assets including graphics, fonts, and stock media with advanced filtering and licensing options.</p>
-                    
+                   
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
                             <span class="number">+72%</span>
@@ -1224,7 +1112,7 @@
                             <span class="label">Assets</span>
                         </div>
                     </div>
-                    
+                   
                     <div style="margin-top: 24px;">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
@@ -1232,11 +1120,11 @@
                     </div>
                 </div>
             </div>
-
+           
             <!-- Portfolio Item 7 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" style="background: linear-gradient(135deg, #3B82F6 0%, #10B981 100%);">
-                    <div>Tech Bootcamp</div>
+                <div class="portfolio-image">
+                    <img src="https://learntocodewith.me/wp-content/uploads/2020/08/nyc-data-science-academy-1-1024x599.png" alt="CodeMaster Academy Tech Bootcamp">
                     <div class="portfolio-badge">Education</div>
                 </div>
                 <div class="portfolio-content">
@@ -1247,7 +1135,7 @@
                     </div>
                     <h3>CodeMaster Academy</h3>
                     <p>A tech bootcamp platform with live coding sessions, project-based learning, and industry-recognized certifications.</p>
-                    
+                   
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
                             <span class="number">+55%</span>
@@ -1262,7 +1150,7 @@
                             <span class="label">Students</span>
                         </div>
                     </div>
-                    
+                   
                     <div style="margin-top: 24px;">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
@@ -1270,11 +1158,11 @@
                     </div>
                 </div>
             </div>
-
+           
             <!-- Portfolio Item 8 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" style="background: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%);">
-                    <div>Project Management</div>
+                <div class="portfolio-image">
+                    <img src="https://d2mkz4zdclmlek.cloudfront.net/blog/wp-content/uploads/2024/03/Task-and-Workflow-Management-Tools.png" alt="TaskFlow Pro Project Management">
                     <div class="portfolio-badge">SaaS</div>
                 </div>
                 <div class="portfolio-content">
@@ -1285,7 +1173,7 @@
                     </div>
                     <h3>TaskFlow Pro</h3>
                     <p>A project management SaaS with team collaboration, time tracking, and automated reporting for remote teams.</p>
-                    
+                   
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
                             <span class="number">+42%</span>
@@ -1300,7 +1188,7 @@
                             <span class="label">Teams</span>
                         </div>
                     </div>
-                    
+                   
                     <div style="margin-top: 24px;">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
@@ -1308,11 +1196,11 @@
                     </div>
                 </div>
             </div>
-
+           
             <!-- Portfolio Item 9 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" style="background: linear-gradient(135deg, #F59E0B 0%, #EC4899 100%);">
-                    <div>Creative Services</div>
+                <div class="portfolio-image">
+                    <img src="https://s3.envato.com/files/502170653/Preview/00_00_Preview.__large_preview.jpg" alt="CreativeWork Hub Freelance Marketplace">
                     <div class="portfolio-badge">Marketplace</div>
                 </div>
                 <div class="portfolio-content">
@@ -1323,7 +1211,7 @@
                     </div>
                     <h3>CreativeWork Hub</h3>
                     <p>A marketplace connecting businesses with creative professionals including designers, writers, and marketers.</p>
-                    
+                   
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
                             <span class="number">+68%</span>
@@ -1338,7 +1226,7 @@
                             <span class="label">Freelancers</span>
                         </div>
                     </div>
-                    
+                   
                     <div style="margin-top: 24px;">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
@@ -1346,11 +1234,11 @@
                     </div>
                 </div>
             </div>
-
+           
             <!-- Portfolio Item 10 -->
             <div class="portfolio-item">
-                <div class="portfolio-image" style="background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);">
-                    <div>Membership Platform</div>
+                <div class="portfolio-image">
+                    <img src="https://memberdev.com/wp-content/themes/memberdev/images/memberdev-platform-screenshot-dashboard.png" alt="ProMember Network Membership Platform">
                     <div class="portfolio-badge">Subscription</div>
                 </div>
                 <div class="portfolio-content">
@@ -1361,7 +1249,7 @@
                     </div>
                     <h3>ProMember Network</h3>
                     <p>A subscription-based membership platform with exclusive content, community features, and tiered pricing options.</p>
-                    
+                   
                     <div class="portfolio-stats">
                         <div class="portfolio-stat">
                             <span class="number">+61%</span>
@@ -1376,7 +1264,7 @@
                             <span class="label">Active Members</span>
                         </div>
                     </div>
-                    
+                   
                     <div style="margin-top: 24px;">
                         <a href="case-studies.html" class="btn btn-outline" style="width: 100%; text-align: center; padding: 12px;">
                             <i class="fas fa-external-link-alt"></i> View Case Study
@@ -1386,7 +1274,6 @@
             </div>
         </div>
     </section>
-
     <!-- Process Section -->
     <section class="process-section">
         <div class="container">
@@ -1394,26 +1281,26 @@
                 <h2>Our Digital Product Design Process</h2>
                 <p class="lead">A proven methodology for creating high-converting digital product websites</p>
             </div>
-            
+           
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
                     <h3>Discovery & Strategy</h3>
                     <p>Understand your digital product, target audience, and conversion goals to create a strategic roadmap.</p>
                 </div>
-                
+               
                 <div class="process-step">
                     <div class="step-number">2</div>
                     <h3>UX/UI Design</h3>
                     <p>Create intuitive user experiences and conversion-focused designs tailored to your digital product.</p>
                 </div>
-                
+               
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Development</h3>
                     <p>Build with the latest technologies ensuring fast performance, security, and scalability.</p>
                 </div>
-                
+               
                 <div class="process-step">
                     <div class="step-number">4</div>
                     <h3>Launch & Optimize</h3>
@@ -1422,7 +1309,6 @@
             </div>
         </div>
     </section>
-
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
@@ -1430,7 +1316,7 @@
                 <h2>Client Testimonials</h2>
                 <p class="lead">What digital product sellers say about working with Growthvia Digital</p>
             </div>
-            
+           
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-quote">
@@ -1447,7 +1333,7 @@
                         </div>
                     </div>
                 </div>
-                
+               
                 <div class="testimonial-card">
                     <div class="testimonial-quote">
                         <i class="fas fa-quote-left"></i>
@@ -1463,7 +1349,7 @@
                         </div>
                     </div>
                 </div>
-                
+               
                 <div class="testimonial-card">
                     <div class="testimonial-quote">
                         <i class="fas fa-quote-left"></i>
@@ -1482,13 +1368,12 @@
             </div>
         </div>
     </section>
-
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
             <h2>Ready to Launch Your Digital Product Website?</h2>
             <p>Let's work together to create a high-converting website that sells your digital products 24/7.</p>
-            
+           
             <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
                 <a href="contact.html" class="btn btn-dark">
                     <i class="fas fa-calendar"></i> Start Your Project
@@ -1499,7 +1384,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1508,7 +1392,7 @@
                     <div class="logo-text">Growth<span style="color: var(--primary-light);">via</span> Digital</div>
                     <p>Specialists in high-converting websites for digital product sellers worldwide. We design, develop, and optimize websites that sell.</p>
                 </div>
-                
+               
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
@@ -1519,7 +1403,7 @@
                         <li><a href="process.html">Our Process</a></li>
                     </ul>
                 </div>
-                
+               
                 <div class="footer-links">
                     <h3>Digital Product Specialties</h3>
                     <ul>
@@ -1530,7 +1414,7 @@
                         <li><a href="portfolio.html">E-books & Publications</a></li>
                     </ul>
                 </div>
-                
+               
                 <div class="footer-contact">
                     <h3>Contact</h3>
                     <p><i class="fas fa-envelope"></i> hello@growthvia.com</p>
@@ -1539,25 +1423,23 @@
                     <p><i class="fas fa-clock"></i> Mon-Fri, 9AM-6PM EST</p>
                 </div>
             </div>
-            
+           
             <div class="copyright">
                 <p>&copy; 2024 Growthvia Digital Agency. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
     <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.querySelector('.nav-links');
-        
+       
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
                 : '<i class="fas fa-bars"></i>';
         });
-
         // Header Scroll Effect
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
@@ -1567,12 +1449,11 @@
                 header.classList.remove('scrolled');
             }
         });
-
         // Set active nav based on current page
         document.addEventListener('DOMContentLoaded', () => {
             const currentPage = window.location.pathname.split('/').pop();
             const navLinks = document.querySelectorAll('.nav-links a');
-            
+           
             navLinks.forEach(link => {
                 const linkPage = link.getAttribute('href');
                 if (linkPage === currentPage) {
@@ -1581,7 +1462,7 @@
                     link.classList.remove('active');
                 }
             });
-            
+           
             // Animate portfolio items on load with staggered effect
             const portfolioItems = document.querySelectorAll('.portfolio-item');
             const observer = new IntersectionObserver((entries) => {
@@ -1597,28 +1478,26 @@
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             });
-
             portfolioItems.forEach(item => {
                 item.style.opacity = '0';
                 item.style.transform = 'translateY(30px)';
                 item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(item);
             });
-            
+           
             // Animate category cards
             const categoryCards = document.querySelectorAll('.category-card');
             categoryCards.forEach((card, index) => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
                 card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                
+               
                 setTimeout(() => {
                     card.style.opacity = '1';
                     card.style.transform = 'translateY(0)';
                 }, 200 + index * 100);
             });
         });
-
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && window.innerWidth <= 768) {
