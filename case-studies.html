@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Studies | ConvertPRO - Digital Product Success Stories</title>
+    <title>Case Studies | Growthvia Digital - Digital Product Success Stories</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,18 +36,15 @@
             --border-radius: 16px;
             --border-radius-lg: 24px;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 80px;
         }
-
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--dark);
@@ -56,45 +53,37 @@
             background-color: #FFFFFF;
             font-size: 16px;
         }
-
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 700;
             line-height: 1.2;
             color: var(--dark);
         }
-
         h1 {
             font-size: 3.5rem;
             letter-spacing: -0.02em;
         }
-
         h2 {
             font-size: 2.75rem;
             letter-spacing: -0.01em;
         }
-
         h3 {
             font-size: 1.875rem;
         }
-
         p {
             font-size: 1.125rem;
             color: var(--gray);
         }
-
         .lead {
             font-size: 1.25rem;
             font-weight: 500;
         }
-
         .container {
             width: 100%;
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 24px;
         }
-
         /* Header */
         header {
             position: fixed;
@@ -109,44 +98,37 @@
             padding: 20px 0;
             transition: var(--transition);
         }
-
         header.scrolled {
             padding: 12px 0;
             box-shadow: var(--shadow-md);
         }
-
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             display: flex;
             align-items: center;
             text-decoration: none;
         }
-
         .logo-text {
             font-size: 1.875rem;
             font-weight: 800;
             color: var(--dark);
             letter-spacing: -0.02em;
         }
-
         .logo-accent {
             background: var(--gradient-primary);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
         .nav-links {
             display: flex;
             gap: 40px;
             list-style: none;
         }
-
         .nav-links a {
             text-decoration: none;
             color: var(--dark);
@@ -156,15 +138,12 @@
             padding: 8px 0;
             transition: var(--transition);
         }
-
         .nav-links a:hover {
             color: var(--primary);
         }
-
         .nav-links a.active {
             color: var(--primary);
         }
-
         .nav-links a.active:after {
             content: '';
             position: absolute;
@@ -175,7 +154,6 @@
             background: var(--primary);
             border-radius: 2px;
         }
-
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -185,7 +163,6 @@
             cursor: pointer;
             z-index: 1001;
         }
-
         /* Buttons */
         .btn {
             display: inline-flex;
@@ -203,42 +180,35 @@
             overflow: hidden;
             gap: 8px;
         }
-
         .btn-primary {
             background: var(--gradient-primary);
             color: white;
             box-shadow: var(--shadow);
         }
-
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
-
         .btn-outline {
             background: transparent;
             border: 2px solid var(--primary);
             color: var(--primary);
         }
-
         .btn-outline:hover {
             background: var(--primary);
             color: white;
             transform: translateY(-3px);
             box-shadow: var(--shadow);
         }
-
         /* Page Hero */
         .page-hero {
             padding: 180px 0 80px;
             background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
             text-align: center;
         }
-
         .page-hero h1 {
             margin-bottom: 16px;
         }
-
         .breadcrumb {
             display: flex;
             justify-content: center;
@@ -246,22 +216,18 @@
             margin-top: 24px;
             font-size: 0.875rem;
         }
-
         .breadcrumb a {
             color: var(--gray);
             text-decoration: none;
             transition: var(--transition);
         }
-
         .breadcrumb a:hover {
             color: var(--primary);
         }
-
         .breadcrumb span {
             color: var(--primary);
             font-weight: 600;
         }
-
         /* Case Study Grid */
         .case-study-grid {
             display: grid;
@@ -269,7 +235,6 @@
             gap: 40px;
             padding: 100px 0;
         }
-
         .case-study-card {
             background: white;
             border-radius: var(--border-radius);
@@ -278,16 +243,13 @@
             transition: var(--transition);
             border: 1px solid var(--border-color);
         }
-
         .case-study-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-xl);
         }
-
         .case-study-header {
             padding: 40px 40px 0;
         }
-
         .case-study-category {
             display: inline-block;
             background: var(--gradient-primary);
@@ -298,38 +260,44 @@
             font-weight: 600;
             margin-bottom: 20px;
         }
-
         .case-study-image {
             height: 200px;
-            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
             margin: 30px 0;
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 700;
+            overflow: hidden;
+            position: relative;
         }
-
+        .case-study-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .case-study-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.05);
+            z-index: 1;
+        }
         .case-study-content {
             padding: 0 40px 40px;
         }
-
         .case-study-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin: 30px 0;
         }
-
         .stat-item {
             text-align: center;
             padding: 20px;
             background: rgba(37, 99, 235, 0.05);
             border-radius: 12px;
         }
-
         .stat-value {
             display: block;
             font-size: 2rem;
@@ -337,19 +305,16 @@
             color: var(--primary);
             line-height: 1;
         }
-
         .stat-label {
             font-size: 0.875rem;
             color: var(--gray);
             margin-top: 8px;
         }
-
         /* Detailed Case Study */
         .detailed-case-study {
             padding: 100px 0;
             background: linear-gradient(135deg, #F8FAFF 0%, #F0F4FF 100%);
         }
-
         .case-study-detail {
             background: white;
             border-radius: var(--border-radius);
@@ -357,27 +322,22 @@
             box-shadow: var(--shadow-lg);
             margin-top: 40px;
         }
-
         .detail-section {
             margin-bottom: 60px;
         }
-
         .detail-section h3 {
             margin-bottom: 24px;
             color: var(--dark);
         }
-
         .detail-list {
             list-style: none;
         }
-
         .detail-list li {
             margin-bottom: 16px;
             padding-left: 32px;
             position: relative;
             color: var(--gray);
         }
-
         .detail-list li:before {
             content: '✓';
             position: absolute;
@@ -385,19 +345,16 @@
             color: var(--success);
             font-weight: 600;
         }
-
         /* Results Section */
         .results-section {
             padding: 100px 0;
             background: white;
         }
-
         .results-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 32px;
         }
-
         .result-card {
             text-align: center;
             padding: 40px;
@@ -405,17 +362,14 @@
             color: white;
             border-radius: var(--border-radius);
         }
-
         .result-card h3 {
             color: white;
             font-size: 3rem;
             margin-bottom: 8px;
         }
-
         .result-card p {
             color: rgba(255, 255, 255, 0.9);
         }
-
         /* CTA Section */
         .cta {
             background: var(--gradient-primary);
@@ -423,12 +377,10 @@
             padding: 120px 0;
             text-align: center;
         }
-
         .cta h2 {
             color: white;
             margin-bottom: 16px;
         }
-
         .cta p {
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 32px;
@@ -436,55 +388,45 @@
             margin-left: auto;
             margin-right: auto;
         }
-
         /* Footer */
         footer {
             background: var(--dark);
             color: white;
             padding: 80px 0 40px;
         }
-
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 48px;
             margin-bottom: 60px;
         }
-
         .footer-brand .logo-text {
             color: white;
             margin-bottom: 16px;
         }
-
         .footer-brand p {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 24px;
         }
-
         .footer-links h3 {
             color: white;
             margin-bottom: 24px;
             font-size: 1.25rem;
         }
-
         .footer-links ul {
             list-style: none;
         }
-
         .footer-links li {
             margin-bottom: 12px;
         }
-
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: var(--transition);
         }
-
         .footer-links a:hover {
             color: white;
         }
-
         .footer-contact p {
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 12px;
@@ -492,12 +434,10 @@
             align-items: center;
             gap: 12px;
         }
-
         .footer-contact i {
             width: 20px;
             color: var(--primary-light);
         }
-
         .copyright {
             text-align: center;
             padding-top: 40px;
@@ -505,18 +445,16 @@
             color: rgba(255, 255, 255, 0.5);
             font-size: 0.875rem;
         }
-
         /* Responsive Design */
         @media (max-width: 1024px) {
             h1 { font-size: 3rem; }
             h2 { font-size: 2.25rem; }
-            
+           
             .case-study-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                 gap: 32px;
             }
         }
-
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -531,50 +469,49 @@
                 box-shadow: var(--shadow-xl);
                 z-index: 1000;
             }
-            
+           
             .nav-links.active {
                 display: flex;
             }
-            
+           
             .mobile-menu-btn {
                 display: block;
             }
-            
+           
             .page-hero {
                 padding: 150px 0 60px;
             }
-            
+           
             .case-study-grid {
                 padding: 60px 0;
             }
-            
+           
             .case-study-detail {
                 padding: 40px;
             }
-            
+           
             .case-study-header,
             .case-study-content {
                 padding: 30px;
             }
-            
+           
             .results-grid {
                 grid-template-columns: 1fr;
                 gap: 24px;
             }
         }
-
         @media (max-width: 480px) {
             h1 { font-size: 2.5rem; }
             h2 { font-size: 2rem; }
-            
+           
             .container {
                 padding: 0 16px;
             }
-            
+           
             .case-study-stats {
                 grid-template-columns: 1fr;
             }
-            
+           
             .case-study-detail {
                 padding: 32px 24px;
             }
@@ -586,9 +523,9 @@
     <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <span class="logo-text">Convert<span class="logo-accent">PRO</span></span>
+                <span class="logo-text">Growth<span class="logo-accent">via</span> Digital</span>
             </a>
-            
+           
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -599,19 +536,18 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            
+           
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
-
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
             <h1>Case Studies</h1>
             <p class="lead">Detailed analysis of how we helped clients achieve significant growth in their digital product sales.</p>
-            
+           
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <span>/</span>
@@ -619,7 +555,6 @@
             </div>
         </div>
     </section>
-
     <!-- Case Study Grid -->
     <section class="case-study-grid">
         <div class="container">
@@ -629,12 +564,12 @@
                     <span class="case-study-category">Online Courses</span>
                     <h3>Global Learning Academy</h3>
                     <p>Transforming an educational platform to increase course sales by 45%.</p>
-                    
+                   
                     <div class="case-study-image">
-                        Education Platform
+                        <img src="https://multipurposethemes.com/wp-content/uploads/2024/11/Education-LMS-Dashboard-Admin-Template.jpg" alt="Global Learning Academy Platform Screenshot">
                     </div>
                 </div>
-                
+               
                 <div class="case-study-content">
                     <div class="case-study-stats">
                         <div class="stat-item">
@@ -654,10 +589,10 @@
                             <span class="stat-label">Client Satisfaction</span>
                         </div>
                     </div>
-                    
+                   
                     <p><strong>Challenge:</strong> Low conversion rates and limited international reach for their online courses.</p>
                     <p><strong>Solution:</strong> We implemented a multi-language LMS with optimized checkout flow and global payment integration.</p>
-                    
+                   
                     <div style="margin-top: 30px;">
                         <a href="#study1" class="btn btn-primary" style="width: 100%; text-align: center;">
                             <i class="fas fa-book-open"></i> Read Full Case Study
@@ -665,19 +600,19 @@
                     </div>
                 </div>
             </div>
-            
+           
             <!-- Case Study 2 -->
             <div class="case-study-card">
                 <div class="case-study-header">
                     <span class="case-study-category">SaaS Platform</span>
                     <h3>DataInsight Pro</h3>
                     <p>Improving sign-up conversion rate by 38% for a UK-based SaaS company.</p>
-                    
+                   
                     <div class="case-study-image">
-                        Analytics Dashboard
+                        <img src="https://cdn.prod.website-files.com/64ccd6239abfeec743815b28/6867e2e1c18814af9d412ebf_Luzmo.webp" alt="DataInsight Pro Analytics Dashboard Screenshot">
                     </div>
                 </div>
-                
+               
                 <div class="case-study-content">
                     <div class="case-study-stats">
                         <div class="stat-item">
@@ -697,10 +632,10 @@
                             <span class="stat-label">Retention Rate</span>
                         </div>
                     </div>
-                    
+                   
                     <p><strong>Challenge:</strong> High bounce rate and low user activation after sign-up.</p>
                     <p><strong>Solution:</strong> Streamlined onboarding process with interactive tutorials and personalized dashboards.</p>
-                    
+                   
                     <div style="margin-top: 30px;">
                         <a href="#study2" class="btn btn-primary" style="width: 100%; text-align: center;">
                             <i class="fas fa-book-open"></i> Read Full Case Study
@@ -708,19 +643,19 @@
                     </div>
                 </div>
             </div>
-            
+           
             <!-- Case Study 3 -->
             <div class="case-study-card">
                 <div class="case-study-header">
                     <span class="case-study-category">Digital Marketplace</span>
                     <h3>DesignAsset Hub</h3>
                     <p>Expanding to 12 new countries with 67% international revenue growth.</p>
-                    
+                   
                     <div class="case-study-image">
-                        Marketplace Platform
+                        <img src="https://abetterlemonadestand.com/wp-content/uploads/2017/08/Creative-Market-Design-Assets-Review.jpg" alt="DesignAsset Hub Marketplace Screenshot">
                     </div>
                 </div>
-                
+               
                 <div class="case-study-content">
                     <div class="case-study-stats">
                         <div class="stat-item">
@@ -740,10 +675,10 @@
                             <span class="stat-label">Active Sellers</span>
                         </div>
                     </div>
-                    
+                   
                     <p><strong>Challenge:</strong> Limited to domestic market with manual payment processing.</p>
                     <p><strong>Solution:</strong> Multi-currency marketplace with automated affiliate system and instant digital delivery.</p>
-                    
+                   
                     <div style="margin-top: 30px;">
                         <a href="#study3" class="btn btn-primary" style="width: 100%; text-align: center;">
                             <i class="fas fa-book-open"></i> Read Full Case Study
@@ -753,21 +688,20 @@
             </div>
         </div>
     </section>
-
-    <!-- Detailed Case Study 1 -->
+    <!-- Detailed Case Study 1 (Example - You can duplicate for others) -->
     <section class="detailed-case-study" id="study1">
         <div class="container">
             <div style="text-align: center; margin-bottom: 60px;">
                 <h2>Global Learning Academy - Detailed Case Study</h2>
                 <p class="lead">How we increased online course sales by 45% with strategic optimization</p>
             </div>
-            
+           
             <div class="case-study-detail">
                 <div class="detail-section">
                     <h3>Client Background</h3>
                     <p>Global Learning Academy is a US-based educational company offering professional certification courses in various industries. They were struggling with low conversion rates and couldn't effectively reach international students.</p>
                 </div>
-                
+               
                 <div class="detail-section">
                     <h3>The Challenge</h3>
                     <ul class="detail-list">
@@ -778,7 +712,7 @@
                         <li>Mobile experience not optimized for course consumption</li>
                     </ul>
                 </div>
-                
+               
                 <div class="detail-section">
                     <h3>Our Solution</h3>
                     <ul class="detail-list">
@@ -790,7 +724,7 @@
                         <li>Email automation for course completion and renewals</li>
                     </ul>
                 </div>
-                
+               
                 <div class="detail-section">
                     <h3>Technical Implementation</h3>
                     <p>We built a custom WordPress/LearnDash solution with React components for the interactive elements. The platform features:</p>
@@ -805,7 +739,6 @@
             </div>
         </div>
     </section>
-
     <!-- Results Section -->
     <section class="results-section">
         <div class="container">
@@ -813,23 +746,23 @@
                 <h2>Measurable Results</h2>
                 <p class="lead">Quantifiable improvements achieved after our implementation</p>
             </div>
-            
+           
             <div class="results-grid">
                 <div class="result-card">
                     <h3>45%</h3>
                     <p>Increase in Course Sales</p>
                 </div>
-                
+               
                 <div class="result-card">
                     <h3>28</h3>
                     <p>Days to Complete Project</p>
                 </div>
-                
+               
                 <div class="result-card">
                     <h3>12</h3>
                     <p>New Languages Supported</p>
                 </div>
-                
+               
                 <div class="result-card">
                     <h3>67%</h3>
                     <p>Reduction in Checkout Abandonment</p>
@@ -837,33 +770,31 @@
             </div>
         </div>
     </section>
-
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
             <h2>Want Similar Results for Your Business?</h2>
             <p>Let's discuss how we can help you achieve measurable growth in your digital product sales.</p>
-            
+           
             <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
                 <a href="contact.html" class="btn btn-dark">
                     <i class="fas fa-calendar"></i> Book a Strategy Call
                 </a>
                 <a href="portfolio.html" class="btn btn-outline" style="background: white; color: var(--primary);">
-                    <i class="fas fa-eye"></i> View More Case Studies
+                    <i class="fas fa-eye"></i> View More Portfolio
                 </a>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="logo-text">Convert<span style="color: var(--primary-light);">PRO</span></div>
+                    <div class="logo-text">Growth<span style="color: var(--primary-light);">via</span> Digital</div>
                     <p>Specialists in high-converting websites for digital product sellers worldwide. Helping businesses increase sales through strategic design and development.</p>
                 </div>
-                
+               
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
@@ -874,7 +805,7 @@
                         <li><a href="process.html">Our Process</a></li>
                     </ul>
                 </div>
-                
+               
                 <div class="footer-links">
                     <h3>Services</h3>
                     <ul>
@@ -884,34 +815,32 @@
                         <li><a href="portfolio.html">E-commerce Solutions</a></li>
                     </ul>
                 </div>
-                
+               
                 <div class="footer-contact">
                     <h3>Contact</h3>
-                    <p><i class="fas fa-envelope"></i> hello@convertpro.com</p>
+                    <p><i class="fas fa-envelope"></i> hello@growthvia.com</p>
                     <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
                     <p><i class="fas fa-map-marker-alt"></i> Global Remote Team</p>
                     <p><i class="fas fa-clock"></i> Mon-Fri, 9AM-6PM EST</p>
                 </div>
             </div>
-            
+           
             <div class="copyright">
-                <p>&copy; 2024 ConvertPRO Digital Agency. All rights reserved.</p>
+                <p>&copy; 2025 Growthvia Digital Agency. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
     <script>
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.querySelector('.nav-links');
-        
+       
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active')
+                ? '<i class="fas fa-times"></i>'
                 : '<i class="fas fa-bars"></i>';
         });
-
         // Header Scroll Effect
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
@@ -921,12 +850,11 @@
                 header.classList.remove('scrolled');
             }
         });
-
         // Set active nav based on current page
         document.addEventListener('DOMContentLoaded', () => {
             const currentPage = window.location.pathname.split('/').pop();
             const navLinks = document.querySelectorAll('.nav-links a');
-            
+           
             navLinks.forEach(link => {
                 const linkPage = link.getAttribute('href');
                 if (linkPage === currentPage) {
@@ -935,10 +863,10 @@
                     link.classList.remove('active');
                 }
             });
-            
+           
             // Animate case study cards
             const caseStudyCards = document.querySelectorAll('.case-study-card');
-            
+           
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry, index) => {
                     if (entry.isIntersecting) {
@@ -952,14 +880,13 @@
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             });
-
             caseStudyCards.forEach(card => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
                 card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(card);
             });
-            
+           
             // Smooth scroll to detailed case study
             const caseStudyLinks = document.querySelectorAll('a[href^="#study"]');
             caseStudyLinks.forEach(link => {
@@ -967,7 +894,7 @@
                     e.preventDefault();
                     const targetId = link.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
-                    
+                   
                     if (targetElement) {
                         window.scrollTo({
                             top: targetElement.offsetTop - 100,
@@ -977,7 +904,6 @@
                 });
             });
         });
-
         // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target) && window.innerWidth <= 768) {
